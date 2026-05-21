@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# Environment / secrets
+.env
+.envrc
+*.pem
+*.key
+
+# Caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local runtime data (watchlist logs, embedding cache, model bill scrape cache)
+data/
+
+# Raw GDELT probe payloads — reference only, not for the repo
+docs/source-research/.probes/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
