@@ -39,6 +39,16 @@ FIXTURES_DIR: Path = REPO_ROOT / "tests" / "fixtures"
 DATA_DIR: Path = REPO_ROOT / "data"
 CONFIG_DIR: Path = REPO_ROOT / "config"
 
+
+def load_pipeline_config() -> dict:
+    """Load config/settings.yml. Returns the `pipeline` block as a dict."""
+    import yaml
+    path = CONFIG_DIR / "settings.yml"
+    if not path.exists():
+        return {}
+    with path.open() as f:
+        return (yaml.safe_load(f) or {}).get("pipeline", {})
+
 _REQUIRED_FOR_LIVE = (
     "OPENSTATES_API_KEY",
     "LDA_API_KEY",

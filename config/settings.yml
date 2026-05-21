@@ -1,0 +1,38 @@
+# Pipeline tuning parameters. Mutable without code changes.
+# Loaded by src/signals/settings.py via load_pipeline_config().
+
+pipeline:
+  schedule_hours: 6
+
+  lookback_days:
+    bills: 14
+    filings_8k: 14
+    lda_registrations: 60
+    model_bill_propagation: 365
+
+  similarity_thresholds:
+    bill_clustering: 0.85
+    model_bill_match: 0.80
+
+  scoring:
+    alert_threshold: 70
+    watchlist_threshold: 50
+
+  weights:
+    signal_a:
+      cluster_size: 0.30
+      lda_recency: 0.20
+      icp_company_count: 0.30
+      cluster_cohesion: 0.20
+
+    signal_c:
+      filing_recency: 0.30
+      bill_count: 0.20
+      bill_stage: 0.30
+      match_specificity: 0.20
+
+    signal_d:
+      propagation_count: 0.40
+      acceleration: 0.30
+      similarity: 0.15
+      icp_topic_match: 0.15

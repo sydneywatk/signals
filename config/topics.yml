@@ -1,0 +1,177 @@
+# Pharmaceutical regulatory topic taxonomy.
+# Used by:
+#   - Signal A — match 10-K Risk Factor mentions to state bills via topic ID
+#   - Signal C — Claude extracts topics from 8-K text against this taxonomy
+#   - Signal D3 — model bills tag a topic; state bills classified to topic via embedding
+#
+# `risk_factor_keywords` are matched (case-insensitive) against 10-K Item 1A.
+# `openstates_search_terms` are passed to OpenStates `q=` for live bill discovery.
+# `lda_issue_codes` are the LDA general_issue_code values for related lobbying activity.
+# `state_specific_statutes` cite named statutes for high-confidence detection.
+
+topics:
+  - id: drug_price_transparency
+    label: "Drug Price Transparency"
+    description: >-
+      State requirements to disclose drug pricing rationale, wholesale
+      acquisition cost increases, R&D allocation, or notification of pricing
+      decisions ahead of effective date.
+    risk_factor_keywords:
+      - "drug pricing transparency"
+      - "drug price transparency"
+      - "prescription drug price"
+      - "wholesale acquisition cost"
+      - "drug pricing notification"
+      - "price increase reporting"
+    openstates_search_terms:
+      - "drug price transparency"
+      - "prescription drug pricing"
+      - "wholesale acquisition cost"
+    lda_issue_codes: ["HCR", "PHA"]
+    state_specific_statutes:
+      - { state: "CA", name: "SB 17" }
+      - { state: "OR", name: "HB 4005" }
+      - { state: "TX", name: "HB 2536" }
+      - { state: "WA", name: "SB 5610" }
+      - { state: "ME", name: "LD 1162" }
+      - { state: "MD", name: "HB 631" }
+      - { state: "VT", name: "Act 75" }
+      - { state: "NV", name: "SB 539" }
+
+  - id: pbm_regulation
+    label: "Pharmacy Benefit Manager Regulation"
+    description: >-
+      Licensure, oversight, spread-pricing prohibitions, fiduciary duty,
+      pharmacy network adequacy, audit rights, and rebate disclosure
+      requirements applied to PBMs.
+    risk_factor_keywords:
+      - "pharmacy benefit manager"
+      - "PBM regulation"
+      - "spread pricing"
+      - "rebate disclosure"
+      - "PBM fiduciary"
+    openstates_search_terms:
+      - "pharmacy benefit manager"
+      - "PBM"
+      - "spread pricing"
+    lda_issue_codes: ["HCR", "PHA"]
+    state_specific_statutes:
+      - { state: "AR", name: "Act 900" }
+      - { state: "OH", name: "HB 24" }
+      - { state: "NY", name: "Article 81" }
+      - { state: "OK", name: "HB 2632" }
+
+  - id: prop_65
+    label: "California Proposition 65 / Product Warning Labels"
+    description: >-
+      California's safe drinking water and toxic enforcement act, plus
+      analogous state product warning regimes. Drives label changes and
+      manufacturer notification obligations.
+    risk_factor_keywords:
+      - "California Proposition 65"
+      - "Proposition 65"
+      - "Prop 65"
+      - "product warning"
+      - "chemical exposure warning"
+    openstates_search_terms:
+      - "Proposition 65"
+      - "product warning label"
+    lda_issue_codes: ["ENV", "CSP"]
+    state_specific_statutes:
+      - { state: "CA", name: "Proposition 65" }
+
+  - id: drug_take_back
+    label: "Drug Take-Back / Extended Producer Responsibility"
+    description: >-
+      State or local ordinances requiring manufacturer-funded drug disposal
+      programs, including secure return kiosks and household disposal channels.
+    risk_factor_keywords:
+      - "drug take-back"
+      - "drug disposal"
+      - "extended producer responsibility"
+      - "EPR program"
+      - "stewardship program"
+    openstates_search_terms:
+      - "drug take-back"
+      - "pharmaceutical stewardship"
+    lda_issue_codes: ["ENV", "HCR"]
+    state_specific_statutes:
+      - { state: "NY", name: "Drug Take-Back Act" }
+      - { state: "WA", name: "Secure Medicine Return Program" }
+
+  - id: drug_affordability_boards
+    label: "Drug Affordability Boards / Upper Payment Limits"
+    description: >-
+      State boards empowered to review drug affordability and set upper
+      payment limits binding on state-purchased drugs or all state-regulated
+      plans.
+    risk_factor_keywords:
+      - "drug affordability board"
+      - "prescription drug affordability"
+      - "upper payment limit"
+      - "PDAB"
+    openstates_search_terms:
+      - "drug affordability board"
+      - "prescription drug affordability"
+      - "upper payment limit"
+    lda_issue_codes: ["HCR", "PHA"]
+    state_specific_statutes:
+      - { state: "MD", name: "HB 768" }
+      - { state: "CO", name: "SB 175" }
+      - { state: "WA", name: "SB 5532" }
+      - { state: "OR", name: "HB 4005" }
+
+  - id: "340b_disputes"
+    label: "340B Drug Pricing Program Disputes"
+    description: >-
+      Manufacturer-vs-state disputes over 340B-discounted pricing through
+      contract pharmacies, audit obligations, and state attempts to enforce
+      participation beyond federal HRSA rules.
+    risk_factor_keywords:
+      - "340B"
+      - "340B program"
+      - "contract pharmacy"
+      - "covered entity"
+    openstates_search_terms:
+      - "340B"
+      - "contract pharmacy"
+    lda_issue_codes: ["HCR", "PHA"]
+    state_specific_statutes:
+      - { state: "AR", name: "Act 1103" }
+      - { state: "WV", name: "HB 4112" }
+      - { state: "LA", name: "HB 387" }
+
+  - id: supply_chain
+    label: "Drug Supply Chain / Shortage Reporting"
+    description: >-
+      State requirements to report critical drug shortages, maintain inventory
+      minimums for essential medicines, or disclose manufacturing site
+      geographies.
+    risk_factor_keywords:
+      - "drug shortage"
+      - "supply chain"
+      - "essential medicine"
+      - "manufacturing redundancy"
+    openstates_search_terms:
+      - "drug shortage"
+      - "drug supply chain"
+      - "essential medicines"
+    lda_issue_codes: ["HCR", "PHA", "MMM"]
+    state_specific_statutes: []
+
+  - id: prescribing_authority
+    label: "Prescribing Authority / Step Therapy / Prior Auth"
+    description: >-
+      Prescriber and patient protections against utilization management
+      restrictions: step therapy exemptions, prior authorization timelines,
+      and off-label prescribing rights.
+    risk_factor_keywords:
+      - "step therapy"
+      - "prior authorization"
+      - "utilization management"
+      - "off-label prescribing"
+    openstates_search_terms:
+      - "step therapy"
+      - "prior authorization"
+    lda_issue_codes: ["HCR", "MMM"]
+    state_specific_statutes: []

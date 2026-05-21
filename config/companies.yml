@@ -1,0 +1,119 @@
+# ICP target list — US-domiciled pharma (SIC 2834 and adjacent 2835/2836 biotech).
+#
+# Curation status: v1 hand-pick of ~14 mid-cap US-domiciled issuers. The first
+# entry (Pfizer) is intentionally large-cap and out-of-ICP — kept because our
+# fixture coverage uses Pfizer's actual 10-K and 8-Ks. Live mode would drop
+# Pfizer and treat the rest as the working set; see DECISION_MEMO.
+#
+# Fields:
+#   cik: 10-digit padded CIK (EDGAR's canonical form)
+#   ticker: primary stock ticker
+#   states_of_operation: best-effort HQ + manufacturing/major office states.
+#     v2 would pull this from the 10-K Item 2 (Properties) section.
+#   lda_registrant_aliases: name variants seen in LDA registrant fields. v1
+#     uses canonical name + Inc/no-Inc variants; v2 would grep actual filings.
+
+companies:
+  - cik: "0000078003"
+    name: "Pfizer Inc"
+    ticker: "PFE"
+    sic: "2834"
+    states_of_operation: ["NY", "MI", "MO", "CT"]
+    lda_registrant_aliases: ["Pfizer Inc.", "Pfizer Inc"]
+    notes: "Large-cap; kept for fixture demo. Out of mid-market ICP."
+
+  - cik: "0001159036"
+    name: "Halozyme Therapeutics, Inc."
+    ticker: "HALO"
+    sic: "2836"
+    states_of_operation: ["CA"]
+    lda_registrant_aliases: ["Halozyme Therapeutics, Inc.", "Halozyme Therapeutics"]
+    notes: ""
+
+  - cik: "0001396814"
+    name: "Pacira BioSciences, Inc."
+    ticker: "PCRX"
+    sic: "2834"
+    states_of_operation: ["NJ", "CA"]
+    lda_registrant_aliases: ["Pacira BioSciences, Inc.", "Pacira Pharmaceuticals"]
+    notes: ""
+
+  - cik: "0001521036"
+    name: "Lantheus Holdings, Inc."
+    ticker: "LNTH"
+    sic: "2835"
+    states_of_operation: ["MA"]
+    lda_registrant_aliases: ["Lantheus Holdings, Inc.", "Lantheus Medical Imaging"]
+    notes: ""
+
+  - cik: "0001356576"
+    name: "Supernus Pharmaceuticals, Inc."
+    ticker: "SUPN"
+    sic: "2834"
+    states_of_operation: ["MD"]
+    lda_registrant_aliases: ["Supernus Pharmaceuticals, Inc.", "Supernus Pharmaceuticals"]
+    notes: ""
+
+  - cik: "0001369568"
+    name: "Catalyst Pharmaceuticals, Inc."
+    ticker: "CPRX"
+    sic: "2834"
+    states_of_operation: ["FL"]
+    lda_registrant_aliases: ["Catalyst Pharmaceuticals, Inc.", "Catalyst Pharmaceuticals"]
+    notes: ""
+
+  - cik: "0001088856"
+    name: "Corcept Therapeutics Incorporated"
+    ticker: "CORT"
+    sic: "2834"
+    states_of_operation: ["CA"]
+    lda_registrant_aliases: ["Corcept Therapeutics", "Corcept Therapeutics Incorporated"]
+    notes: ""
+
+  - cik: "0001438533"
+    name: "Travere Therapeutics, Inc."
+    ticker: "TVTX"
+    sic: "2834"
+    states_of_operation: ["CA"]
+    lda_registrant_aliases: ["Travere Therapeutics, Inc.", "Travere Therapeutics"]
+    notes: ""
+
+  - cik: "0001446847"
+    name: "Ironwood Pharmaceuticals, Inc."
+    ticker: "IRWD"
+    sic: "2834"
+    states_of_operation: ["MA"]
+    lda_registrant_aliases: ["Ironwood Pharmaceuticals, Inc.", "Ironwood Pharmaceuticals"]
+    notes: ""
+
+  - cik: "0000882796"
+    name: "BioCryst Pharmaceuticals, Inc."
+    ticker: "BCRX"
+    sic: "2836"
+    states_of_operation: ["NC", "AL"]
+    lda_registrant_aliases: ["BioCryst Pharmaceuticals, Inc.", "BioCryst Pharmaceuticals"]
+    notes: ""
+
+  - cik: "0001759425"
+    name: "Mirum Pharmaceuticals, Inc."
+    ticker: "MIRM"
+    sic: "2834"
+    states_of_operation: ["CA"]
+    lda_registrant_aliases: ["Mirum Pharmaceuticals, Inc.", "Mirum Pharmaceuticals"]
+    notes: ""
+
+  - cik: "0001023024"
+    name: "ANI Pharmaceuticals, Inc."
+    ticker: "ANIP"
+    sic: "2834"
+    states_of_operation: ["NJ", "MN"]
+    lda_registrant_aliases: ["ANI Pharmaceuticals, Inc.", "ANI Pharmaceuticals"]
+    notes: ""
+
+  - cik: "0001297184"
+    name: "Amphastar Pharmaceuticals, Inc."
+    ticker: "AMPH"
+    sic: "2834"
+    states_of_operation: ["CA"]
+    lda_registrant_aliases: ["Amphastar Pharmaceuticals, Inc.", "Amphastar Pharmaceuticals"]
+    notes: ""
