@@ -42,11 +42,7 @@ def _build_registry() -> dict[str, dict[str, Callable[[], Any]]]:
         "openstates": {
             # Bag of recent bills matching the pharma-pricing query across all states.
             # Used by Signal A clustering and by smoke tests.
-            "recent_bills_drug_pricing": lambda: openstates.search_bills(
-                query='"drug pricing" OR "prescription drug" OR "pharmacy benefit manager"',
-                updated_since="2026-03-01",
-                max_pages=3,
-            ),
+            "recent_bills_drug_pricing": lambda: _capture_recent_bills_drug_pricing(),
             # One detailed bill for the get_bill_detail fixture path.
             # Bill ID resolved on first capture and pinned manually if it churns.
             "bill_detail_sample": lambda: _capture_sample_bill_detail(),
@@ -71,7 +67,18 @@ def _build_registry() -> dict[str, dict[str, Callable[[], Any]]]:
             ),
         },
         "anthropic": {
-            # populated in build task 10
+            # Risk factor topic extraction for Pfizer's 10-K Item 1A
+            "risk_factor_topics_78003": lambda: _capture_risk_factor_topics_pfizer(),
+            # 8-K state regulation extraction for each of Pfizer's trigger 8-Ks
+            "eight_k_state_regulation_0000078003-25-000167": lambda: _capture_8k_extraction(
+                "0000078003-25-000167"
+            ),
+            "eight_k_state_regulation_0001193125-25-291406": lambda: _capture_8k_extraction(
+                "0001193125-25-291406"
+            ),
+            "eight_k_state_regulation_0000078003-25-000159": lambda: _capture_8k_extraction(
+                "0000078003-25-000159"
+            ),
         },
     }
 
@@ -86,6 +93,30 @@ def _import_lda():
     return lda
 
 
+def _capture_risk_factor_topics_pfizer() -> Any:
+    """Read the pre-captured Pfizer 10-K fixture, run live Claude extraction."""
+    from signals.enrich import extraction, icp
+    from signals.fixtures import load_fixture
+    rf = load_fixture("edgar", "risk_factors_78003")  # mode-agnostic file read
+    return extraction.extract_risk_factor_topics(
+        rf["text"], icp.load_topics(),
+        fixture_scenario="risk_factor_topics_78003",
+    )
+
+
+def _capture_8k_extraction(accession: str) -> Any:
+    from signals.enrich import extraction
+    from signals.fixtures import load_fixture
+    eight_ks = load_fixture("edgar", "recent_8ks_78003")
+    match = next((e for e in eight_ks if e["accession"] == accession), None)
+    if not match:
+        raise RuntimeError(f"8-K {accession} not in fixture; run edgar capture first")
+    return extraction.extract_8k_state_regulation(
+        match["text"],
+        fixture_scenario=f"eight_k_state_regulation_{accession}",
+    )
+
+
 def _capture_sample_bill_detail() -> Any:
     """Pick the first bill from the recent_bills query and fetch its detail."""
     from signals.sources import openstates
@@ -96,6 +127,34 @@ def _capture_sample_bill_detail() -> Any:
     if not bills:
         raise RuntimeError("No bills returned; can't seed bill_detail_sample fixture")
     return openstates.get_bill_detail(bills[0]["id"])
+
+
+def _capture_recent_bills_drug_pricing() -> Any:
+    """Per-state capture across transparency-active jurisdictions.
+
+    The default free-text query returns a Kentucky-heavy bag (KY has lots of
+    short-titled drug-related bills). For Signal A clustering we want variety
+    across states with active transparency / PBM / affordability legislation.
+    """
+    import time
+    from signals.sources import openstates
+
+    JURISDICTIONS = ["ca", "or", "wa", "me", "md", "tx", "co", "ny"]
+    QUERY = "prescription drug pricing OR pharmacy benefit manager OR drug affordability"
+
+    merged: list = []
+    for i, jur in enumerate(JURISDICTIONS):
+        if i > 0:
+            time.sleep(8.0)  # ultra-conservative — OpenStates free tier 429s on bursts
+        page = openstates.search_bills(
+            query=QUERY,
+            jurisdiction=jur,
+            updated_since="2024-06-01",  # wider window catches more bills per state
+            max_pages=1,
+        )
+        merged.extend(page)
+        logger.info("captured %d bills from %s (running total %d)", len(page), jur, len(merged))
+    return merged
 
 
 def parse_targets(args: list[str], registry: dict[str, dict[str, Callable]]) -> list[tuple[str, str]]:

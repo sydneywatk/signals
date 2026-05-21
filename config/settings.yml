@@ -10,9 +10,12 @@ pipeline:
     lda_registrations: 60
     model_bill_propagation: 365
 
+  # Thresholds tuned for scikit-learn TF-IDF cosine similarity (not Claude/Voyage dense
+  # embeddings). TF-IDF compresses semantic distance into lower numeric range — the
+  # spec's 0.80-0.85 reads from a dense-embedding world. See DECISION_MEMO for swap path.
   similarity_thresholds:
-    bill_clustering: 0.85
-    model_bill_match: 0.80
+    bill_clustering: 0.25
+    model_bill_match: 0.20
 
   scoring:
     alert_threshold: 70

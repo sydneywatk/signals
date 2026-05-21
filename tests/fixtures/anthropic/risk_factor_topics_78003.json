@@ -1,0 +1,29 @@
+{
+  "topics": [
+    {
+      "confidence": "medium",
+      "id": "pbm_regulation",
+      "supporting_text": "We expect that consolidation and integration among pharmacy chains, wholesalers and PBMs will increase pricing pressures in the industry."
+    },
+    {
+      "confidence": "high",
+      "id": "drug_affordability_boards",
+      "supporting_text": "Measures to regulate prices or payment for pharmaceutical products, including legislation on drug importation, international reference pricing and prescription drug affordability boards (PDABs) that seek to impose reimbursement limits for certain drugs, could adversely affect our business."
+    },
+    {
+      "confidence": "medium",
+      "id": "drug_price_transparency",
+      "supporting_text": "States have continued to focus on addressing drug costs, generally by increasing price transparency or attempting to limit drug price increases for state-regulated insurance."
+    },
+    {
+      "confidence": "high",
+      "id": "prescribing_authority",
+      "supporting_text": "Such payors are also increasingly imposing utilization management tools requiring prior authorization for a branded product or requiring the patient to first fail on one or more other products before permitting access to a particular branded medicine."
+    },
+    {
+      "confidence": "medium",
+      "id": "340b_disputes",
+      "supporting_text": "Any additional reduction of U.S. federal spending on entitlement programs beyond the IRA, including Medicare, Medicaid, or any other publicly funded or subsidized health programs, and the 340B Program, may affect payment for our products or services provided using our products."
+    }
+  ]
+}

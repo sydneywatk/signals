@@ -1,0 +1,13 @@
+{
+  "mentions_state_regulation": true,
+  "states": [
+    "CA",
+    "OR",
+    "WA"
+  ],
+  "supporting_text": "On May 10, 2026, Pfizer Inc. (\"the Company\") filed comments with the California Department of Health Care Access and Information regarding the Department's implementation of California SB 17 (Drug Price Transparency Act), expressing concerns about the proposed wholesale acquisition cost reporting thresholds and their interaction with the federal Inflation Reduction Act Medicare negotiation framework. The Company also submitted comments to the Oregon Health Authority on HB 4005 reporting requirements and to the Washington State Health Care Authority on prescription drug affordability board (PDAB) upper payment limit methodology under SB 5532.",
+  "topics": [
+    "drug_price_transparency",
+    "drug_affordability_boards"
+  ]
+}
