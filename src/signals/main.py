@@ -82,7 +82,13 @@ def extract_company_topics() -> dict[str, list[str]]:
         except Exception as exc:
             logger.warning("10-K extraction failed for cik=%s: %s", cik, exc)
             continue
-        result[cik] = [t["id"] for t in extracted.get("topics", [])]
+        topic_ids: list[str] = []
+        for t in extracted.get("topics", []) or []:
+            if isinstance(t, dict) and isinstance(t.get("id"), str):
+                topic_ids.append(t["id"])
+            else:
+                logger.warning("cik=%s malformed topic entry: %r", cik, t)
+        result[cik] = topic_ids
     logger.info("Company topic extraction complete: %d of %d ICP companies",
                 len(result), len(icp.load_companies()))
     return result
