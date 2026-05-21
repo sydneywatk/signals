@@ -12,7 +12,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Any, Literal
 
-SignalType = Literal["A", "C", "D3"]
+SignalType = Literal["A", "C", "D3", "E4"]
 
 
 @dataclass
@@ -39,5 +39,6 @@ class Signal:
 from signals.detectors.signal_a import detect_signal_a  # noqa: E402
 from signals.detectors.signal_c import detect_signal_c  # noqa: E402
 from signals.detectors.signal_d import detect_signal_d3  # noqa: E402
+from signals.detectors.signal_e import detect_signal_e4  # noqa: E402
 
-__all__ = ["Signal", "detect_signal_a", "detect_signal_c", "detect_signal_d3"]
+__all__ = ["Signal", "detect_signal_a", "detect_signal_c", "detect_signal_d3", "detect_signal_e4"]

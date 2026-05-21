@@ -23,7 +23,7 @@ def test_signal_a_max_inputs_high_score():
         "cluster_size": 10,        # >=5 -> 100
         "lda_recency_days": 0,     # 0 days -> 100
         "icp_company_count": 5,    # >=3 -> 100
-        "cluster_cohesion": 0.5,   # 0.5 * 250 -> 100
+        "cluster_cohesion": 1.0,   # 1.0 * 100 -> 100 (sentence-transformers normalizer)
     })
     score = score_signal(sig, load_pipeline_config())
     assert score.total == 100

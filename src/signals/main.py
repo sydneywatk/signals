@@ -13,7 +13,7 @@ from dataclasses import asdict
 from datetime import date, datetime, timedelta
 from typing import Any
 
-from signals.detectors import Signal, detect_signal_a, detect_signal_c, detect_signal_d3
+from signals.detectors import Signal, detect_signal_a, detect_signal_c, detect_signal_d3, detect_signal_e4
 from signals.distribute.slack import aggregate_by_company, post_account_alert
 from signals.enrich import extraction, icp
 from signals.fixtures import FixtureMissing, load_fixture
@@ -154,7 +154,11 @@ def run_pipeline() -> dict[str, Any]:
     signals.extend(detect_signal_c(eight_ks_by_cik, eight_k_extractions, bills, topics))
     signals.extend(detect_signal_d3(
         bills, model_bills, company_topics,
-        similarity_threshold=sim_cfg.get("model_bill_match", 0.20),
+        similarity_threshold=sim_cfg.get("model_bill_match", 0.65),
+    ))
+    signals.extend(detect_signal_e4(
+        bills, company_topics, topics,
+        similarity_threshold=sim_cfg.get("bill_clustering", 0.70),
     ))
 
     # ---- Score + route ----

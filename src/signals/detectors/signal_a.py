@@ -22,7 +22,7 @@ from signals.detectors._common import (
     bill_text_for_similarity,
 )
 from signals.enrich import icp
-from signals.enrich.embeddings import TfidfCorpus
+from signals.enrich.embeddings import Corpus
 
 logger = logging.getLogger(__name__)
 
@@ -42,7 +42,7 @@ def detect_signal_a(
         return []
 
     texts = [bill_text_for_similarity(b) for b in bills]
-    corpus = TfidfCorpus(texts)
+    corpus = Corpus(texts)
     clusters = corpus.cluster(threshold=similarity_threshold)
 
     signals: list[Signal] = []

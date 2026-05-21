@@ -46,6 +46,14 @@ def _build_registry() -> dict[str, dict[str, Callable[[], Any]]]:
             # One detailed bill for the get_bill_detail fixture path.
             # Bill ID resolved on first capture and pinned manually if it churns.
             "bill_detail_sample": lambda: _capture_sample_bill_detail(),
+            # Historical-with-actions captures for Signal E4. Limited to a few
+            # states to stay under OpenStates daily quota; expand as needed.
+            "historical_bills_ca": lambda: _import_openstates().get_historical_bills_with_actions(
+                "ca", since="2023-01-01", max_pages=2),
+            "historical_bills_or": lambda: _import_openstates().get_historical_bills_with_actions(
+                "or", since="2023-01-01", max_pages=2),
+            "historical_bills_md": lambda: _import_openstates().get_historical_bills_with_actions(
+                "md", since="2023-01-01", max_pages=2),
         },
         "lda": {
             # Recent LD-1 registrations on pharma-relevant issue codes
@@ -91,6 +99,11 @@ def _import_edgar():
 def _import_lda():
     from signals.sources import lda
     return lda
+
+
+def _import_openstates():
+    from signals.sources import openstates
+    return openstates
 
 
 def _capture_risk_factor_topics_pfizer() -> Any:

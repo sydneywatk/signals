@@ -39,8 +39,8 @@ _NORMALIZERS: dict[tuple[str, str], Callable[[dict[str, float]], float]] = {
     ("A", "icp_company_count"):
         lambda i: _clamp_0_100(i.get("icp_company_count", 0) / 3.0 * 100),
     ("A", "cluster_cohesion"):
-        # TF-IDF cohesion caps well below 1.0 for cross-state bills (~0.35 is strong); x250
-        lambda i: _clamp_0_100(i.get("cluster_cohesion", 0) * 250),
+        # Voyage dense cohesion typically 0.70-0.90 for true clusters; 0.7->70, 1.0->100
+        lambda i: _clamp_0_100(i.get("cluster_cohesion", 0) * 100),
 
     # Signal C
     ("C", "filing_recency"):
@@ -59,9 +59,23 @@ _NORMALIZERS: dict[tuple[str, str], Callable[[dict[str, float]], float]] = {
     ("D3", "acceleration"):
         lambda i: _clamp_0_100(i.get("acceleration", 0) * 100),
     ("D3", "similarity"):
-        # TF-IDF similarity for model bills tops out around 0.4-0.5; x250 to compress to 0-100
-        lambda i: _clamp_0_100(i.get("similarity", 0) * 250),
+        # Voyage dense similarity for model bill matches typically 0.65-0.85; 0.65->65, 1.0->100
+        lambda i: _clamp_0_100(i.get("similarity", 0) * 100),
     ("D3", "icp_topic_match"):
+        lambda i: 100.0 if i.get("icp_topic_match", 0) else 0.0,
+
+    # Signal E4
+    # Gated at >=0.70; we map 0.70->70, 0.85->85, 1.00->100 so the headline
+    # sign rate stays interpretable in the score.
+    ("E4", "sign_rate"):
+        lambda i: _clamp_0_100(i.get("sign_rate", 0) * 100),
+    # 3 historical bills is the minimum; 10+ is strong, 20+ is saturated
+    ("E4", "sample_size"):
+        lambda i: _clamp_0_100(min(i.get("sample_size", 0) / 10.0, 1.0) * 100),
+    # bill_stage scale 0-3; 0=intro, 3=passed both chambers
+    ("E4", "bill_stage"):
+        lambda i: _clamp_0_100(i.get("bill_stage", 0) / 3.0 * 100),
+    ("E4", "icp_topic_match"):
         lambda i: 100.0 if i.get("icp_topic_match", 0) else 0.0,
 }
 
@@ -89,7 +103,7 @@ def score_signal(signal: Signal, pipeline_cfg: dict[str, Any]) -> ScoreBreakdown
 
 
 def _signal_weight_key(signal_type: str) -> str:
-    return {"A": "signal_a", "C": "signal_c", "D3": "signal_d"}.get(signal_type, "")
+    return {"A": "signal_a", "C": "signal_c", "D3": "signal_d", "E4": "signal_e"}.get(signal_type, "")
 
 
 def _confidence_band(total: int) -> Confidence:
@@ -109,6 +123,11 @@ def _group_key(signal: Signal) -> tuple:
                 signal.evidence.get("filing", {}).get("accession"))
     if signal.signal_type == "D3":
         return (signal.company_cik, "D3", signal.evidence.get("model_bill_id"))
+    if signal.signal_type == "E4":
+        # Each E4 signal is bill-specific; group by (company, state, topic)
+        bill = signal.evidence.get("bill", {})
+        return (signal.company_cik, "E4", bill.get("jurisdiction"),
+                signal.evidence.get("topic"))
     return (signal.company_cik, signal.signal_type, None)
 
 
@@ -149,4 +168,7 @@ def _bill_anchor(signal: Signal) -> str | None:
         return signal.evidence.get("cluster_id")
     if signal.signal_type == "C":
         return signal.evidence.get("filing", {}).get("accession")
+    if signal.signal_type == "E4":
+        b = signal.evidence.get("bill", {})
+        return f"{b.get('jurisdiction', '')} {b.get('identifier', '')}".strip()
     return None

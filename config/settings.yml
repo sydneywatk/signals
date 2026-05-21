@@ -10,12 +10,13 @@ pipeline:
     lda_registrations: 60
     model_bill_propagation: 365
 
-  # Thresholds tuned for scikit-learn TF-IDF cosine similarity (not Claude/Voyage dense
-  # embeddings). TF-IDF compresses semantic distance into lower numeric range — the
-  # spec's 0.80-0.85 reads from a dense-embedding world. See DECISION_MEMO for swap path.
+  # Thresholds tuned for sentence-transformers all-MiniLM-L6-v2 cosine.
+  # (Voyage was the first choice but free-tier rate-limits made it unusable —
+  # see DECISION_MEMO.) Same-topic cross-state bills cluster around 0.65-0.80;
+  # model-bill matches a touch lower due to state-specific statute paraphrasing.
   similarity_thresholds:
-    bill_clustering: 0.25
-    model_bill_match: 0.20
+    bill_clustering: 0.65
+    model_bill_match: 0.55
 
   scoring:
     alert_threshold: 70
@@ -39,3 +40,9 @@ pipeline:
       acceleration: 0.30
       similarity: 0.15
       icp_topic_match: 0.15
+
+    signal_e:
+      sign_rate: 0.45         # the headline number — high sign rate dominates
+      sample_size: 0.15       # more historical bills = more reliable
+      bill_stage: 0.20        # closer to passage = more urgent
+      icp_topic_match: 0.20

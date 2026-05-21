@@ -27,6 +27,7 @@ LDA_API_KEY: str = os.getenv("LDA_API_KEY", "")
 LDA_BASE_URL: str = os.getenv("LDA_BASE_URL", "https://lda.senate.gov/api/v1").rstrip("/")
 EDGAR_USER_AGENT: str = os.getenv("EDGAR_USER_AGENT", "")
 ANTHROPIC_API_KEY: str = os.getenv("ANTHROPIC_API_KEY", "")
+VOYAGE_API_KEY: str = os.getenv("VOYAGE_API_KEY", "")
 
 SLACK_WEBHOOK_URL: str = os.getenv("SLACK_WEBHOOK_URL", "")
 TRIGGER_SECRET: str = os.getenv("TRIGGER_SECRET", "")

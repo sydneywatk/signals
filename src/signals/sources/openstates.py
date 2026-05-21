@@ -114,6 +114,42 @@ def get_recent_bills_for_topic(
     return merged
 
 
+def get_historical_bills_with_actions(
+    jurisdiction: str,
+    *,
+    query: str = "prescription drug OR pharmacy benefit OR drug pricing OR drug affordability",
+    since: str | None = None,
+    max_pages: int = 3,
+) -> list[dict[str, Any]]:
+    """For Signal E4: pull historical bills in `jurisdiction` with full action data
+    so the detector can identify which were signed vs vetoed.
+    """
+    if not USE_LIVE_APIS:
+        return load_fixture("openstates", f"historical_bills_{jurisdiction.lower()}")
+
+    _ensure_host_registered()
+    client = get_http_client()
+    includes = ["actions", "abstracts", "sponsorships"]
+    params: dict[str, Any] = {
+        "q": query,
+        "jurisdiction": jurisdiction.lower(),
+        "sort": "updated_desc",
+        "per_page": 20,
+        "include": includes,
+    }
+    if since:
+        params["updated_since"] = since
+    results: list[dict[str, Any]] = []
+    for page in range(1, max_pages + 1):
+        params["page"] = page
+        resp = client.get(_HOST_KEY, f"{_BASE_URL}/bills", params=params)
+        body = resp.json()
+        results.extend(body.get("results", []))
+        if page >= body.get("pagination", {}).get("max_page", 0):
+            break
+    return results
+
+
 def get_bill_detail(
     bill_id: str,
     *,

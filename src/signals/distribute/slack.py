@@ -196,6 +196,56 @@ def _btn(label: str, url: str) -> dict[str, Any]:
     }
 
 
+def _suggested_opener(account: "AccountAlert") -> str:
+    """One sentence the AE could read on a discovery call.
+
+    Templated per top signal so the language is concrete and fact-grounded —
+    every clause cites a specific bill, filing, or signing rate from the alert
+    evidence. No generic hand-waving.
+    """
+    top_sig, _ = account.top
+    ev = top_sig.evidence
+    co = account.company_name
+
+    if top_sig.signal_type == "A":
+        topic_label = ev.get("topic_label", "the topic")
+        states = ev.get("states", [])
+        state_phrase = ", ".join(states[:3]) + (
+            f" and {len(states) - 3} other" if len(states) > 3 else "")
+        return (f"{co}'s 10-K just flagged {topic_label} as a material risk, and "
+                f"the same bill is now active in {state_phrase} — wanted to make "
+                f"sure your team had a heads-up before the next committee vote.")
+
+    if top_sig.signal_type == "C":
+        states = ev.get("states", [])
+        topics = ev.get("topics", [])
+        topic_phrase = topics[0].replace("_", " ") if topics else "state regulation"
+        state_phrase = "/".join(states[:3])
+        return (f"{co} just filed an 8-K naming {state_phrase} {topic_phrase} as a "
+                f"specific exposure — saw active matching bills and wanted to flag "
+                f"it before your team has to scramble.")
+
+    if top_sig.signal_type == "D3":
+        model_title = ev.get("model_bill_title", "a model bill")
+        prior_states = ev.get("prior_states", [])
+        bill_state = ev.get("matched_bill", {}).get("jurisdiction", "a target state")
+        return (f"The {model_title} just showed up in {bill_state} — that's "
+                f"{len(prior_states) + 1} states now. With {co}'s 10-K exposure "
+                f"on this topic, you're going to want this on the radar before "
+                f"two more states follow.")
+
+    if top_sig.signal_type == "E4":
+        gov = ev.get("governor", "the governor")
+        rate = int((ev.get("sign_rate") or 0) * 100)
+        bill_state = ev.get("bill", {}).get("jurisdiction", "")
+        bill_id = ev.get("bill", {}).get("identifier", "")
+        return (f"{bill_state} just introduced {bill_id} — {gov} has signed "
+                f"{rate}% of similar bills this term, so this one is on a fast "
+                f"path. {co}'s 10-K already flags this as material.")
+
+    return f"{co} has {account.num_signals} signals firing right now — worth a call this week."
+
+
 # ---------------------------------------------------------------------------
 # Account-level alerts: one Slack message per company per run.
 # ---------------------------------------------------------------------------
@@ -265,6 +315,8 @@ def render_account_alert(account: AccountAlert) -> str:
         f"  {account.num_signals} signal{'s' if account.num_signals != 1 else ''} firing"
         f" · top: Signal {top_sig.signal_type} ({top_score.total})",
         "",
+        f"Suggested opener: \"{_suggested_opener(account)}\"",
+        "",
         f"Top signal: {top_sig.title}",
         f"Why now: {top_sig.why_now}",
         "",
@@ -310,6 +362,11 @@ def build_account_block_kit(account: AccountAlert) -> dict[str, Any]:
                          f"· top: Signal *{top_sig.signal_type}* "
                          f"({top_score.total}) · _{top_sig.title}_",
             }],
+        },
+        {
+            "type": "section",
+            "text": {"type": "mrkdwn",
+                     "text": f"*Suggested opener:*\n> {_suggested_opener(account)}"},
         },
         {
             "type": "section",

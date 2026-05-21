@@ -1,0 +1,72 @@
+# Current US governor identity + term-start date per state.
+# v1: hand-curated. Governor metadata isn't exposed by OpenStates directly, so
+# we use term_start as a date filter on bill actions to scope "the governor's
+# signing track record" to the current term.
+#
+# v2 source: scrape National Governors Association membership page weekly.
+
+governors:
+  - state: CA
+    name: "Gavin Newsom"
+    party: "D"
+    term_start: "2023-01-02"   # 2nd term
+
+  - state: NY
+    name: "Kathy Hochul"
+    party: "D"
+    term_start: "2023-01-01"
+
+  - state: OR
+    name: "Tina Kotek"
+    party: "D"
+    term_start: "2023-01-09"
+
+  - state: WA
+    name: "Bob Ferguson"
+    party: "D"
+    term_start: "2025-01-15"
+
+  - state: ME
+    name: "Janet Mills"
+    party: "D"
+    term_start: "2023-01-04"   # 2nd term
+
+  - state: MD
+    name: "Wes Moore"
+    party: "D"
+    term_start: "2023-01-18"
+
+  - state: CO
+    name: "Jared Polis"
+    party: "D"
+    term_start: "2023-01-10"   # 2nd term
+
+  - state: TX
+    name: "Greg Abbott"
+    party: "R"
+    term_start: "2023-01-17"   # 3rd term
+
+  - state: FL
+    name: "Ron DeSantis"
+    party: "R"
+    term_start: "2023-01-03"   # 2nd term
+
+  - state: PA
+    name: "Josh Shapiro"
+    party: "D"
+    term_start: "2023-01-17"
+
+  - state: MA
+    name: "Maura Healey"
+    party: "D"
+    term_start: "2023-01-05"
+
+  - state: IL
+    name: "JB Pritzker"
+    party: "D"
+    term_start: "2023-01-09"   # 2nd term
+
+  - state: VA
+    name: "Glenn Youngkin"
+    party: "R"
+    term_start: "2022-01-15"

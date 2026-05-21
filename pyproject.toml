@@ -24,6 +24,8 @@ dependencies = [
   "uvicorn[standard]>=0.27",
   "scikit-learn>=1.4",
   "numpy>=1.26",
+  "voyageai>=0.3",
+  "sentence-transformers>=2.7",
 ]
 
 [project.optional-dependencies]

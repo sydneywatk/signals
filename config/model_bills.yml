@@ -14,7 +14,12 @@
 
 model_bills:
   - id: alec_pbm_oversight_act
-    title: "ALEC Pharmacy Benefit Manager Oversight Act"
+    # Renamed for honesty: this is a hand-curated representation in the spirit of
+    # ALEC's PBM model legislation, not a direct quote of ALEC's canonical bill
+    # title (which the public ALEC archive doesn't easily expose). State list is
+    # the empirically observed PBM-regulation wave 2019-2025, not strictly
+    # attributable to ALEC's model.
+    title: "ALEC-aligned PBM Oversight Model"
     source: ALEC
     topic: pbm_regulation
     year_introduced: 2019
@@ -58,7 +63,8 @@ model_bills:
     source: NASHP
     topic: drug_affordability_boards
     year_introduced: 2019
-    known_propagation: ["MD", "CO", "WA", "OR", "ME", "MN", "NY", "NH"]
+    # Verified against NASHP PDAB Toolkit + MultiState policy tracker (2026-05).
+    known_propagation: ["MD", "CO", "WA", "OR", "ME", "MN", "NJ", "NH", "OH"]
     summary: >-
       Creates an independent state board with authority to review the
       affordability of high-cost prescription drugs, conduct cost reviews of
