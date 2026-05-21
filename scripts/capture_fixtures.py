@@ -52,15 +52,38 @@ def _build_registry() -> dict[str, dict[str, Callable[[], Any]]]:
             "bill_detail_sample": lambda: _capture_sample_bill_detail(),
         },
         "lda": {
-            # populated in build task 7
+            # Recent LD-1 registrations on pharma-relevant issue codes
+            "recent_registrations_pharma": lambda: _import_lda().get_recent_registrations(
+                issue_codes=["HCR", "PHA", "MMM"],  # Health Care Reform, Pharmacy, Medicare/Medicaid
+                since="2026-01-01",
+                max_pages=8,  # large window since issue filter runs client-side
+            ),
         },
         "edgar": {
-            # populated in build task 6
+            # Pfizer 10-K Item 1A — proves edgartools extraction on the canonical case
+            "risk_factors_78003": lambda: _import_edgar().get_10k_risk_factors("78003"),
+            # Pfizer recent 8-Ks filtered to the GTM-relevant item codes.
+            # 90 day window so we catch a 7.01 / 8.01 example for Signal C.
+            # Fixture window is 365d so we catch trigger items (Pfizer's most recent
+            # 7.01/8.01 filings are ~5-6 months back). Pipeline still uses 14d live.
+            "recent_8ks_78003": lambda: _import_edgar().get_recent_8ks(
+                "78003", item_codes=["7.01", "8.01", "1.05", "2.05"], days=365, max_filings=50,
+            ),
         },
         "anthropic": {
             # populated in build task 10
         },
     }
+
+
+def _import_edgar():
+    from signals.sources import edgar
+    return edgar
+
+
+def _import_lda():
+    from signals.sources import lda
+    return lda
 
 
 def _capture_sample_bill_detail() -> Any:

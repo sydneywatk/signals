@@ -1,0 +1,164 @@
+# Hand-curated model bill corpus for Signal D3 (model bill propagation velocity).
+#
+# Each entry contains representative text used for cosine-similarity matching
+# against newly introduced state bills. Per spec §6.5, this is the static
+# fallback for ALEC scraping — accept partial coverage in v1.
+#
+# Sources mixed intentionally: ALEC for industry-favorable model legislation,
+# NCSL and the National Academy for State Health Policy (NASHP) for state-
+# friendly counterparts. Both directions matter for GTM signal — corporate GA
+# teams track both.
+#
+# `summary` is intentionally short and rich in policy nouns so embedding
+# similarity hits genuine substantive matches, not generic legislative boilerplate.
+
+model_bills:
+  - id: alec_pbm_oversight_act
+    title: "ALEC Pharmacy Benefit Manager Oversight Act"
+    source: ALEC
+    topic: pbm_regulation
+    year_introduced: 2019
+    known_propagation: ["AR", "OK", "WV", "FL", "TX", "TN", "GA", "MO"]
+    summary: >-
+      Requires pharmacy benefit managers to register with the state insurance
+      department, disclose rebate retention, prohibit retroactive fee
+      assessments against pharmacies, and submit to fiduciary duty standards
+      with respect to plan sponsors. Establishes audit rights for the
+      department and enforcement penalties for unfair pharmacy reimbursement
+      practices.
+
+  - id: nashp_drug_price_transparency_model
+    title: "NASHP Prescription Drug Price Transparency Act"
+    source: NASHP
+    topic: drug_price_transparency
+    year_introduced: 2017
+    known_propagation: ["CA", "OR", "ME", "MD", "VT", "NV", "WA", "TX", "CO"]
+    summary: >-
+      Requires manufacturers to report wholesale acquisition cost increases
+      exceeding defined thresholds in advance, including detailed
+      justifications for the increase, marketing and advertising expenditures,
+      R&D costs allocable to the product, and any patient assistance program
+      contributions. Imposes civil penalties for failure to report.
+
+  - id: alec_freedom_to_prescribe_act
+    title: "ALEC Freedom to Prescribe Act"
+    source: ALEC
+    topic: prescribing_authority
+    year_introduced: 2021
+    known_propagation: ["FL", "TX", "AL", "GA", "SC", "MO"]
+    summary: >-
+      Limits state authority to restrict off-label prescribing or impose prior
+      authorization requirements on FDA-approved medications. Preempts local
+      jurisdictions from enacting prescribing restrictions beyond federal law.
+      Establishes a private right of action for prescribers against
+      unreasonable utilization management.
+
+  - id: nashp_prescription_drug_affordability_board
+    title: "NASHP Prescription Drug Affordability Board Act"
+    source: NASHP
+    topic: drug_affordability_boards
+    year_introduced: 2019
+    known_propagation: ["MD", "CO", "WA", "OR", "ME", "MN", "NY", "NH"]
+    summary: >-
+      Creates an independent state board with authority to review the
+      affordability of high-cost prescription drugs, conduct cost reviews of
+      drugs whose wholesale acquisition cost exceeds defined thresholds, and
+      establish upper payment limits binding on state-purchased drugs.
+
+  - id: alec_340b_integrity_act
+    title: "ALEC 340B Program Integrity Act"
+    source: ALEC
+    topic: "340b_disputes"
+    year_introduced: 2022
+    known_propagation: ["IN", "MS", "AR", "WV", "LA", "KS"]
+    summary: >-
+      Prohibits state requirements that manufacturers honor 340B-discounted
+      pricing for drugs dispensed through contract pharmacies beyond the first
+      covered entity location. Restricts state attempts to impose audit
+      obligations on manufacturer 340B compliance beyond federal HRSA rules.
+
+  - id: nashp_drug_supply_chain_security
+    title: "NASHP Drug Supply Chain Resilience Act"
+    source: NASHP
+    topic: supply_chain
+    year_introduced: 2023
+    known_propagation: ["CA", "MA", "NJ", "MN", "VA"]
+    summary: >-
+      Requires manufacturers of essential medicines to maintain redundant
+      supply chains, report critical drug shortages to the state pharmacy
+      board within defined windows, and disclose manufacturing site
+      geographies. Imposes inventory minimums for designated essential
+      medicines.
+
+  - id: alec_prop_warning_label_uniformity
+    title: "ALEC Uniform Product Warning Label Act"
+    source: ALEC
+    topic: prop_65
+    year_introduced: 2018
+    known_propagation: ["TX", "FL", "OH", "PA", "MI"]
+    summary: >-
+      Preempts state and local jurisdictions from requiring product warning
+      labels that exceed federal FDA or EPA labeling requirements. Targets
+      California Proposition 65-style chemical exposure warning regimes by
+      establishing federal preemption as state policy.
+
+  - id: nashp_pbm_spread_pricing_ban
+    title: "NASHP PBM Spread Pricing Prohibition Act"
+    source: NASHP
+    topic: pbm_regulation
+    year_introduced: 2020
+    known_propagation: ["OH", "KY", "WV", "NY", "IL", "LA", "GA"]
+    summary: >-
+      Prohibits pharmacy benefit managers from engaging in spread pricing
+      practices against managed Medicaid plans. Requires pass-through pricing
+      models, transparent dispensing fees, and quarterly reporting of all
+      rebates negotiated with manufacturers.
+
+  - id: alec_drug_disposal_uniformity
+    title: "ALEC Uniform Drug Disposal Program Act"
+    source: ALEC
+    topic: drug_take_back
+    year_introduced: 2017
+    known_propagation: ["IL", "WI", "MI", "OH"]
+    summary: >-
+      Establishes that voluntary industry-funded drug disposal programs
+      satisfy state safe-disposal obligations. Preempts local extended
+      producer responsibility ordinances that require manufacturer-funded
+      take-back beyond defined federal floors.
+
+  - id: nashp_insulin_copay_cap
+    title: "NASHP Insulin Affordability Act"
+    source: NASHP
+    topic: drug_price_transparency
+    year_introduced: 2020
+    known_propagation: ["CO", "NM", "IL", "VA", "ME", "WA", "OR", "CT", "MN", "DE", "KY", "NH"]
+    summary: >-
+      Caps patient cost-sharing for prescription insulin at a defined monthly
+      out-of-pocket amount regardless of formulary tier. Applies to state-
+      regulated commercial health plans and state employee plans. Establishes
+      a manufacturer assistance program backstop for uninsured patients.
+
+  - id: alec_biosimilar_substitution_act
+    title: "ALEC Biosimilar Pharmacy Substitution Act"
+    source: ALEC
+    topic: pbm_regulation
+    year_introduced: 2014
+    known_propagation: ["AZ", "FL", "GA", "IN", "NC", "TN", "TX", "UT", "VA"]
+    summary: >-
+      Authorizes pharmacists to substitute an interchangeable biosimilar for
+      its reference biological product without prescriber re-authorization
+      provided notification, recordkeeping, and patient consent requirements
+      are met. Defines interchangeability per FDA designation.
+
+  - id: nashp_step_therapy_protections
+    title: "NASHP Step Therapy Patient Protection Act"
+    source: NASHP
+    topic: prescribing_authority
+    year_introduced: 2017
+    known_propagation: ["NY", "TX", "FL", "IL", "MN", "MO", "OH", "OK", "VA"]
+    summary: >-
+      Establishes patient and prescriber rights to exception from health
+      insurer step therapy protocols when the required therapy is contra-
+      indicated, has been ineffective, or is reasonably expected to be
+      ineffective. Requires plans to grant or deny exception requests within
+      defined timeframes.

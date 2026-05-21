@@ -1,0 +1,5259 @@
+[
+  {
+    "affiliated_organizations": [],
+    "client": {
+      "client_government_entity": null,
+      "client_id": 70362,
+      "client_self_select": false,
+      "country": "US",
+      "country_display": "United States of America",
+      "effective_date": "2025-10-01",
+      "general_description": "Clinical laboratory testing",
+      "id": 70362,
+      "name": "MAYO COLLABORATIVE SERVICES, INC.",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "ppb_state": "FL",
+      "ppb_state_display": "Florida",
+      "state": "MN",
+      "state_display": "Minnesota",
+      "url": "https://lda.senate.gov/api/v1/clients/70362/"
+    },
+    "conviction_disclosures": [],
+    "dt_posted": "2026-01-02T12:28:16-05:00",
+    "expenses": null,
+    "expenses_method": null,
+    "expenses_method_display": null,
+    "filing_document_content_type": "text/html",
+    "filing_document_url": "https://lda.senate.gov/filings/public/filing/0c755939-fb0e-48b1-8847-ad0bd51cfaed/print/",
+    "filing_period": "fourth_quarter",
+    "filing_period_display": "4th Quarter (Oct 1 - Dec 31)",
+    "filing_type": "RR",
+    "filing_type_display": "Registration",
+    "filing_uuid": "0c755939-fb0e-48b1-8847-ad0bd51cfaed",
+    "filing_year": 2025,
+    "foreign_entities": [],
+    "income": null,
+    "lobbying_activities": [
+      {
+        "description": "Issues impacting diagnostics, including laboratory developed testing and reimbursement; Reforming and Enhancing Sustainable Updates to Laboratory Testing Services Act of 2025 (HR. 5269/S.2761)",
+        "foreign_entity_issues": null,
+        "general_issue_code": "HCR",
+        "general_issue_code_display": "Health Issues",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": "Legislative Director, Rep. Anna Eshoo; Legislative Assistant, Sen. Robert Torricelli; Legislative Assistant, Sen. Barbara Boxer",
+            "lobbyist": {
+              "first_name": "STACEY",
+              "id": 152260,
+              "last_name": "RAMPY",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      }
+    ],
+    "posted_by_name": "Stacey Rampy",
+    "registrant": {
+      "address_1": "1415 Spring Vale Ave",
+      "address_2": null,
+      "address_3": null,
+      "address_4": null,
+      "city": "Mclean",
+      "contact_name": "STACEY RAMPY",
+      "contact_telephone": "+1 202-360-3604",
+      "country": "US",
+      "country_display": "United States of America",
+      "description": null,
+      "dt_updated": "2026-01-07T11:45:09.666987-05:00",
+      "house_registrant_id": 77356,
+      "id": 401110174,
+      "name": "RAMPY STRATEGIES, LLC",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "state": "VA",
+      "state_display": "Virginia",
+      "url": "https://lda.senate.gov/api/v1/registrants/401110174/",
+      "zip": "22101"
+    },
+    "registrant_address_1": "1415 Spring Vale Ave",
+    "registrant_address_2": null,
+    "registrant_city": "Mclean",
+    "registrant_country": "United States of America",
+    "registrant_different_address": null,
+    "registrant_ppb_country": "United States of America",
+    "registrant_state": "VA",
+    "registrant_zip": "22101",
+    "termination_date": null,
+    "url": "https://lda.senate.gov/api/v1/filings/0c755939-fb0e-48b1-8847-ad0bd51cfaed/"
+  },
+  {
+    "affiliated_organizations": [],
+    "client": {
+      "client_government_entity": null,
+      "client_id": 70366,
+      "client_self_select": false,
+      "country": "US",
+      "country_display": "United States of America",
+      "effective_date": "2025-12-17",
+      "general_description": "Medical technology",
+      "id": 70366,
+      "name": "ALTRAZEAL LIFE SCIENCES INC.",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "ppb_state": "TX",
+      "ppb_state_display": "Texas",
+      "state": "TX",
+      "state_display": "Texas",
+      "url": "https://lda.senate.gov/api/v1/clients/70366/"
+    },
+    "conviction_disclosures": [],
+    "dt_posted": "2026-01-02T15:55:30-05:00",
+    "expenses": null,
+    "expenses_method": null,
+    "expenses_method_display": null,
+    "filing_document_content_type": "text/html",
+    "filing_document_url": "https://lda.senate.gov/filings/public/filing/58ae6a98-9879-4894-be90-9bee7feffca6/print/",
+    "filing_period": "fourth_quarter",
+    "filing_period_display": "4th Quarter (Oct 1 - Dec 31)",
+    "filing_type": "RR",
+    "filing_type_display": "Registration",
+    "filing_uuid": "58ae6a98-9879-4894-be90-9bee7feffca6",
+    "filing_year": 2025,
+    "foreign_entities": [],
+    "income": null,
+    "lobbying_activities": [
+      {
+        "description": "Issues related to Medicare coverage and payment for wound management systems",
+        "foreign_entity_issues": null,
+        "general_issue_code": "MMM",
+        "general_issue_code_display": "Medicare/Medicaid",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "JODIE",
+              "id": 139872,
+              "last_name": "CURTIS",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": "ms",
+              "prefix_display": "MS.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "ILISA",
+              "id": 133401,
+              "last_name": "HALPERN PAUL",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "JENNIFER",
+              "id": 138127,
+              "last_name": "TAYLOR MCBRIDE",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": "ms",
+              "prefix_display": "MS.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      }
+    ],
+    "posted_by_name": "Ronald M. Jacobs, Partner",
+    "registrant": {
+      "address_1": "600 Massachusetts Avenue NW",
+      "address_2": null,
+      "address_3": null,
+      "address_4": null,
+      "city": "Washington",
+      "contact_name": "RONALD M. JACOBS",
+      "contact_telephone": "+1 202-344-4000",
+      "country": "US",
+      "country_display": "United States of America",
+      "description": "Law firm",
+      "dt_updated": "2026-01-29T11:09:12.300850-05:00",
+      "house_registrant_id": 31958,
+      "id": 39941,
+      "name": "VENABLE LLP",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "state": "DC",
+      "state_display": "District of Columbia",
+      "url": "https://lda.senate.gov/api/v1/registrants/39941/",
+      "zip": "20001"
+    },
+    "registrant_address_1": "600 Massachusetts Avenue NW",
+    "registrant_address_2": null,
+    "registrant_city": "Washington",
+    "registrant_country": "United States of America",
+    "registrant_different_address": null,
+    "registrant_ppb_country": null,
+    "registrant_state": "DC",
+    "registrant_zip": "20001",
+    "termination_date": null,
+    "url": "https://lda.senate.gov/api/v1/filings/58ae6a98-9879-4894-be90-9bee7feffca6/"
+  },
+  {
+    "affiliated_organizations": [],
+    "client": {
+      "client_government_entity": null,
+      "client_id": 70372,
+      "client_self_select": false,
+      "country": "US",
+      "country_display": "United States of America",
+      "effective_date": "2025-11-01",
+      "general_description": "Virtual Patient Advocacy Services",
+      "id": 70372,
+      "name": "SOLACE INC.",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "ppb_state": "CA",
+      "ppb_state_display": "California",
+      "state": "CA",
+      "state_display": "California",
+      "url": "https://lda.senate.gov/api/v1/clients/70372/"
+    },
+    "conviction_disclosures": [],
+    "dt_posted": "2026-01-03T20:18:35-05:00",
+    "expenses": null,
+    "expenses_method": null,
+    "expenses_method_display": null,
+    "filing_document_content_type": "text/html",
+    "filing_document_url": "https://lda.senate.gov/filings/public/filing/1a93c5f1-0815-42fe-a4c1-1342b9aecf52/print/",
+    "filing_period": "fourth_quarter",
+    "filing_period_display": "4th Quarter (Oct 1 - Dec 31)",
+    "filing_type": "RR",
+    "filing_type_display": "Registration",
+    "filing_uuid": "1a93c5f1-0815-42fe-a4c1-1342b9aecf52",
+    "filing_year": 2025,
+    "foreign_entities": [],
+    "income": null,
+    "lobbying_activities": [
+      {
+        "description": "Health care finances",
+        "foreign_entity_issues": null,
+        "general_issue_code": "MMM",
+        "general_issue_code_display": "Medicare/Medicaid",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": "Federal Legislative Consultant",
+            "lobbyist": {
+              "first_name": "KATE",
+              "id": 2312,
+              "last_name": "FINKELSTEIN",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Federal Legislative Consultant",
+            "lobbyist": {
+              "first_name": "ELLEN",
+              "id": 12395,
+              "last_name": "KUGLER",
+              "middle_name": "J",
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Federal Legislative Consultant",
+            "lobbyist": {
+              "first_name": "SOMMER",
+              "id": 152817,
+              "last_name": "SISON",
+              "middle_name": "SIVICHANE",
+              "nickname": null,
+              "prefix": "ms",
+              "prefix_display": "MS.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      },
+      {
+        "description": "Health care finances",
+        "foreign_entity_issues": null,
+        "general_issue_code": "HCR",
+        "general_issue_code_display": "Health Issues",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": "Federal Legislative Consultant",
+            "lobbyist": {
+              "first_name": "KATE",
+              "id": 2312,
+              "last_name": "FINKELSTEIN",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Federal Legislative Consultant",
+            "lobbyist": {
+              "first_name": "ELLEN",
+              "id": 12395,
+              "last_name": "KUGLER",
+              "middle_name": "J",
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Federal Legislative Consultant",
+            "lobbyist": {
+              "first_name": "SOMMER",
+              "id": 152817,
+              "last_name": "SISON",
+              "middle_name": "SIVICHANE",
+              "nickname": null,
+              "prefix": "ms",
+              "prefix_display": "MS.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      }
+    ],
+    "posted_by_name": "Ellen J Kugler",
+    "registrant": {
+      "address_1": "21351 Gentry Drive",
+      "address_2": "Suite 210",
+      "address_3": null,
+      "address_4": null,
+      "city": "Sterling",
+      "contact_name": "ELLEN J. KUGLER",
+      "contact_telephone": "+1 703-444-4091",
+      "country": "US",
+      "country_display": "United States of America",
+      "description": "Health Policy Consulting Firm",
+      "dt_updated": "2026-01-23T09:58:07.634541-05:00",
+      "house_registrant_id": 31362,
+      "id": 11834,
+      "name": "DEBRUNNER & ASSOCIATES, INC.",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "state": "VA",
+      "state_display": "Virginia",
+      "url": "https://lda.senate.gov/api/v1/registrants/11834/",
+      "zip": "20166"
+    },
+    "registrant_address_1": "21351 Gentry Drive",
+    "registrant_address_2": "Suite 210",
+    "registrant_city": "Sterling",
+    "registrant_country": "United States of America",
+    "registrant_different_address": null,
+    "registrant_ppb_country": null,
+    "registrant_state": "VA",
+    "registrant_zip": "20166",
+    "termination_date": null,
+    "url": "https://lda.senate.gov/api/v1/filings/1a93c5f1-0815-42fe-a4c1-1342b9aecf52/"
+  },
+  {
+    "affiliated_organizations": [],
+    "client": {
+      "client_government_entity": null,
+      "client_id": 70373,
+      "client_self_select": false,
+      "country": "US",
+      "country_display": "United States of America",
+      "effective_date": "2026-01-01",
+      "general_description": "The leading human rights organization for all individuals with Down syndrome.",
+      "id": 70373,
+      "name": "NATIONAL DOWN SYNDROME SOCIETY",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "ppb_state": "DC",
+      "ppb_state_display": "District of Columbia",
+      "state": "DC",
+      "state_display": "District of Columbia",
+      "url": "https://lda.senate.gov/api/v1/clients/70373/"
+    },
+    "conviction_disclosures": [],
+    "dt_posted": "2026-01-03T20:52:02-05:00",
+    "expenses": null,
+    "expenses_method": null,
+    "expenses_method_display": null,
+    "filing_document_content_type": "text/html",
+    "filing_document_url": "https://lda.senate.gov/filings/public/filing/d26203bd-2c15-40a9-9db4-656987fa964e/print/",
+    "filing_period": "first_quarter",
+    "filing_period_display": "1st Quarter (Jan 1 - Mar 31)",
+    "filing_type": "RR",
+    "filing_type_display": "Registration",
+    "filing_uuid": "d26203bd-2c15-40a9-9db4-656987fa964e",
+    "filing_year": 2026,
+    "foreign_entities": [],
+    "income": null,
+    "lobbying_activities": [
+      {
+        "description": "Charlotte Woodward Organ Transplant Discrimination Prevention Act; protecting and strengthening Medicaid coverage and access for individuals with Down syndrome; supporting reforms to the Social Security Income program to enhance the lives of individuals with disabilities",
+        "foreign_entity_issues": null,
+        "general_issue_code": "HCR",
+        "general_issue_code_display": "Health Issues",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "MEGAN",
+              "id": 153881,
+              "last_name": "BURKE",
+              "middle_name": "CRISTINA",
+              "nickname": null,
+              "prefix": "ms",
+              "prefix_display": "MS.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      },
+      {
+        "description": "Charlotte Woodward Organ Transplant Discrimination Prevention Act; protecting and strengthening Medicaid coverage and access for individuals with Down syndrome; supporting reforms to the Social Security Income program to enhance the lives of individuals with disabilities",
+        "foreign_entity_issues": null,
+        "general_issue_code": "MMM",
+        "general_issue_code_display": "Medicare/Medicaid",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "MEGAN",
+              "id": 153881,
+              "last_name": "BURKE",
+              "middle_name": "CRISTINA",
+              "nickname": null,
+              "prefix": "ms",
+              "prefix_display": "MS.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      },
+      {
+        "description": "Charlotte Woodward Organ Transplant Discrimination Prevention Act; protecting and strengthening Medicaid coverage and access for individuals with Down syndrome; supporting reforms to the Social Security Income program to enhance the lives of individuals with disabilities",
+        "foreign_entity_issues": null,
+        "general_issue_code": "BUD",
+        "general_issue_code_display": "Budget/Appropriations",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "MEGAN",
+              "id": 153881,
+              "last_name": "BURKE",
+              "middle_name": "CRISTINA",
+              "nickname": null,
+              "prefix": "ms",
+              "prefix_display": "MS.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      },
+      {
+        "description": "Charlotte Woodward Organ Transplant Discrimination Prevention Act; protecting and strengthening Medicaid coverage and access for individuals with Down syndrome; supporting reforms to the Social Security Income program to enhance the lives of individuals with disabilities",
+        "foreign_entity_issues": null,
+        "general_issue_code": "WEL",
+        "general_issue_code_display": "Welfare",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "MEGAN",
+              "id": 153881,
+              "last_name": "BURKE",
+              "middle_name": "CRISTINA",
+              "nickname": null,
+              "prefix": "ms",
+              "prefix_display": "MS.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      }
+    ],
+    "posted_by_name": "Megan Burke",
+    "registrant": {
+      "address_1": "2007 Franklin Avenue",
+      "address_2": null,
+      "address_3": null,
+      "address_4": null,
+      "city": "McLean",
+      "contact_name": "MEGAN BURKE",
+      "contact_telephone": "+1 813-391-1402",
+      "country": "US",
+      "country_display": "United States of America",
+      "description": null,
+      "dt_updated": "2026-05-11T12:42:58.714350-04:00",
+      "house_registrant_id": 77350,
+      "id": 401110179,
+      "name": "ADAPTIVE GOVERNMENT RELATIONS",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "state": "VA",
+      "state_display": "Virginia",
+      "url": "https://lda.senate.gov/api/v1/registrants/401110179/",
+      "zip": "22101"
+    },
+    "registrant_address_1": "4201 Wilson Boulevard",
+    "registrant_address_2": "3rd Floor",
+    "registrant_city": "Arlington",
+    "registrant_country": "United States of America",
+    "registrant_different_address": null,
+    "registrant_ppb_country": null,
+    "registrant_state": "VA",
+    "registrant_zip": "22003",
+    "termination_date": null,
+    "url": "https://lda.senate.gov/api/v1/filings/d26203bd-2c15-40a9-9db4-656987fa964e/"
+  },
+  {
+    "affiliated_organizations": [],
+    "client": {
+      "client_government_entity": null,
+      "client_id": 70385,
+      "client_self_select": false,
+      "country": "US",
+      "country_display": "United States of America",
+      "effective_date": "2026-01-05",
+      "general_description": "Manufacturing and distributing kefir, a cultured dairy product",
+      "id": 70385,
+      "name": "LIFEWAY FOODS, INC",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "ppb_state": "IL",
+      "ppb_state_display": "Illinois",
+      "state": "IL",
+      "state_display": "Illinois",
+      "url": "https://lda.senate.gov/api/v1/clients/70385/"
+    },
+    "conviction_disclosures": [],
+    "dt_posted": "2026-01-05T13:13:22-05:00",
+    "expenses": null,
+    "expenses_method": null,
+    "expenses_method_display": null,
+    "filing_document_content_type": "text/html",
+    "filing_document_url": "https://lda.senate.gov/filings/public/filing/7cd44718-178e-4401-9997-30326c6e6b15/print/",
+    "filing_period": "first_quarter",
+    "filing_period_display": "1st Quarter (Jan 1 - Mar 31)",
+    "filing_type": "RR",
+    "filing_type_display": "Registration",
+    "filing_uuid": "7cd44718-178e-4401-9997-30326c6e6b15",
+    "filing_year": 2026,
+    "foreign_entities": [
+      {
+        "address": "59-61 rue La Fayette",
+        "city": "Paris",
+        "contribution": "0.00",
+        "country": "FR",
+        "country_display": "France",
+        "name": "DANONE",
+        "ownership_percentage": "20.00",
+        "ppb_city": "Paris",
+        "ppb_country": "FR",
+        "ppb_country_display": "France",
+        "ppb_state": null,
+        "ppb_state_display": null,
+        "state": null,
+        "state_display": null
+      }
+    ],
+    "income": null,
+    "lobbying_activities": [
+      {
+        "description": "Ensuring kefir is recognized as a valuable product by the FDA, included in Medicaid Food as Medicine programs, covered by health insurance and Medicare for populations that need probiotics, provided fair access to the Canadian consumer market and acknowledged as an important American export by agencies that support manufacturers.",
+        "foreign_entity_issues": null,
+        "general_issue_code": "AGR",
+        "general_issue_code_display": "Agriculture",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "DAN",
+              "id": 152270,
+              "last_name": "JOHNSON",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      },
+      {
+        "description": "Ensuring kefir is recognized as a valuable product by the FDA, included in Medicaid Food as Medicine programs, covered by health insurance and Medicare for populations that need probiotics, provided fair access to the Canadian consumer market and acknowledged as an important American export by agencies that support manufacturers.",
+        "foreign_entity_issues": null,
+        "general_issue_code": "TAR",
+        "general_issue_code_display": "Tariff (miscellaneous tariff bills)",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "DAN",
+              "id": 152270,
+              "last_name": "JOHNSON",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      },
+      {
+        "description": "Ensuring kefir is recognized as a valuable product by the FDA, included in Medicaid Food as Medicine programs, covered by health insurance and Medicare for populations that need probiotics, provided fair access to the Canadian consumer market and acknowledged as an important American export by agencies that support manufacturers.",
+        "foreign_entity_issues": null,
+        "general_issue_code": "MAN",
+        "general_issue_code_display": "Manufacturing",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "DAN",
+              "id": 152270,
+              "last_name": "JOHNSON",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      },
+      {
+        "description": "Ensuring kefir is recognized as a valuable product by the FDA, included in Medicaid Food as Medicine programs, covered by health insurance and Medicare for populations that need probiotics, provided fair access to the Canadian consumer market and acknowledged as an important American export by agencies that support manufacturers.",
+        "foreign_entity_issues": null,
+        "general_issue_code": "FOO",
+        "general_issue_code_display": "Food Industry (safety, labeling, etc.)",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "DAN",
+              "id": 152270,
+              "last_name": "JOHNSON",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      },
+      {
+        "description": "Ensuring kefir is recognized as a valuable product by the FDA, included in Medicaid Food as Medicine programs, covered by health insurance and Medicare for populations that need probiotics, provided fair access to the Canadian consumer market and acknowledged as an important American export by agencies that support manufacturers.",
+        "foreign_entity_issues": null,
+        "general_issue_code": "BEV",
+        "general_issue_code_display": "Beverage Industry",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "DAN",
+              "id": 152270,
+              "last_name": "JOHNSON",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      },
+      {
+        "description": "Ensuring kefir is recognized as a valuable product by the FDA, included in Medicaid Food as Medicine programs, covered by health insurance and Medicare for populations that need probiotics, provided fair access to the Canadian consumer market and acknowledged as an important American export by agencies that support manufacturers.",
+        "foreign_entity_issues": null,
+        "general_issue_code": "MMM",
+        "general_issue_code_display": "Medicare/Medicaid",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "DAN",
+              "id": 152270,
+              "last_name": "JOHNSON",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      },
+      {
+        "description": "Ensuring kefir is recognized as a valuable product by the FDA, included in Medicaid Food as Medicine programs, covered by health insurance and Medicare for populations that need probiotics, provided fair access to the Canadian consumer market and acknowledged as an important American export by agencies that support manufacturers.",
+        "foreign_entity_issues": null,
+        "general_issue_code": "HCR",
+        "general_issue_code_display": "Health Issues",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "DAN",
+              "id": 152270,
+              "last_name": "JOHNSON",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      }
+    ],
+    "posted_by_name": "Dan Johnson",
+    "registrant": {
+      "address_1": "820 Lake Avenue",
+      "address_2": null,
+      "address_3": null,
+      "address_4": null,
+      "city": "Wilmette",
+      "contact_name": "DAN JOHNSON",
+      "contact_telephone": "+1 312-933-4890",
+      "country": "US",
+      "country_display": "United States of America",
+      "description": null,
+      "dt_updated": "2025-10-16T06:27:51.382298-04:00",
+      "house_registrant_id": 77252,
+      "id": 401109999,
+      "name": "LOBBYING FOR IMPROVEMENTS",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "state": "IL",
+      "state_display": "Illinois",
+      "url": "https://lda.senate.gov/api/v1/registrants/401109999/",
+      "zip": "60091"
+    },
+    "registrant_address_1": "820 Lake Avenue",
+    "registrant_address_2": null,
+    "registrant_city": "Wilmette",
+    "registrant_country": "United States of America",
+    "registrant_different_address": null,
+    "registrant_ppb_country": "United States of America",
+    "registrant_state": "IL",
+    "registrant_zip": "60091",
+    "termination_date": null,
+    "url": "https://lda.senate.gov/api/v1/filings/7cd44718-178e-4401-9997-30326c6e6b15/"
+  },
+  {
+    "affiliated_organizations": [],
+    "client": {
+      "client_government_entity": null,
+      "client_id": 70389,
+      "client_self_select": false,
+      "country": "US",
+      "country_display": "United States of America",
+      "effective_date": "2025-11-19",
+      "general_description": "Pharmaceutical manufacturer",
+      "id": 70389,
+      "name": "KARYOPHARM THERAPEUTICS",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "ppb_state": "MA",
+      "ppb_state_display": "Massachusetts",
+      "state": "MA",
+      "state_display": "Massachusetts",
+      "url": "https://lda.senate.gov/api/v1/clients/70389/"
+    },
+    "conviction_disclosures": [],
+    "dt_posted": "2026-01-05T14:44:17-05:00",
+    "expenses": null,
+    "expenses_method": null,
+    "expenses_method_display": null,
+    "filing_document_content_type": "text/html",
+    "filing_document_url": "https://lda.senate.gov/filings/public/filing/7a9e7229-95dd-47a1-9a5b-e757652d9896/print/",
+    "filing_period": "fourth_quarter",
+    "filing_period_display": "4th Quarter (Oct 1 - Dec 31)",
+    "filing_type": "RR",
+    "filing_type_display": "Registration",
+    "filing_uuid": "7a9e7229-95dd-47a1-9a5b-e757652d9896",
+    "filing_year": 2025,
+    "foreign_entities": [],
+    "income": null,
+    "lobbying_activities": [
+      {
+        "description": "Rare disease policy, drug approval process",
+        "foreign_entity_issues": null,
+        "general_issue_code": "HCR",
+        "general_issue_code_display": "Health Issues",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": "Health Policy Director, Sen. Orrin Hatch; Chief of Staff,Legislative Director, Legislative Assistant, Rep. MikeBilirakis",
+            "lobbyist": {
+              "first_name": "PATRICIA",
+              "id": 147219,
+              "last_name": "DELOATCHE",
+              "middle_name": "LOUISE",
+              "nickname": null,
+              "prefix": "ms",
+              "prefix_display": "MS.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Detailee to the Energy and Commerce Committee, U.S. House of Representatives",
+            "lobbyist": {
+              "first_name": "ABIGAIL",
+              "id": 149564,
+              "last_name": "CARROLL",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      }
+    ],
+    "posted_by_name": "Patricia DeLoatche",
+    "registrant": {
+      "address_1": "1501 K Street",
+      "address_2": null,
+      "address_3": null,
+      "address_4": null,
+      "city": "Washington",
+      "contact_name": "KYLE J. FIET",
+      "contact_telephone": "+1 202-736-8446",
+      "country": "US",
+      "country_display": "United States of America",
+      "description": "law firm",
+      "dt_updated": "2026-01-22T15:10:25.715545-05:00",
+      "house_registrant_id": 31204,
+      "id": 35230,
+      "name": "SIDLEY AUSTIN LLP",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "state": "DC",
+      "state_display": "District of Columbia",
+      "url": "https://lda.senate.gov/api/v1/registrants/35230/",
+      "zip": "20005"
+    },
+    "registrant_address_1": "1501 K Street",
+    "registrant_address_2": null,
+    "registrant_city": "Washington",
+    "registrant_country": "United States of America",
+    "registrant_different_address": null,
+    "registrant_ppb_country": null,
+    "registrant_state": "DC",
+    "registrant_zip": "20005",
+    "termination_date": null,
+    "url": "https://lda.senate.gov/api/v1/filings/7a9e7229-95dd-47a1-9a5b-e757652d9896/"
+  },
+  {
+    "affiliated_organizations": [],
+    "client": {
+      "client_government_entity": null,
+      "client_id": 70417,
+      "client_self_select": false,
+      "country": "US",
+      "country_display": "United States of America",
+      "effective_date": "2025-11-01",
+      "general_description": "Health Insurance",
+      "id": 70417,
+      "name": "BLUE CROSS BLUE SHIELD OF KANSAS",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "ppb_state": "KS",
+      "ppb_state_display": "Kansas",
+      "state": "KS",
+      "state_display": "Kansas",
+      "url": "https://lda.senate.gov/api/v1/clients/70417/"
+    },
+    "conviction_disclosures": [],
+    "dt_posted": "2026-01-06T16:39:12-05:00",
+    "expenses": null,
+    "expenses_method": null,
+    "expenses_method_display": null,
+    "filing_document_content_type": "text/html",
+    "filing_document_url": "https://lda.senate.gov/filings/public/filing/78871261-ee17-44e2-94c2-73eba149f9b9/print/",
+    "filing_period": "fourth_quarter",
+    "filing_period_display": "4th Quarter (Oct 1 - Dec 31)",
+    "filing_type": "RR",
+    "filing_type_display": "Registration",
+    "filing_uuid": "78871261-ee17-44e2-94c2-73eba149f9b9",
+    "filing_year": 2025,
+    "foreign_entities": [],
+    "income": null,
+    "lobbying_activities": [
+      {
+        "description": "general healthcare and health insurance issues. No specific legislation.",
+        "foreign_entity_issues": null,
+        "general_issue_code": "INS",
+        "general_issue_code_display": "Insurance",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": "Served as COS/State Director/Counsel to US Senator Pat Roberts; Served as Gen Counsel to US Senator Roger Marshall",
+            "lobbyist": {
+              "first_name": "CHAD",
+              "id": 139953,
+              "last_name": "TENPENNY",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      },
+      {
+        "description": "general healthcare and health insurance issues. No specific legislation.",
+        "foreign_entity_issues": null,
+        "general_issue_code": "HCR",
+        "general_issue_code_display": "Health Issues",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": "Served as COS/State Director/Counsel to US Senator Pat Roberts; Served as Gen Counsel to US Senator Roger Marshall",
+            "lobbyist": {
+              "first_name": "CHAD",
+              "id": 139953,
+              "last_name": "TENPENNY",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      }
+    ],
+    "posted_by_name": "Chad D Tenpenny",
+    "registrant": {
+      "address_1": "5004 W 131st St",
+      "address_2": "Suite 110",
+      "address_3": null,
+      "address_4": null,
+      "city": "Leawood",
+      "contact_name": "CHAD D TENPENNY",
+      "contact_telephone": "+1 913-609-4659",
+      "country": "US",
+      "country_display": "United States of America",
+      "description": null,
+      "dt_updated": "2026-01-06T16:55:01.802538-05:00",
+      "house_registrant_id": 45732,
+      "id": 401106873,
+      "name": "TENPENNY LAW LLC",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "state": "KS",
+      "state_display": "Kansas",
+      "url": "https://lda.senate.gov/api/v1/registrants/401106873/",
+      "zip": "66209"
+    },
+    "registrant_address_1": "5004 W 131st St",
+    "registrant_address_2": "Suite 110",
+    "registrant_city": "Leawood",
+    "registrant_country": "United States of America",
+    "registrant_different_address": null,
+    "registrant_ppb_country": null,
+    "registrant_state": "KS",
+    "registrant_zip": "66209",
+    "termination_date": null,
+    "url": "https://lda.senate.gov/api/v1/filings/78871261-ee17-44e2-94c2-73eba149f9b9/"
+  },
+  {
+    "affiliated_organizations": [],
+    "client": {
+      "client_government_entity": null,
+      "client_id": 70428,
+      "client_self_select": false,
+      "country": "US",
+      "country_display": "United States of America",
+      "effective_date": "2025-10-10",
+      "general_description": "Healthcare information technology.",
+      "id": 70428,
+      "name": "VERSIMA",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "ppb_state": "VA",
+      "ppb_state_display": "Virginia",
+      "state": "VA",
+      "state_display": "Virginia",
+      "url": "https://lda.senate.gov/api/v1/clients/70428/"
+    },
+    "conviction_disclosures": [],
+    "dt_posted": "2026-01-07T13:18:03-05:00",
+    "expenses": null,
+    "expenses_method": null,
+    "expenses_method_display": null,
+    "filing_document_content_type": "text/html",
+    "filing_document_url": "https://lda.senate.gov/filings/public/filing/f3a68807-b70a-41d4-985e-62623088fe70/print/",
+    "filing_period": "fourth_quarter",
+    "filing_period_display": "4th Quarter (Oct 1 - Dec 31)",
+    "filing_type": "RR",
+    "filing_type_display": "Registration",
+    "filing_uuid": "f3a68807-b70a-41d4-985e-62623088fe70",
+    "filing_year": 2025,
+    "foreign_entities": [],
+    "income": null,
+    "lobbying_activities": [
+      {
+        "description": "Proposed Modifications to the HIPAA Privacy Rule To Support, and Remove Barriers to, Coordinated Care and Individual Engagement.",
+        "foreign_entity_issues": null,
+        "general_issue_code": "HCR",
+        "general_issue_code_display": "Health Issues",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": "Assistant Deputy Secretary, Deputy Asst. Secretary, Deputy Chief of Staff, Chief of Staff, Office of ESEA, Department of Education; Professional Staff, House Education and Workforce Committee.",
+            "lobbyist": {
+              "first_name": "DOUG",
+              "id": 72976,
+              "last_name": "MESECAR",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      }
+    ],
+    "posted_by_name": "Kenneth Swab",
+    "registrant": {
+      "address_1": "4320 W. Kennedy Blvd.",
+      "address_2": null,
+      "address_3": null,
+      "address_4": null,
+      "city": "Tampa",
+      "contact_name": "KENNETH SWAB",
+      "contact_telephone": "+1 202-546-1761",
+      "country": "US",
+      "country_display": "United States of America",
+      "description": "&#226;\u20ac\u2039Public affairs and business consultancy.",
+      "dt_updated": "2026-01-27T10:34:33.595578-05:00",
+      "house_registrant_id": null,
+      "id": 401104199,
+      "name": "STRATEGOS PUBLIC AFFAIRS",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "state": "FL",
+      "state_display": "Florida",
+      "url": "https://lda.senate.gov/api/v1/registrants/401104199/",
+      "zip": "33609"
+    },
+    "registrant_address_1": "4320 W. Kennedy Blvd.",
+    "registrant_address_2": null,
+    "registrant_city": "Tampa",
+    "registrant_country": "United States of America",
+    "registrant_different_address": null,
+    "registrant_ppb_country": null,
+    "registrant_state": "FL",
+    "registrant_zip": "33609",
+    "termination_date": null,
+    "url": "https://lda.senate.gov/api/v1/filings/f3a68807-b70a-41d4-985e-62623088fe70/"
+  },
+  {
+    "affiliated_organizations": [],
+    "client": {
+      "client_government_entity": null,
+      "client_id": 70436,
+      "client_self_select": false,
+      "country": "US",
+      "country_display": "United States of America",
+      "effective_date": "2025-12-01",
+      "general_description": "Patient advocacy for ALS research and treatment.",
+      "id": 70436,
+      "name": "ALS UNITED",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "ppb_state": "OR",
+      "ppb_state_display": "Oregon",
+      "state": "OR",
+      "state_display": "Oregon",
+      "url": "https://lda.senate.gov/api/v1/clients/70436/"
+    },
+    "conviction_disclosures": [],
+    "dt_posted": "2026-01-07T17:27:55-05:00",
+    "expenses": null,
+    "expenses_method": null,
+    "expenses_method_display": null,
+    "filing_document_content_type": "text/html",
+    "filing_document_url": "https://lda.senate.gov/filings/public/filing/aa49dc29-4602-43fa-937a-f9c99e528386/print/",
+    "filing_period": "fourth_quarter",
+    "filing_period_display": "4th Quarter (Oct 1 - Dec 31)",
+    "filing_type": "RR",
+    "filing_type_display": "Registration",
+    "filing_uuid": "aa49dc29-4602-43fa-937a-f9c99e528386",
+    "filing_year": 2025,
+    "foreign_entities": [],
+    "income": null,
+    "lobbying_activities": [
+      {
+        "description": "Support for ALS research and treatment.",
+        "foreign_entity_issues": null,
+        "general_issue_code": "HCR",
+        "general_issue_code_display": "Health Issues",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "ANDREW",
+              "id": 50816,
+              "last_name": "ROSENBERG",
+              "middle_name": null,
+              "nickname": "ANDY",
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "MICHAEL",
+              "id": 58218,
+              "last_name": "MCCARTHY",
+              "middle_name": "O'SHEA",
+              "nickname": null,
+              "prefix": "mr",
+              "prefix_display": "MR.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      }
+    ],
+    "posted_by_name": "Beth Anne Cole",
+    "registrant": {
+      "address_1": "100 M Street, SE",
+      "address_2": "Suite 750",
+      "address_3": null,
+      "address_4": null,
+      "city": "Washington",
+      "contact_name": "W. CHRISTOPHER LAMOND",
+      "contact_telephone": "+1 202-688-0225",
+      "country": "US",
+      "country_display": "United States of America",
+      "description": "Government Affairs Firm",
+      "dt_updated": "2026-01-29T09:03:11.805178-05:00",
+      "house_registrant_id": 41161,
+      "id": 400534596,
+      "name": "THORN RUN PARTNERS",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "state": "DC",
+      "state_display": "District of Columbia",
+      "url": "https://lda.senate.gov/api/v1/registrants/400534596/",
+      "zip": "20003"
+    },
+    "registrant_address_1": "100 M Street, SE",
+    "registrant_address_2": "Suite 750",
+    "registrant_city": "Washington",
+    "registrant_country": "United States of America",
+    "registrant_different_address": null,
+    "registrant_ppb_country": null,
+    "registrant_state": "DC",
+    "registrant_zip": "20003",
+    "termination_date": null,
+    "url": "https://lda.senate.gov/api/v1/filings/aa49dc29-4602-43fa-937a-f9c99e528386/"
+  },
+  {
+    "affiliated_organizations": [],
+    "client": {
+      "client_government_entity": null,
+      "client_id": 70437,
+      "client_self_select": false,
+      "country": "US",
+      "country_display": "United States of America",
+      "effective_date": "2025-11-17",
+      "general_description": "Automation and insights platform for healthcare efficiency.",
+      "id": 70437,
+      "name": "SMARTER TECHNOLOGIES",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "ppb_state": "TX",
+      "ppb_state_display": "Texas",
+      "state": "TX",
+      "state_display": "Texas",
+      "url": "https://lda.senate.gov/api/v1/clients/70437/"
+    },
+    "conviction_disclosures": [],
+    "dt_posted": "2026-01-07T17:34:44-05:00",
+    "expenses": null,
+    "expenses_method": null,
+    "expenses_method_display": null,
+    "filing_document_content_type": "text/html",
+    "filing_document_url": "https://lda.senate.gov/filings/public/filing/95d41e8f-9961-4aa7-a1ff-a2e1cb48db8c/print/",
+    "filing_period": "fourth_quarter",
+    "filing_period_display": "4th Quarter (Oct 1 - Dec 31)",
+    "filing_type": "RR",
+    "filing_type_display": "Registration",
+    "filing_uuid": "95d41e8f-9961-4aa7-a1ff-a2e1cb48db8c",
+    "filing_year": 2025,
+    "foreign_entities": [],
+    "income": null,
+    "lobbying_activities": [
+      {
+        "description": "Development of artificial intelligence in healthcare.",
+        "foreign_entity_issues": null,
+        "general_issue_code": "HCR",
+        "general_issue_code_display": "Health Issues",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": "Chief of Staff, Representative Carolyn McCarthy; Chief of Staff, Representative Zack Space; Press Secretary, Senator Jay Rockefeller; Press Secretary, Representative Barbara Lee",
+            "lobbyist": {
+              "first_name": "STUART",
+              "id": 64036,
+              "last_name": "CHAPMAN",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "HAYDEN",
+              "id": 151309,
+              "last_name": "JEWETT",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      }
+    ],
+    "posted_by_name": "Beth Anne Cole",
+    "registrant": {
+      "address_1": "100 M Street, SE",
+      "address_2": "Suite 750",
+      "address_3": null,
+      "address_4": null,
+      "city": "Washington",
+      "contact_name": "W. CHRISTOPHER LAMOND",
+      "contact_telephone": "+1 202-688-0225",
+      "country": "US",
+      "country_display": "United States of America",
+      "description": "Government Affairs Firm",
+      "dt_updated": "2026-01-29T09:03:11.805178-05:00",
+      "house_registrant_id": 41161,
+      "id": 400534596,
+      "name": "THORN RUN PARTNERS",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "state": "DC",
+      "state_display": "District of Columbia",
+      "url": "https://lda.senate.gov/api/v1/registrants/400534596/",
+      "zip": "20003"
+    },
+    "registrant_address_1": "100 M Street, SE",
+    "registrant_address_2": "Suite 750",
+    "registrant_city": "Washington",
+    "registrant_country": "United States of America",
+    "registrant_different_address": null,
+    "registrant_ppb_country": null,
+    "registrant_state": "DC",
+    "registrant_zip": "20003",
+    "termination_date": null,
+    "url": "https://lda.senate.gov/api/v1/filings/95d41e8f-9961-4aa7-a1ff-a2e1cb48db8c/"
+  },
+  {
+    "affiliated_organizations": [
+      {
+        "address_1": "3101 NE 27th Avenue",
+        "address_2": null,
+        "address_3": null,
+        "address_4": null,
+        "city": "Lighthouse Point",
+        "country": "US",
+        "country_display": "United States of America",
+        "name": "IT'S ALL GOOD, LLC",
+        "ppb_city": null,
+        "ppb_country": "US",
+        "ppb_country_display": "United States of America",
+        "ppb_state": "FL",
+        "ppb_state_display": "Florida",
+        "state": "FL",
+        "state_display": "Florida",
+        "url": null,
+        "zip": "33064"
+      }
+    ],
+    "client": {
+      "client_government_entity": null,
+      "client_id": 70452,
+      "client_self_select": false,
+      "country": "US",
+      "country_display": "United States of America",
+      "effective_date": "2026-01-05",
+      "general_description": "Investment firm",
+      "id": 70452,
+      "name": "FARUK CAPAN ON BEHALF OF IT'S ALL GOOD, LLC",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "ppb_state": "FL",
+      "ppb_state_display": "Florida",
+      "state": "FL",
+      "state_display": "Florida",
+      "url": "https://lda.senate.gov/api/v1/clients/70452/"
+    },
+    "conviction_disclosures": [],
+    "dt_posted": "2026-01-08T14:05:30-05:00",
+    "expenses": null,
+    "expenses_method": null,
+    "expenses_method_display": null,
+    "filing_document_content_type": "text/html",
+    "filing_document_url": "https://lda.senate.gov/filings/public/filing/53bc64e9-bb5f-48e4-b87b-c172d0e7c271/print/",
+    "filing_period": "first_quarter",
+    "filing_period_display": "1st Quarter (Jan 1 - Mar 31)",
+    "filing_type": "RR",
+    "filing_type_display": "Registration",
+    "filing_uuid": "53bc64e9-bb5f-48e4-b87b-c172d0e7c271",
+    "filing_year": 2026,
+    "foreign_entities": [],
+    "income": null,
+    "lobbying_activities": [
+      {
+        "description": "Drug pricing reform, pharmaceutical advertising, use of AI in healthcare.",
+        "foreign_entity_issues": null,
+        "general_issue_code": "HCR",
+        "general_issue_code_display": "Health Issues",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "THOMAS",
+              "id": 142977,
+              "last_name": "MATHIASEN",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "NICK",
+              "id": 152301,
+              "last_name": "BONFIGLIO",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "LIZZY",
+              "id": 147702,
+              "last_name": "IRWIN",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "AVA",
+              "id": 148495,
+              "last_name": "COFIELL",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      }
+    ],
+    "posted_by_name": "Noe Garcia III",
+    "registrant": {
+      "address_1": "1010 Wisconsin Avenue NW",
+      "address_2": "Suite 710",
+      "address_3": null,
+      "address_4": null,
+      "city": "Washington",
+      "contact_name": "NOE GARCIA",
+      "contact_telephone": "+1 202-870-8298",
+      "country": "US",
+      "country_display": "United States of America",
+      "description": "Government Affairs and Consulting",
+      "dt_updated": "2026-01-30T16:54:17.259897-05:00",
+      "house_registrant_id": null,
+      "id": 401105597,
+      "name": "FORWARD GLOBAL",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "state": "DC",
+      "state_display": "District of Columbia",
+      "url": "https://lda.senate.gov/api/v1/registrants/401105597/",
+      "zip": "20007"
+    },
+    "registrant_address_1": "1010 Wisconsin Avenue NW",
+    "registrant_address_2": "Suite 710",
+    "registrant_city": "Washington",
+    "registrant_country": "United States of America",
+    "registrant_different_address": null,
+    "registrant_ppb_country": null,
+    "registrant_state": "DC",
+    "registrant_zip": "20007",
+    "termination_date": null,
+    "url": "https://lda.senate.gov/api/v1/filings/53bc64e9-bb5f-48e4-b87b-c172d0e7c271/"
+  },
+  {
+    "affiliated_organizations": [],
+    "client": {
+      "client_government_entity": null,
+      "client_id": 70460,
+      "client_self_select": false,
+      "country": "US",
+      "country_display": "United States of America",
+      "effective_date": "2025-09-02",
+      "general_description": "government relations matters pertaining to global science policy",
+      "id": 70460,
+      "name": "AMERICAN SOCIETY FOR MICROBIOLOGY",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "ppb_state": "DC",
+      "ppb_state_display": "District of Columbia",
+      "state": "DC",
+      "state_display": "District of Columbia",
+      "url": "https://lda.senate.gov/api/v1/clients/70460/"
+    },
+    "conviction_disclosures": [],
+    "dt_posted": "2026-01-08T16:18:16-05:00",
+    "expenses": null,
+    "expenses_method": null,
+    "expenses_method_display": null,
+    "filing_document_content_type": "text/html",
+    "filing_document_url": "https://lda.senate.gov/filings/public/filing/df412803-e04c-4ece-b961-2b5cde524879/print/",
+    "filing_period": "third_quarter",
+    "filing_period_display": "3rd Quarter (July 1 - Sep 30)",
+    "filing_type": "RR",
+    "filing_type_display": "Registration",
+    "filing_uuid": "df412803-e04c-4ece-b961-2b5cde524879",
+    "filing_year": 2025,
+    "foreign_entities": [],
+    "income": null,
+    "lobbying_activities": [
+      {
+        "description": "matters pertaining to global science policy",
+        "foreign_entity_issues": null,
+        "general_issue_code": "BUD",
+        "general_issue_code_display": "Budget/Appropriations",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "CARRIE",
+              "id": 144739,
+              "last_name": "WOLINETZ",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Agricultural Science Fellow, Office of the Chief Scientist, U.S. Department of Agriculture; Science Policy Advisor for Food and Life Sciences, White House Office of Science and Technology Policy.",
+            "lobbyist": {
+              "first_name": "ELIZABETH",
+              "id": 121949,
+              "last_name": "STULBERG",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "REBECCA",
+              "id": 138137,
+              "last_name": "ADLER MISERENDINO",
+              "middle_name": "ABIGAIL",
+              "nickname": null,
+              "prefix": "ms",
+              "prefix_display": "MS.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Legislative Director, Sen. Leg. Assistant, Leg. Assistant, Leg. Correspondent/Media Specialist, Staff Assistant, Intern, Congressman Peter J. Visclosky",
+            "lobbyist": {
+              "first_name": "MICHAEL",
+              "id": 152328,
+              "last_name": "PETERSON",
+              "middle_name": "ANTHONY",
+              "nickname": null,
+              "prefix": "mr",
+              "prefix_display": "MR.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      },
+      {
+        "description": "matters pertaining to global science policy",
+        "foreign_entity_issues": null,
+        "general_issue_code": "SCI",
+        "general_issue_code_display": "Science/Technology",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "CARRIE",
+              "id": 144739,
+              "last_name": "WOLINETZ",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "REBECCA",
+              "id": 138137,
+              "last_name": "ADLER MISERENDINO",
+              "middle_name": "ABIGAIL",
+              "nickname": null,
+              "prefix": "ms",
+              "prefix_display": "MS.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Agricultural Science Fellow, Office of the Chief Scientist, U.S. Department of Agriculture; Science Policy Advisor for Food and Life Sciences, White House Office of Science and Technology Policy.",
+            "lobbyist": {
+              "first_name": "ELIZABETH",
+              "id": 121949,
+              "last_name": "STULBERG",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Legislative Director, Sen. Leg. Assistant, Leg. Assistant, Leg. Correspondent/Media Specialist, Staff Assistant, Intern, Congressman Peter J. Visclosky",
+            "lobbyist": {
+              "first_name": "MICHAEL",
+              "id": 152328,
+              "last_name": "PETERSON",
+              "middle_name": "ANTHONY",
+              "nickname": null,
+              "prefix": "mr",
+              "prefix_display": "MR.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      },
+      {
+        "description": "matters pertaining to global science policy",
+        "foreign_entity_issues": null,
+        "general_issue_code": "AGR",
+        "general_issue_code_display": "Agriculture",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "CARRIE",
+              "id": 144739,
+              "last_name": "WOLINETZ",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "REBECCA",
+              "id": 138137,
+              "last_name": "ADLER MISERENDINO",
+              "middle_name": "ABIGAIL",
+              "nickname": null,
+              "prefix": "ms",
+              "prefix_display": "MS.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Agricultural Science Fellow, Office of the Chief Scientist, U.S. Department of Agriculture; Science Policy Advisor for Food and Life Sciences, White House Office of Science and Technology Policy.",
+            "lobbyist": {
+              "first_name": "ELIZABETH",
+              "id": 121949,
+              "last_name": "STULBERG",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Legislative Director, Sen. Leg. Assistant, Leg. Assistant, Leg. Correspondent/Media Specialist, Staff Assistant, Intern, Congressman Peter J. Visclosky",
+            "lobbyist": {
+              "first_name": "MICHAEL",
+              "id": 152328,
+              "last_name": "PETERSON",
+              "middle_name": "ANTHONY",
+              "nickname": null,
+              "prefix": "mr",
+              "prefix_display": "MR.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      },
+      {
+        "description": "matters pertaining to global science policy",
+        "foreign_entity_issues": null,
+        "general_issue_code": "HCR",
+        "general_issue_code_display": "Health Issues",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "CARRIE",
+              "id": 144739,
+              "last_name": "WOLINETZ",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Agricultural Science Fellow, Office of the Chief Scientist, U.S. Department of Agriculture; Science Policy Advisor for Food and Life Sciences, White House Office of Science and Technology Policy.",
+            "lobbyist": {
+              "first_name": "ELIZABETH",
+              "id": 121949,
+              "last_name": "STULBERG",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "REBECCA",
+              "id": 138137,
+              "last_name": "ADLER MISERENDINO",
+              "middle_name": "ABIGAIL",
+              "nickname": null,
+              "prefix": "ms",
+              "prefix_display": "MS.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Legislative Director, Sen. Leg. Assistant, Leg. Assistant, Leg. Correspondent/Media Specialist, Staff Assistant, Intern, Congressman Peter J. Visclosky",
+            "lobbyist": {
+              "first_name": "MICHAEL",
+              "id": 152328,
+              "last_name": "PETERSON",
+              "middle_name": "ANTHONY",
+              "nickname": null,
+              "prefix": "mr",
+              "prefix_display": "MR.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      }
+    ],
+    "posted_by_name": "reed skaggs",
+    "registrant": {
+      "address_1": "440 1st Street NW",
+      "address_2": "Suite 700",
+      "address_3": null,
+      "address_4": null,
+      "city": "Washington",
+      "contact_name": "REED SKAGGS",
+      "contact_telephone": "+1 202-289-7475",
+      "country": "US",
+      "country_display": "United States of America",
+      "description": "Lobbying and Consulting Firm",
+      "dt_updated": "2026-01-28T14:55:41.471573-05:00",
+      "house_registrant_id": 30442,
+      "id": 22781,
+      "name": "LEWIS-BURKE ASSOCIATES, LLC",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "state": "DC",
+      "state_display": "District of Columbia",
+      "url": "https://lda.senate.gov/api/v1/registrants/22781/",
+      "zip": "20001"
+    },
+    "registrant_address_1": "440 1st Street NW",
+    "registrant_address_2": "Suite 700",
+    "registrant_city": "Washington",
+    "registrant_country": "United States of America",
+    "registrant_different_address": null,
+    "registrant_ppb_country": null,
+    "registrant_state": "DC",
+    "registrant_zip": "20001",
+    "termination_date": null,
+    "url": "https://lda.senate.gov/api/v1/filings/df412803-e04c-4ece-b961-2b5cde524879/"
+  },
+  {
+    "affiliated_organizations": [],
+    "client": {
+      "client_government_entity": null,
+      "client_id": 70462,
+      "client_self_select": false,
+      "country": "US",
+      "country_display": "United States of America",
+      "effective_date": "2026-01-08",
+      "general_description": "Health care",
+      "id": 70462,
+      "name": "SHARKEY ISSAQUENA COMMUNITY HOSPITAL",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "ppb_state": "MS",
+      "ppb_state_display": "Mississippi",
+      "state": "MS",
+      "state_display": "Mississippi",
+      "url": "https://lda.senate.gov/api/v1/clients/70462/"
+    },
+    "conviction_disclosures": [],
+    "dt_posted": "2026-01-08T16:57:10-05:00",
+    "expenses": null,
+    "expenses_method": null,
+    "expenses_method_display": null,
+    "filing_document_content_type": "text/html",
+    "filing_document_url": "https://lda.senate.gov/filings/public/filing/79f0e40b-7102-4c72-b5c9-8cd3bf78d6e5/print/",
+    "filing_period": "first_quarter",
+    "filing_period_display": "1st Quarter (Jan 1 - Mar 31)",
+    "filing_type": "RR",
+    "filing_type_display": "Registration",
+    "filing_uuid": "79f0e40b-7102-4c72-b5c9-8cd3bf78d6e5",
+    "filing_year": 2026,
+    "foreign_entities": [],
+    "income": null,
+    "lobbying_activities": [
+      {
+        "description": "Rural Healthcare issues",
+        "foreign_entity_issues": null,
+        "general_issue_code": "HCR",
+        "general_issue_code_display": "Health Issues",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "KATIE",
+              "id": 73508,
+              "last_name": "SNELL",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      }
+    ],
+    "posted_by_name": "Katie Bryant Snell",
+    "registrant": {
+      "address_1": "300 Concourse Boulevard",
+      "address_2": "#103",
+      "address_3": null,
+      "address_4": null,
+      "city": "Ridgeland",
+      "contact_name": "KATIE BRYANT SNELL",
+      "contact_telephone": "+1 601-594-1108",
+      "country": "US",
+      "country_display": "United States of America",
+      "description": "consulting and lobbying",
+      "dt_updated": "2026-03-02T10:45:02.188826-05:00",
+      "house_registrant_id": null,
+      "id": 401105559,
+      "name": "BRYANT SONGY SNELL LLC",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "state": "MS",
+      "state_display": "Mississippi",
+      "url": "https://lda.senate.gov/api/v1/registrants/401105559/",
+      "zip": "39157"
+    },
+    "registrant_address_1": "300 Concourse Boulevard",
+    "registrant_address_2": "#103",
+    "registrant_city": "Ridgeland",
+    "registrant_country": "United States of America",
+    "registrant_different_address": null,
+    "registrant_ppb_country": null,
+    "registrant_state": "MS",
+    "registrant_zip": "39157",
+    "termination_date": null,
+    "url": "https://lda.senate.gov/api/v1/filings/79f0e40b-7102-4c72-b5c9-8cd3bf78d6e5/"
+  },
+  {
+    "affiliated_organizations": [],
+    "client": {
+      "client_government_entity": null,
+      "client_id": 70468,
+      "client_self_select": false,
+      "country": "US",
+      "country_display": "United States of America",
+      "effective_date": "2025-10-01",
+      "general_description": "nonprofit organization helping people affected by Guillain-Barre Syndrome, CIDP, MMN, etc.",
+      "id": 70468,
+      "name": "GBS CIDP FOUNDATION INTERNATIONAL",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "ppb_state": "PA",
+      "ppb_state_display": "Pennsylvania",
+      "state": "PA",
+      "state_display": "Pennsylvania",
+      "url": "https://lda.senate.gov/api/v1/clients/70468/"
+    },
+    "conviction_disclosures": [],
+    "dt_posted": "2026-01-09T09:00:32-05:00",
+    "expenses": null,
+    "expenses_method": null,
+    "expenses_method_display": null,
+    "filing_document_content_type": "text/html",
+    "filing_document_url": "https://lda.senate.gov/filings/public/filing/80935d71-d251-48d6-9b89-5fbb7fa9ee8f/print/",
+    "filing_period": "fourth_quarter",
+    "filing_period_display": "4th Quarter (Oct 1 - Dec 31)",
+    "filing_type": "RR",
+    "filing_type_display": "Registration",
+    "filing_uuid": "80935d71-d251-48d6-9b89-5fbb7fa9ee8f",
+    "filing_year": 2025,
+    "foreign_entities": [],
+    "income": null,
+    "lobbying_activities": [
+      {
+        "description": "NIH Appropriations, CDMRP Appropriations, Medicare payment, disability civil rights, FDA issues",
+        "foreign_entity_issues": null,
+        "general_issue_code": "BUD",
+        "general_issue_code_display": "Budget/Appropriations",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "ERIC",
+              "id": 152312,
+              "last_name": "GASCHO",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      },
+      {
+        "description": "NIH Appropriations, CDMRP Appropriations, Medicare payment, disability civil rights, FDA issues",
+        "foreign_entity_issues": null,
+        "general_issue_code": "CIV",
+        "general_issue_code_display": "Civil Rights/Civil Liberties",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "ERIC",
+              "id": 152312,
+              "last_name": "GASCHO",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      },
+      {
+        "description": "NIH Appropriations, CDMRP Appropriations, Medicare payment, disability civil rights, FDA issues",
+        "foreign_entity_issues": null,
+        "general_issue_code": "HCR",
+        "general_issue_code_display": "Health Issues",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "ERIC",
+              "id": 152312,
+              "last_name": "GASCHO",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      },
+      {
+        "description": "NIH Appropriations, CDMRP Appropriations, Medicare payment, disability civil rights, FDA issues",
+        "foreign_entity_issues": null,
+        "general_issue_code": "MMM",
+        "general_issue_code_display": "Medicare/Medicaid",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "ERIC",
+              "id": 152312,
+              "last_name": "GASCHO",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      }
+    ],
+    "posted_by_name": "Katina Pierce",
+    "registrant": {
+      "address_1": "600 Maryland Avenue SW",
+      "address_2": "Suite 220E",
+      "address_3": null,
+      "address_4": null,
+      "city": "Washington",
+      "contact_name": "KATINA PIERCE",
+      "contact_telephone": "+1 202-484-1100",
+      "country": "US",
+      "country_display": "United States of America",
+      "description": "Consultant firm",
+      "dt_updated": "2026-01-09T10:20:33.802241-05:00",
+      "house_registrant_id": 31321,
+      "id": 8511,
+      "name": "CAVAROCCHI RUSCIO DENNIS ASSOCIATES, L.L.C.",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "state": "DC",
+      "state_display": "District of Columbia",
+      "url": "https://lda.senate.gov/api/v1/registrants/8511/",
+      "zip": "20024"
+    },
+    "registrant_address_1": "600 Maryland Avenue SW",
+    "registrant_address_2": "Suite 220E",
+    "registrant_city": "Washington",
+    "registrant_country": "United States of America",
+    "registrant_different_address": null,
+    "registrant_ppb_country": null,
+    "registrant_state": "DC",
+    "registrant_zip": "20024",
+    "termination_date": null,
+    "url": "https://lda.senate.gov/api/v1/filings/80935d71-d251-48d6-9b89-5fbb7fa9ee8f/"
+  },
+  {
+    "affiliated_organizations": [],
+    "client": {
+      "client_government_entity": null,
+      "client_id": 70484,
+      "client_self_select": false,
+      "country": "US",
+      "country_display": "United States of America",
+      "effective_date": "2025-11-01",
+      "general_description": "ophthalmic biotechnology company",
+      "id": 70484,
+      "name": "OPUS GENETICS, INC",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "ppb_state": "MD",
+      "ppb_state_display": "Maryland",
+      "state": "MD",
+      "state_display": "Maryland",
+      "url": "https://lda.senate.gov/api/v1/clients/70484/"
+    },
+    "conviction_disclosures": [],
+    "dt_posted": "2026-01-09T15:29:09-05:00",
+    "expenses": null,
+    "expenses_method": null,
+    "expenses_method_display": null,
+    "filing_document_content_type": "text/html",
+    "filing_document_url": "https://lda.senate.gov/filings/public/filing/a6171d7e-3458-4939-9f10-099488cc2e03/print/",
+    "filing_period": "fourth_quarter",
+    "filing_period_display": "4th Quarter (Oct 1 - Dec 31)",
+    "filing_type": "RR",
+    "filing_type_display": "Registration",
+    "filing_uuid": "a6171d7e-3458-4939-9f10-099488cc2e03",
+    "filing_year": 2025,
+    "foreign_entities": [],
+    "income": null,
+    "lobbying_activities": [
+      {
+        "description": "issues related to FDA regulation of gene therapies",
+        "foreign_entity_issues": null,
+        "general_issue_code": "HCR",
+        "general_issue_code_display": "Health Issues",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": "Legislative Assistant, Rep. Mike Kelly",
+            "lobbyist": {
+              "first_name": "JOHN",
+              "id": 67296,
+              "last_name": "RAY",
+              "middle_name": "R",
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "KENNETH",
+              "id": 139878,
+              "last_name": "HODGE",
+              "middle_name": "LEE",
+              "nickname": null,
+              "prefix": "mr",
+              "prefix_display": "MR.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "DAVID",
+              "id": 68519,
+              "last_name": "RUDLOFF",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "JEFFREY",
+              "id": 42442,
+              "last_name": "KIMBELL",
+              "middle_name": "J",
+              "nickname": null,
+              "prefix": "mr",
+              "prefix_display": "MR.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Health Aide, Sen. Lamar Alexander; Special Assistant to the Assistant to the President for Legislative Affairs, Executive Office of the President",
+            "lobbyist": {
+              "first_name": "JOHN",
+              "id": 53650,
+              "last_name": "HERZOG",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Deputy Health Policy Director, Senate Committee on Health, Education, Labor and Pensions; Deputy Press Secretary, Office of Senator Lamar Alexander",
+            "lobbyist": {
+              "first_name": "BRETT",
+              "id": 150293,
+              "last_name": "MEEKS",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Counsel, Sen. John Cornyn; Deputy Assistant Secretary for Legislation, U.S. Department of Health and Human Services; Counselor to the Secretary, U.S. Department of Health and Human Services",
+            "lobbyist": {
+              "first_name": "LAURA",
+              "id": 149308,
+              "last_name": "KEMPER",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Legislative Director, Rep. Marsha Blackburn",
+            "lobbyist": {
+              "first_name": "KEITH",
+              "id": 60159,
+              "last_name": "STUDDARD",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      }
+    ],
+    "posted_by_name": "Jeffrey J. Kimbell",
+    "registrant": {
+      "address_1": "401 9th Street NW",
+      "address_2": "Suite 920",
+      "address_3": null,
+      "address_4": null,
+      "city": "Washington",
+      "contact_name": "JEFFREY KIMBELL",
+      "contact_telephone": "+1 202-735-2590",
+      "country": "US",
+      "country_display": "United States of America",
+      "description": "Consulting Firm",
+      "dt_updated": "2026-03-13T14:33:52.953675-04:00",
+      "house_registrant_id": 34381,
+      "id": 46038,
+      "name": "JEFFREY J. KIMBELL & ASSOCIATES, INC.",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "state": "DC",
+      "state_display": "District of Columbia",
+      "url": "https://lda.senate.gov/api/v1/registrants/46038/",
+      "zip": "20004"
+    },
+    "registrant_address_1": "401 9th Street NW",
+    "registrant_address_2": "Suite 920",
+    "registrant_city": "Washington",
+    "registrant_country": "United States of America",
+    "registrant_different_address": null,
+    "registrant_ppb_country": null,
+    "registrant_state": "DC",
+    "registrant_zip": "20004",
+    "termination_date": null,
+    "url": "https://lda.senate.gov/api/v1/filings/a6171d7e-3458-4939-9f10-099488cc2e03/"
+  },
+  {
+    "affiliated_organizations": [],
+    "client": {
+      "client_government_entity": null,
+      "client_id": 70487,
+      "client_self_select": false,
+      "country": "US",
+      "country_display": "United States of America",
+      "effective_date": "2025-11-01",
+      "general_description": "research and advocacy organization",
+      "id": 70487,
+      "name": "MEDICARE ALLIANCE FOR BENEFICIARY ACCESS, INC.",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "ppb_state": "UT",
+      "ppb_state_display": "Utah",
+      "state": "UT",
+      "state_display": "Utah",
+      "url": "https://lda.senate.gov/api/v1/clients/70487/"
+    },
+    "conviction_disclosures": [],
+    "dt_posted": "2026-01-09T15:35:33-05:00",
+    "expenses": null,
+    "expenses_method": null,
+    "expenses_method_display": null,
+    "filing_document_content_type": "text/html",
+    "filing_document_url": "https://lda.senate.gov/filings/public/filing/82a98eac-b795-46e0-a1da-22cca5725824/print/",
+    "filing_period": "fourth_quarter",
+    "filing_period_display": "4th Quarter (Oct 1 - Dec 31)",
+    "filing_type": "RR",
+    "filing_type_display": "Registration",
+    "filing_uuid": "82a98eac-b795-46e0-a1da-22cca5725824",
+    "filing_year": 2025,
+    "foreign_entities": [],
+    "income": null,
+    "lobbying_activities": [
+      {
+        "description": "issues related to Medicare physician reimbursement",
+        "foreign_entity_issues": null,
+        "general_issue_code": "MMM",
+        "general_issue_code_display": "Medicare/Medicaid",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": "Legislative Assistant, Rep. Mike Kelly",
+            "lobbyist": {
+              "first_name": "JOHN",
+              "id": 67296,
+              "last_name": "RAY",
+              "middle_name": "R",
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "KENNETH",
+              "id": 139878,
+              "last_name": "HODGE",
+              "middle_name": "LEE",
+              "nickname": null,
+              "prefix": "mr",
+              "prefix_display": "MR.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "DAVID",
+              "id": 68519,
+              "last_name": "RUDLOFF",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "JEFFREY",
+              "id": 42442,
+              "last_name": "KIMBELL",
+              "middle_name": "J",
+              "nickname": null,
+              "prefix": "mr",
+              "prefix_display": "MR.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Health Aide, Sen. Lamar Alexander; Special Assistant to the Assistant to the President for Legislative Affairs, Executive Office of the President",
+            "lobbyist": {
+              "first_name": "JOHN",
+              "id": 53650,
+              "last_name": "HERZOG",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Deputy Health Policy Director, Senate Committee on Health, Education, Labor and Pensions; Deputy Press Secretary, Office of Senator Lamar Alexander",
+            "lobbyist": {
+              "first_name": "BRETT",
+              "id": 150293,
+              "last_name": "MEEKS",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Counsel, Sen. John Cornyn; Deputy Assistant Secretary for Legislation, U.S. Department of Health and Human Services; Counselor to the Secretary, U.S. Department of Health and Human Services",
+            "lobbyist": {
+              "first_name": "LAURA",
+              "id": 149308,
+              "last_name": "KEMPER",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Legislative Director, Rep. Marsha Blackburn",
+            "lobbyist": {
+              "first_name": "KEITH",
+              "id": 60159,
+              "last_name": "STUDDARD",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      }
+    ],
+    "posted_by_name": "Jeffrey J. Kimbell",
+    "registrant": {
+      "address_1": "401 9th Street NW",
+      "address_2": "Suite 920",
+      "address_3": null,
+      "address_4": null,
+      "city": "Washington",
+      "contact_name": "JEFFREY KIMBELL",
+      "contact_telephone": "+1 202-735-2590",
+      "country": "US",
+      "country_display": "United States of America",
+      "description": "Consulting Firm",
+      "dt_updated": "2026-03-13T14:33:52.953675-04:00",
+      "house_registrant_id": 34381,
+      "id": 46038,
+      "name": "JEFFREY J. KIMBELL & ASSOCIATES, INC.",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "state": "DC",
+      "state_display": "District of Columbia",
+      "url": "https://lda.senate.gov/api/v1/registrants/46038/",
+      "zip": "20004"
+    },
+    "registrant_address_1": "401 9th Street NW",
+    "registrant_address_2": "Suite 920",
+    "registrant_city": "Washington",
+    "registrant_country": "United States of America",
+    "registrant_different_address": null,
+    "registrant_ppb_country": null,
+    "registrant_state": "DC",
+    "registrant_zip": "20004",
+    "termination_date": null,
+    "url": "https://lda.senate.gov/api/v1/filings/82a98eac-b795-46e0-a1da-22cca5725824/"
+  },
+  {
+    "affiliated_organizations": [],
+    "client": {
+      "client_government_entity": null,
+      "client_id": 70489,
+      "client_self_select": false,
+      "country": "US",
+      "country_display": "United States of America",
+      "effective_date": "2025-11-24",
+      "general_description": "biotechnology company",
+      "id": 70489,
+      "name": "GENETIX BIOTHERAPEUTICS",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "ppb_state": "MA",
+      "ppb_state_display": "Massachusetts",
+      "state": "MA",
+      "state_display": "Massachusetts",
+      "url": "https://lda.senate.gov/api/v1/clients/70489/"
+    },
+    "conviction_disclosures": [],
+    "dt_posted": "2026-01-09T15:42:07-05:00",
+    "expenses": null,
+    "expenses_method": null,
+    "expenses_method_display": null,
+    "filing_document_content_type": "text/html",
+    "filing_document_url": "https://lda.senate.gov/filings/public/filing/22780a77-a3e0-4c5d-94e6-4ba15abd9d95/print/",
+    "filing_period": "fourth_quarter",
+    "filing_period_display": "4th Quarter (Oct 1 - Dec 31)",
+    "filing_type": "RR",
+    "filing_type_display": "Registration",
+    "filing_uuid": "22780a77-a3e0-4c5d-94e6-4ba15abd9d95",
+    "filing_year": 2025,
+    "foreign_entities": [],
+    "income": null,
+    "lobbying_activities": [
+      {
+        "description": "Issues related to FDA regulation of rare disease therapies",
+        "foreign_entity_issues": null,
+        "general_issue_code": "HCR",
+        "general_issue_code_display": "Health Issues",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": "Legislative Assistant, Rep. Mike Kelly",
+            "lobbyist": {
+              "first_name": "JOHN",
+              "id": 67296,
+              "last_name": "RAY",
+              "middle_name": "R",
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "KENNETH",
+              "id": 139878,
+              "last_name": "HODGE",
+              "middle_name": "LEE",
+              "nickname": null,
+              "prefix": "mr",
+              "prefix_display": "MR.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "DAVID",
+              "id": 68519,
+              "last_name": "RUDLOFF",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "JEFFREY",
+              "id": 42442,
+              "last_name": "KIMBELL",
+              "middle_name": "J",
+              "nickname": null,
+              "prefix": "mr",
+              "prefix_display": "MR.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Health Aide, Sen. Lamar Alexander; Special Assistant to the Assistant to the President for Legislative Affairs, Executive Office of the President",
+            "lobbyist": {
+              "first_name": "JOHN",
+              "id": 53650,
+              "last_name": "HERZOG",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Deputy Health Policy Director, Senate Committee on Health, Education, Labor and Pensions; Deputy Press Secretary, Office of Senator Lamar Alexander",
+            "lobbyist": {
+              "first_name": "BRETT",
+              "id": 150293,
+              "last_name": "MEEKS",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Counsel, Sen. John Cornyn; Deputy Assistant Secretary for Legislation, U.S. Department of Health and Human Services; Counselor to the Secretary, U.S. Department of Health and Human Services",
+            "lobbyist": {
+              "first_name": "LAURA",
+              "id": 149308,
+              "last_name": "KEMPER",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Legislative Director, Rep. Marsha Blackburn",
+            "lobbyist": {
+              "first_name": "KEITH",
+              "id": 60159,
+              "last_name": "STUDDARD",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      }
+    ],
+    "posted_by_name": "Jeffrey J. Kimbell",
+    "registrant": {
+      "address_1": "401 9th Street NW",
+      "address_2": "Suite 920",
+      "address_3": null,
+      "address_4": null,
+      "city": "Washington",
+      "contact_name": "JEFFREY KIMBELL",
+      "contact_telephone": "+1 202-735-2590",
+      "country": "US",
+      "country_display": "United States of America",
+      "description": "Consulting Firm",
+      "dt_updated": "2026-03-13T14:33:52.953675-04:00",
+      "house_registrant_id": 34381,
+      "id": 46038,
+      "name": "JEFFREY J. KIMBELL & ASSOCIATES, INC.",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "state": "DC",
+      "state_display": "District of Columbia",
+      "url": "https://lda.senate.gov/api/v1/registrants/46038/",
+      "zip": "20004"
+    },
+    "registrant_address_1": "401 9th Street NW",
+    "registrant_address_2": "Suite 920",
+    "registrant_city": "Washington",
+    "registrant_country": "United States of America",
+    "registrant_different_address": null,
+    "registrant_ppb_country": null,
+    "registrant_state": "DC",
+    "registrant_zip": "20004",
+    "termination_date": null,
+    "url": "https://lda.senate.gov/api/v1/filings/22780a77-a3e0-4c5d-94e6-4ba15abd9d95/"
+  },
+  {
+    "affiliated_organizations": [],
+    "client": {
+      "client_government_entity": null,
+      "client_id": 70490,
+      "client_self_select": false,
+      "country": "US",
+      "country_display": "United States of America",
+      "effective_date": "2025-12-03",
+      "general_description": "medical device company",
+      "id": 70490,
+      "name": "NEUSPERA MEDICAL",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "ppb_state": "CA",
+      "ppb_state_display": "California",
+      "state": "CA",
+      "state_display": "California",
+      "url": "https://lda.senate.gov/api/v1/clients/70490/"
+    },
+    "conviction_disclosures": [],
+    "dt_posted": "2026-01-09T15:47:11-05:00",
+    "expenses": null,
+    "expenses_method": null,
+    "expenses_method_display": null,
+    "filing_document_content_type": "text/html",
+    "filing_document_url": "https://lda.senate.gov/filings/public/filing/5e491df3-40f5-44c4-b590-8b9ab81b3310/print/",
+    "filing_period": "fourth_quarter",
+    "filing_period_display": "4th Quarter (Oct 1 - Dec 31)",
+    "filing_type": "RR",
+    "filing_type_display": "Registration",
+    "filing_uuid": "5e491df3-40f5-44c4-b590-8b9ab81b3310",
+    "filing_year": 2025,
+    "foreign_entities": [],
+    "income": null,
+    "lobbying_activities": [
+      {
+        "description": "Issues related to reimbursement",
+        "foreign_entity_issues": null,
+        "general_issue_code": "MMM",
+        "general_issue_code_display": "Medicare/Medicaid",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": "Legislative Assistant, Rep. Mike Kelly",
+            "lobbyist": {
+              "first_name": "JOHN",
+              "id": 67296,
+              "last_name": "RAY",
+              "middle_name": "R",
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "KENNETH",
+              "id": 139878,
+              "last_name": "HODGE",
+              "middle_name": "LEE",
+              "nickname": null,
+              "prefix": "mr",
+              "prefix_display": "MR.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "DAVID",
+              "id": 68519,
+              "last_name": "RUDLOFF",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "JEFFREY",
+              "id": 42442,
+              "last_name": "KIMBELL",
+              "middle_name": "J",
+              "nickname": null,
+              "prefix": "mr",
+              "prefix_display": "MR.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Health Aide, Sen. Lamar Alexander; Special Assistant to the Assistant to the President for Legislative Affairs, Executive Office of the President",
+            "lobbyist": {
+              "first_name": "JOHN",
+              "id": 53650,
+              "last_name": "HERZOG",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Deputy Health Policy Director, Senate Committee on Health, Education, Labor and Pensions; Deputy Press Secretary, Office of Senator Lamar Alexander",
+            "lobbyist": {
+              "first_name": "BRETT",
+              "id": 150293,
+              "last_name": "MEEKS",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Counsel, Sen. John Cornyn; Deputy Assistant Secretary for Legislation, U.S. Department of Health and Human Services; Counselor to the Secretary, U.S. Department of Health and Human Services",
+            "lobbyist": {
+              "first_name": "LAURA",
+              "id": 149308,
+              "last_name": "KEMPER",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Legislative Director, Rep. Marsha Blackburn",
+            "lobbyist": {
+              "first_name": "KEITH",
+              "id": 60159,
+              "last_name": "STUDDARD",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      }
+    ],
+    "posted_by_name": "Jeffrey J. Kimbell",
+    "registrant": {
+      "address_1": "401 9th Street NW",
+      "address_2": "Suite 920",
+      "address_3": null,
+      "address_4": null,
+      "city": "Washington",
+      "contact_name": "JEFFREY KIMBELL",
+      "contact_telephone": "+1 202-735-2590",
+      "country": "US",
+      "country_display": "United States of America",
+      "description": "Consulting Firm",
+      "dt_updated": "2026-03-13T14:33:52.953675-04:00",
+      "house_registrant_id": 34381,
+      "id": 46038,
+      "name": "JEFFREY J. KIMBELL & ASSOCIATES, INC.",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "state": "DC",
+      "state_display": "District of Columbia",
+      "url": "https://lda.senate.gov/api/v1/registrants/46038/",
+      "zip": "20004"
+    },
+    "registrant_address_1": "401 9th Street NW",
+    "registrant_address_2": "Suite 920",
+    "registrant_city": "Washington",
+    "registrant_country": "United States of America",
+    "registrant_different_address": null,
+    "registrant_ppb_country": null,
+    "registrant_state": "DC",
+    "registrant_zip": "20004",
+    "termination_date": null,
+    "url": "https://lda.senate.gov/api/v1/filings/5e491df3-40f5-44c4-b590-8b9ab81b3310/"
+  },
+  {
+    "affiliated_organizations": [],
+    "client": {
+      "client_government_entity": null,
+      "client_id": 70491,
+      "client_self_select": false,
+      "country": "US",
+      "country_display": "United States of America",
+      "effective_date": "2025-11-24",
+      "general_description": "rare disease focused biopharmaceutical company",
+      "id": 70491,
+      "name": "AGIOS PHARMACEUTICALS, INC.",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "ppb_state": "MA",
+      "ppb_state_display": "Massachusetts",
+      "state": "MA",
+      "state_display": "Massachusetts",
+      "url": "https://lda.senate.gov/api/v1/clients/70491/"
+    },
+    "conviction_disclosures": [],
+    "dt_posted": "2026-01-09T15:53:40-05:00",
+    "expenses": null,
+    "expenses_method": null,
+    "expenses_method_display": null,
+    "filing_document_content_type": "text/html",
+    "filing_document_url": "https://lda.senate.gov/filings/public/filing/a2173a37-5409-4753-8a8a-92220d96a9dc/print/",
+    "filing_period": "fourth_quarter",
+    "filing_period_display": "4th Quarter (Oct 1 - Dec 31)",
+    "filing_type": "RR",
+    "filing_type_display": "Registration",
+    "filing_uuid": "a2173a37-5409-4753-8a8a-92220d96a9dc",
+    "filing_year": 2025,
+    "foreign_entities": [],
+    "income": null,
+    "lobbying_activities": [
+      {
+        "description": "issues related to prescription drugs",
+        "foreign_entity_issues": null,
+        "general_issue_code": "HCR",
+        "general_issue_code_display": "Health Issues",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": "Legislative Assistant, Rep. Mike Kelly",
+            "lobbyist": {
+              "first_name": "JOHN",
+              "id": 67296,
+              "last_name": "RAY",
+              "middle_name": "R",
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "KENNETH",
+              "id": 139878,
+              "last_name": "HODGE",
+              "middle_name": "LEE",
+              "nickname": null,
+              "prefix": "mr",
+              "prefix_display": "MR.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "DAVID",
+              "id": 68519,
+              "last_name": "RUDLOFF",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "JEFFREY",
+              "id": 42442,
+              "last_name": "KIMBELL",
+              "middle_name": "J",
+              "nickname": null,
+              "prefix": "mr",
+              "prefix_display": "MR.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Health Aide, Sen. Lamar Alexander; Special Assistant to the Assistant to the President for Legislative Affairs, Executive Office of the President",
+            "lobbyist": {
+              "first_name": "JOHN",
+              "id": 53650,
+              "last_name": "HERZOG",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Deputy Health Policy Director, Senate Committee on Health, Education, Labor and Pensions; Deputy Press Secretary, Office of Senator Lamar Alexander",
+            "lobbyist": {
+              "first_name": "BRETT",
+              "id": 150293,
+              "last_name": "MEEKS",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Counsel, Sen. John Cornyn; Deputy Assistant Secretary for Legislation, U.S. Department of Health and Human Services; Counselor to the Secretary, U.S. Department of Health and Human Services",
+            "lobbyist": {
+              "first_name": "LAURA",
+              "id": 149308,
+              "last_name": "KEMPER",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Legislative Director, Rep. Marsha Blackburn",
+            "lobbyist": {
+              "first_name": "KEITH",
+              "id": 60159,
+              "last_name": "STUDDARD",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      }
+    ],
+    "posted_by_name": "Jeffrey J. Kimbell",
+    "registrant": {
+      "address_1": "401 9th Street NW",
+      "address_2": "Suite 920",
+      "address_3": null,
+      "address_4": null,
+      "city": "Washington",
+      "contact_name": "JEFFREY KIMBELL",
+      "contact_telephone": "+1 202-735-2590",
+      "country": "US",
+      "country_display": "United States of America",
+      "description": "Consulting Firm",
+      "dt_updated": "2026-03-13T14:33:52.953675-04:00",
+      "house_registrant_id": 34381,
+      "id": 46038,
+      "name": "JEFFREY J. KIMBELL & ASSOCIATES, INC.",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "state": "DC",
+      "state_display": "District of Columbia",
+      "url": "https://lda.senate.gov/api/v1/registrants/46038/",
+      "zip": "20004"
+    },
+    "registrant_address_1": "401 9th Street NW",
+    "registrant_address_2": "Suite 920",
+    "registrant_city": "Washington",
+    "registrant_country": "United States of America",
+    "registrant_different_address": null,
+    "registrant_ppb_country": null,
+    "registrant_state": "DC",
+    "registrant_zip": "20004",
+    "termination_date": null,
+    "url": "https://lda.senate.gov/api/v1/filings/a2173a37-5409-4753-8a8a-92220d96a9dc/"
+  },
+  {
+    "affiliated_organizations": [],
+    "client": {
+      "client_government_entity": null,
+      "client_id": 70492,
+      "client_self_select": false,
+      "country": "US",
+      "country_display": "United States of America",
+      "effective_date": "2025-12-18",
+      "general_description": "pharmaceutical company",
+      "id": 70492,
+      "name": "INDIVIOR INC.",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "ppb_state": "VA",
+      "ppb_state_display": "Virginia",
+      "state": "VA",
+      "state_display": "Virginia",
+      "url": "https://lda.senate.gov/api/v1/clients/70492/"
+    },
+    "conviction_disclosures": [],
+    "dt_posted": "2026-01-09T16:00:23-05:00",
+    "expenses": null,
+    "expenses_method": null,
+    "expenses_method_display": null,
+    "filing_document_content_type": "text/html",
+    "filing_document_url": "https://lda.senate.gov/filings/public/filing/c3d49fe1-843a-474b-958d-c022def58cd3/print/",
+    "filing_period": "fourth_quarter",
+    "filing_period_display": "4th Quarter (Oct 1 - Dec 31)",
+    "filing_type": "RR",
+    "filing_type_display": "Registration",
+    "filing_uuid": "c3d49fe1-843a-474b-958d-c022def58cd3",
+    "filing_year": 2025,
+    "foreign_entities": [],
+    "income": null,
+    "lobbying_activities": [
+      {
+        "description": "issues related to substance use disorder",
+        "foreign_entity_issues": null,
+        "general_issue_code": "HCR",
+        "general_issue_code_display": "Health Issues",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": "Legislative Assistant, Rep. Mike Kelly",
+            "lobbyist": {
+              "first_name": "JOHN",
+              "id": 67296,
+              "last_name": "RAY",
+              "middle_name": "R",
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "KENNETH",
+              "id": 139878,
+              "last_name": "HODGE",
+              "middle_name": "LEE",
+              "nickname": null,
+              "prefix": "mr",
+              "prefix_display": "MR.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "DAVID",
+              "id": 68519,
+              "last_name": "RUDLOFF",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "JEFFREY",
+              "id": 42442,
+              "last_name": "KIMBELL",
+              "middle_name": "J",
+              "nickname": null,
+              "prefix": "mr",
+              "prefix_display": "MR.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Health Aide, Sen. Lamar Alexander; Special Assistant to the Assistant to the President for Legislative Affairs, Executive Office of the President",
+            "lobbyist": {
+              "first_name": "JOHN",
+              "id": 53650,
+              "last_name": "HERZOG",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Deputy Health Policy Director, Senate Committee on Health, Education, Labor and Pensions; Deputy Press Secretary, Office of Senator Lamar Alexander",
+            "lobbyist": {
+              "first_name": "BRETT",
+              "id": 150293,
+              "last_name": "MEEKS",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Counsel, Sen. John Cornyn; Deputy Assistant Secretary for Legislation, U.S. Department of Health and Human Services; Counselor to the Secretary, U.S. Department of Health and Human Services",
+            "lobbyist": {
+              "first_name": "LAURA",
+              "id": 149308,
+              "last_name": "KEMPER",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Legislative Director, Rep. Marsha Blackburn",
+            "lobbyist": {
+              "first_name": "KEITH",
+              "id": 60159,
+              "last_name": "STUDDARD",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      }
+    ],
+    "posted_by_name": "Jeffrey J. Kimbell",
+    "registrant": {
+      "address_1": "401 9th Street NW",
+      "address_2": "Suite 920",
+      "address_3": null,
+      "address_4": null,
+      "city": "Washington",
+      "contact_name": "JEFFREY KIMBELL",
+      "contact_telephone": "+1 202-735-2590",
+      "country": "US",
+      "country_display": "United States of America",
+      "description": "Consulting Firm",
+      "dt_updated": "2026-03-13T14:33:52.953675-04:00",
+      "house_registrant_id": 34381,
+      "id": 46038,
+      "name": "JEFFREY J. KIMBELL & ASSOCIATES, INC.",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "state": "DC",
+      "state_display": "District of Columbia",
+      "url": "https://lda.senate.gov/api/v1/registrants/46038/",
+      "zip": "20004"
+    },
+    "registrant_address_1": "401 9th Street NW",
+    "registrant_address_2": "Suite 920",
+    "registrant_city": "Washington",
+    "registrant_country": "United States of America",
+    "registrant_different_address": null,
+    "registrant_ppb_country": null,
+    "registrant_state": "DC",
+    "registrant_zip": "20004",
+    "termination_date": null,
+    "url": "https://lda.senate.gov/api/v1/filings/c3d49fe1-843a-474b-958d-c022def58cd3/"
+  },
+  {
+    "affiliated_organizations": [],
+    "client": {
+      "client_government_entity": null,
+      "client_id": 70498,
+      "client_self_select": true,
+      "country": "US",
+      "country_display": "United States of America",
+      "effective_date": "2025-11-24",
+      "general_description": "501(c)(4) social welfare organization",
+      "id": 70498,
+      "name": "RESTART SMARTER ALLIANCE A NJ NONPROFIT CORPORATION",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "ppb_state": "NJ",
+      "ppb_state_display": "New Jersey",
+      "state": "NJ",
+      "state_display": "New Jersey",
+      "url": "https://lda.senate.gov/api/v1/clients/70498/"
+    },
+    "conviction_disclosures": [],
+    "dt_posted": "2026-01-11T06:26:44-05:00",
+    "expenses": null,
+    "expenses_method": null,
+    "expenses_method_display": null,
+    "filing_document_content_type": "text/html",
+    "filing_document_url": "https://lda.senate.gov/filings/public/filing/30c2784e-d6c1-44d6-9e9b-166547a4b588/print/",
+    "filing_period": "fourth_quarter",
+    "filing_period_display": "4th Quarter (Oct 1 - Dec 31)",
+    "filing_type": "RR",
+    "filing_type_display": "Registration",
+    "filing_uuid": "30c2784e-d6c1-44d6-9e9b-166547a4b588",
+    "filing_year": 2025,
+    "foreign_entities": [],
+    "income": null,
+    "lobbying_activities": [
+      {
+        "description": "Affordable housing, public health, economic development and small business, education and career training.",
+        "foreign_entity_issues": null,
+        "general_issue_code": "ALC",
+        "general_issue_code_display": "Alcohol and Drug Abuse",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "TERRI",
+              "id": 152324,
+              "last_name": "BEIDEMAN",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      },
+      {
+        "description": "Affordable housing, public health, economic development and small business, education and career training.",
+        "foreign_entity_issues": null,
+        "general_issue_code": "DIS",
+        "general_issue_code_display": "Disaster Planning/Emergencies",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "TERRI",
+              "id": 152324,
+              "last_name": "BEIDEMAN",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      },
+      {
+        "description": "Affordable housing, public health, economic development and small business, education and career training.",
+        "foreign_entity_issues": null,
+        "general_issue_code": "ECN",
+        "general_issue_code_display": "Economics/Economic Development",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "TERRI",
+              "id": 152324,
+              "last_name": "BEIDEMAN",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      },
+      {
+        "description": "Affordable housing, public health, economic development and small business, education and career training.",
+        "foreign_entity_issues": null,
+        "general_issue_code": "EDU",
+        "general_issue_code_display": "Education",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "TERRI",
+              "id": 152324,
+              "last_name": "BEIDEMAN",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      },
+      {
+        "description": "Affordable housing, public health, economic development and small business, education and career training.",
+        "foreign_entity_issues": null,
+        "general_issue_code": "GOV",
+        "general_issue_code_display": "Government Issues",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "TERRI",
+              "id": 152324,
+              "last_name": "BEIDEMAN",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      },
+      {
+        "description": "Affordable housing, public health, economic development and small business, education and career training.",
+        "foreign_entity_issues": null,
+        "general_issue_code": "HCR",
+        "general_issue_code_display": "Health Issues",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "TERRI",
+              "id": 152324,
+              "last_name": "BEIDEMAN",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      },
+      {
+        "description": "Affordable housing, public health, economic development and small business, education and career training.",
+        "foreign_entity_issues": null,
+        "general_issue_code": "HOU",
+        "general_issue_code_display": "Housing",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "TERRI",
+              "id": 152324,
+              "last_name": "BEIDEMAN",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      },
+      {
+        "description": "Affordable housing, public health, economic development and small business, education and career training.",
+        "foreign_entity_issues": null,
+        "general_issue_code": "SMB",
+        "general_issue_code_display": "Small Business",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "TERRI",
+              "id": 152324,
+              "last_name": "BEIDEMAN",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      }
+    ],
+    "posted_by_name": "Terri Beideman",
+    "registrant": {
+      "address_1": "610 Lacey Road Unit 749",
+      "address_2": null,
+      "address_3": null,
+      "address_4": null,
+      "city": "Forked River",
+      "contact_name": "TERRI BEIDEMAN",
+      "contact_telephone": "+1 609-337-6193",
+      "country": "US",
+      "country_display": "United States of America",
+      "description": null,
+      "dt_updated": "2026-01-11T06:08:54.349707-05:00",
+      "house_registrant_id": 77297,
+      "id": 401110088,
+      "name": "RESTART SMARTER ALLIANCE A NJ NONPROFIT CORPORATION",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "state": "NJ",
+      "state_display": "New Jersey",
+      "url": "https://lda.senate.gov/api/v1/registrants/401110088/",
+      "zip": "08731"
+    },
+    "registrant_address_1": "610 Lacey Road Unit 749",
+    "registrant_address_2": null,
+    "registrant_city": "Forked River",
+    "registrant_country": "United States of America",
+    "registrant_different_address": null,
+    "registrant_ppb_country": null,
+    "registrant_state": "NJ",
+    "registrant_zip": "08731",
+    "termination_date": null,
+    "url": "https://lda.senate.gov/api/v1/filings/30c2784e-d6c1-44d6-9e9b-166547a4b588/"
+  },
+  {
+    "affiliated_organizations": [],
+    "client": {
+      "client_government_entity": null,
+      "client_id": 70499,
+      "client_self_select": false,
+      "country": "US",
+      "country_display": "United States of America",
+      "effective_date": "2025-10-01",
+      "general_description": "Biopharmaceutical company focused on rare respiratory diseases.",
+      "id": 70499,
+      "name": "SAVARA INC.",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "ppb_state": "PA",
+      "ppb_state_display": "Pennsylvania",
+      "state": "PA",
+      "state_display": "Pennsylvania",
+      "url": "https://lda.senate.gov/api/v1/clients/70499/"
+    },
+    "conviction_disclosures": [],
+    "dt_posted": "2026-01-11T14:17:40-05:00",
+    "expenses": null,
+    "expenses_method": null,
+    "expenses_method_display": null,
+    "filing_document_content_type": "text/html",
+    "filing_document_url": "https://lda.senate.gov/filings/public/filing/dacfcf09-53ab-477e-8343-7d1db097bf5a/print/",
+    "filing_period": "fourth_quarter",
+    "filing_period_display": "4th Quarter (Oct 1 - Dec 31)",
+    "filing_type": "RR",
+    "filing_type_display": "Registration",
+    "filing_uuid": "dacfcf09-53ab-477e-8343-7d1db097bf5a",
+    "filing_year": 2025,
+    "foreign_entities": [],
+    "income": null,
+    "lobbying_activities": [
+      {
+        "description": "Monitor prescirption drug payment reform. Monitor supply chain. Monitor Medicare/Medicaid issues.",
+        "foreign_entity_issues": null,
+        "general_issue_code": "PHA",
+        "general_issue_code_display": "Pharmacy",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": "Legislative Director, U.S. Representative Jon Porter",
+            "lobbyist": {
+              "first_name": "ALANNA",
+              "id": 145804,
+              "last_name": "TEMME",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      },
+      {
+        "description": "Monitor prescirption drug payment reform. Monitor supply chain. Monitor Medicare/Medicaid issues.",
+        "foreign_entity_issues": null,
+        "general_issue_code": "MMM",
+        "general_issue_code_display": "Medicare/Medicaid",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": "Legislative Director, U.S. Representative Jon Porter",
+            "lobbyist": {
+              "first_name": "ALANNA",
+              "id": 145804,
+              "last_name": "TEMME",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      }
+    ],
+    "posted_by_name": "Beth Anne Cole",
+    "registrant": {
+      "address_1": "2231 48th Street NW",
+      "address_2": null,
+      "address_3": null,
+      "address_4": null,
+      "city": "Washington",
+      "contact_name": "ALANNA TEMME",
+      "contact_telephone": "+1 202-503-5189",
+      "country": "US",
+      "country_display": "United States of America",
+      "description": null,
+      "dt_updated": "2026-01-12T17:46:10.639071-05:00",
+      "house_registrant_id": 56368,
+      "id": 401108183,
+      "name": "LMH STRATEGIC SOLUTIONS",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "state": "DC",
+      "state_display": "District of Columbia",
+      "url": "https://lda.senate.gov/api/v1/registrants/401108183/",
+      "zip": "20007"
+    },
+    "registrant_address_1": "2231 48th Street NW",
+    "registrant_address_2": null,
+    "registrant_city": "Washington",
+    "registrant_country": "United States of America",
+    "registrant_different_address": null,
+    "registrant_ppb_country": null,
+    "registrant_state": "DC",
+    "registrant_zip": "20007",
+    "termination_date": null,
+    "url": "https://lda.senate.gov/api/v1/filings/dacfcf09-53ab-477e-8343-7d1db097bf5a/"
+  },
+  {
+    "affiliated_organizations": [],
+    "client": {
+      "client_government_entity": null,
+      "client_id": 70519,
+      "client_self_select": false,
+      "country": "US",
+      "country_display": "United States of America",
+      "effective_date": "2026-01-01",
+      "general_description": "Biotechnology advocacy organization.",
+      "id": 70519,
+      "name": "BIOTECHNOLOGY INNOVATION ORGANIZATION (BIO)",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "ppb_state": "DC",
+      "ppb_state_display": "District of Columbia",
+      "state": "DC",
+      "state_display": "District of Columbia",
+      "url": "https://lda.senate.gov/api/v1/clients/70519/"
+    },
+    "conviction_disclosures": [],
+    "dt_posted": "2026-01-12T15:25:14-05:00",
+    "expenses": null,
+    "expenses_method": null,
+    "expenses_method_display": null,
+    "filing_document_content_type": "text/html",
+    "filing_document_url": "https://lda.senate.gov/filings/public/filing/0440bd9e-6a8c-4309-8f56-479a72090817/print/",
+    "filing_period": "first_quarter",
+    "filing_period_display": "1st Quarter (Jan 1 - Mar 31)",
+    "filing_type": "RR",
+    "filing_type_display": "Registration",
+    "filing_uuid": "0440bd9e-6a8c-4309-8f56-479a72090817",
+    "filing_year": 2026,
+    "foreign_entities": [],
+    "income": null,
+    "lobbying_activities": [
+      {
+        "description": "Issues related to prescription drugs. Issues related to tax and trade.",
+        "foreign_entity_issues": null,
+        "general_issue_code": "HCR",
+        "general_issue_code_display": "Health Issues",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": "(continued) U.S. House Cmte on Oversight and Government Reform, Deputy General Counsel, Parliamentarian, Professional Staff Member; U.S. Rep. Darrell Issa, Leg. Asst., Leg. Corr., Staff Asst., Intern",
+            "lobbyist": {
+              "first_name": "MOLLY",
+              "id": 150500,
+              "last_name": "FROMM",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "White House Office of Management and Budget, Associate Director of Health Programs; Senate Committee on the Budget (Sen. Gregg, Sen. Sessions, and Sen. Enzi), Professional Staff Member",
+            "lobbyist": {
+              "first_name": "GREG",
+              "id": 89965,
+              "last_name": "D'ANGELO",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Joint Economic Committee, General Counsel; U.S. Senator Connie Mack, Legislative Assistant",
+            "lobbyist": {
+              "first_name": "MARY",
+              "id": 26331,
+              "last_name": "SAVARY TAYLOR",
+              "middle_name": "BETH",
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "U.S. Senate Committee on Finance (Senators Crapo, Grassley, and Hatch)-Deputy Health Policy Director; Health Policy Dir.; Senior Policy Advsr; Policy Advisor. U.S. House of Representatives Committee on Ways and Means (Reps. Camp and Ryan) Prof. Staff",
+            "lobbyist": {
+              "first_name": "BRETT",
+              "id": 103387,
+              "last_name": "BAKER",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "U.S. Senate Budget Committee, Tax Policy Dir.; Office of U.S. Senator Fred Thompson, Legislative Assistant; Office of U.S. Senator Dave Durenberger, Legislative Assistant; Office of U.S. Senator Dave Durenberger, Legislative Correspondent",
+            "lobbyist": {
+              "first_name": "RACHEL",
+              "id": 20062,
+              "last_name": "JONES HENSLER",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      },
+      {
+        "description": "Issues related to prescription drugs. Issues related to tax and trade.",
+        "foreign_entity_issues": null,
+        "general_issue_code": "MMM",
+        "general_issue_code_display": "Medicare/Medicaid",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": "(continued) U.S. House Cmte on Oversight and Government Reform, Deputy General Counsel, Parliamentarian, Professional Staff Member; U.S. Rep. Darrell Issa, Leg. Asst., Leg. Corr., Staff Asst., Intern",
+            "lobbyist": {
+              "first_name": "MOLLY",
+              "id": 150500,
+              "last_name": "FROMM",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "White House Office of Management and Budget, Associate Director of Health Programs; Senate Committee on the Budget (Sen. Gregg, Sen. Sessions, and Sen. Enzi), Professional Staff Member",
+            "lobbyist": {
+              "first_name": "GREG",
+              "id": 89965,
+              "last_name": "D'ANGELO",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Joint Economic Committee, General Counsel; U.S. Senator Connie Mack, Legislative Assistant",
+            "lobbyist": {
+              "first_name": "MARY",
+              "id": 26331,
+              "last_name": "SAVARY TAYLOR",
+              "middle_name": "BETH",
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "U.S. Senate Committee on Finance (Senators Crapo, Grassley, and Hatch)-Deputy Health Policy Director; Health Policy Dir.; Senior Policy Advsr; Policy Advisor. U.S. House of Representatives Committee on Ways and Means (Reps. Camp and Ryan) Prof. Staff",
+            "lobbyist": {
+              "first_name": "BRETT",
+              "id": 103387,
+              "last_name": "BAKER",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "U.S. Senate Budget Committee, Tax Policy Dir.; Office of U.S. Senator Fred Thompson, Legislative Assistant; Office of U.S. Senator Dave Durenberger, Legislative Assistant; Office of U.S. Senator Dave Durenberger, Legislative Correspondent",
+            "lobbyist": {
+              "first_name": "RACHEL",
+              "id": 20062,
+              "last_name": "JONES HENSLER",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      },
+      {
+        "description": "Issues related to prescription drugs. Issues related to tax and trade.",
+        "foreign_entity_issues": null,
+        "general_issue_code": "TAX",
+        "general_issue_code_display": "Taxation/Internal Revenue Code",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": "(continued) U.S. House Cmte on Oversight and Government Reform, Deputy General Counsel, Parliamentarian, Professional Staff Member; U.S. Rep. Darrell Issa, Leg. Asst., Leg. Corr., Staff Asst., Intern",
+            "lobbyist": {
+              "first_name": "MOLLY",
+              "id": 150500,
+              "last_name": "FROMM",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "White House Office of Management and Budget, Associate Director of Health Programs; Senate Committee on the Budget (Sen. Gregg, Sen. Sessions, and Sen. Enzi), Professional Staff Member",
+            "lobbyist": {
+              "first_name": "GREG",
+              "id": 89965,
+              "last_name": "D'ANGELO",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Joint Economic Committee, General Counsel; U.S. Senator Connie Mack, Legislative Assistant",
+            "lobbyist": {
+              "first_name": "MARY",
+              "id": 26331,
+              "last_name": "SAVARY TAYLOR",
+              "middle_name": "BETH",
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "U.S. Senate Committee on Finance (Senators Crapo, Grassley, and Hatch)-Deputy Health Policy Director; Health Policy Dir.; Senior Policy Advsr; Policy Advisor. U.S. House of Representatives Committee on Ways and Means (Reps. Camp and Ryan) Prof. Staff",
+            "lobbyist": {
+              "first_name": "BRETT",
+              "id": 103387,
+              "last_name": "BAKER",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "U.S. Senate Budget Committee, Tax Policy Dir.; Office of U.S. Senator Fred Thompson, Legislative Assistant; Office of U.S. Senator Dave Durenberger, Legislative Assistant; Office of U.S. Senator Dave Durenberger, Legislative Correspondent",
+            "lobbyist": {
+              "first_name": "RACHEL",
+              "id": 20062,
+              "last_name": "JONES HENSLER",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      },
+      {
+        "description": "Issues related to prescription drugs. Issues related to tax and trade.",
+        "foreign_entity_issues": null,
+        "general_issue_code": "TRD",
+        "general_issue_code_display": "Trade (domestic/foreign)",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": "(continued) U.S. House Cmte on Oversight and Government Reform, Deputy General Counsel, Parliamentarian, Professional Staff Member; U.S. Rep. Darrell Issa, Leg. Asst., Leg. Corr., Staff Asst., Intern",
+            "lobbyist": {
+              "first_name": "MOLLY",
+              "id": 150500,
+              "last_name": "FROMM",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "White House Office of Management and Budget, Associate Director of Health Programs; Senate Committee on the Budget (Sen. Gregg, Sen. Sessions, and Sen. Enzi), Professional Staff Member",
+            "lobbyist": {
+              "first_name": "GREG",
+              "id": 89965,
+              "last_name": "D'ANGELO",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Joint Economic Committee, General Counsel; U.S. Senator Connie Mack, Legislative Assistant",
+            "lobbyist": {
+              "first_name": "MARY",
+              "id": 26331,
+              "last_name": "SAVARY TAYLOR",
+              "middle_name": "BETH",
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "U.S. Senate Committee on Finance (Senators Crapo, Grassley, and Hatch)-Deputy Health Policy Director; Health Policy Dir.; Senior Policy Advsr; Policy Advisor. U.S. House of Representatives Committee on Ways and Means (Reps. Camp and Ryan) Prof. Staff",
+            "lobbyist": {
+              "first_name": "BRETT",
+              "id": 103387,
+              "last_name": "BAKER",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "U.S. Senate Budget Committee, Tax Policy Dir.; Office of U.S. Senator Fred Thompson, Legislative Assistant; Office of U.S. Senator Dave Durenberger, Legislative Assistant; Office of U.S. Senator Dave Durenberger, Legislative Correspondent",
+            "lobbyist": {
+              "first_name": "RACHEL",
+              "id": 20062,
+              "last_name": "JONES HENSLER",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      }
+    ],
+    "posted_by_name": "Greg D'Angelo",
+    "registrant": {
+      "address_1": "601 13th St. NW",
+      "address_2": "Suite 250 N",
+      "address_3": null,
+      "address_4": null,
+      "city": "Washington",
+      "contact_name": "KATHLEEN MCGHEE",
+      "contact_telephone": "+1 202-742-6990",
+      "country": "US",
+      "country_display": "United States of America",
+      "description": "Consulting firm.",
+      "dt_updated": "2026-01-14T08:51:26.922313-05:00",
+      "house_registrant_id": 37338,
+      "id": 293335,
+      "name": "THE NICKLES GROUP, LLC",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "state": "DC",
+      "state_display": "District of Columbia",
+      "url": "https://lda.senate.gov/api/v1/registrants/293335/",
+      "zip": "20005"
+    },
+    "registrant_address_1": "601 13th St. NW",
+    "registrant_address_2": "Suite 250 N",
+    "registrant_city": "Washington",
+    "registrant_country": "United States of America",
+    "registrant_different_address": null,
+    "registrant_ppb_country": null,
+    "registrant_state": "DC",
+    "registrant_zip": "20005",
+    "termination_date": null,
+    "url": "https://lda.senate.gov/api/v1/filings/0440bd9e-6a8c-4309-8f56-479a72090817/"
+  },
+  {
+    "affiliated_organizations": [],
+    "client": {
+      "client_government_entity": null,
+      "client_id": 70532,
+      "client_self_select": true,
+      "country": "US",
+      "country_display": "United States of America",
+      "effective_date": "2026-01-12",
+      "general_description": "complete mental health solution",
+      "id": 70532,
+      "name": "SPRING CARE, INC.",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "ppb_state": "NY",
+      "ppb_state_display": "New York",
+      "state": "NY",
+      "state_display": "New York",
+      "url": "https://lda.senate.gov/api/v1/clients/70532/"
+    },
+    "conviction_disclosures": [],
+    "dt_posted": "2026-01-13T12:45:07-05:00",
+    "expenses": null,
+    "expenses_method": null,
+    "expenses_method_display": null,
+    "filing_document_content_type": "text/html",
+    "filing_document_url": "https://lda.senate.gov/filings/public/filing/f9377b93-4ba3-4710-a482-80ddf42307bc/print/",
+    "filing_period": "first_quarter",
+    "filing_period_display": "1st Quarter (Jan 1 - Mar 31)",
+    "filing_type": "RR",
+    "filing_type_display": "Registration",
+    "filing_uuid": "f9377b93-4ba3-4710-a482-80ddf42307bc",
+    "filing_year": 2026,
+    "foreign_entities": [],
+    "income": null,
+    "lobbying_activities": [
+      {
+        "description": "SAFE BOTS Act - H.R. 6489, AI and mental health",
+        "foreign_entity_issues": null,
+        "general_issue_code": "CSP",
+        "general_issue_code_display": "Consumer Issues/Safety/Products",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "BRIAN",
+              "id": 152344,
+              "last_name": "ALTMAN",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      },
+      {
+        "description": "SAFE BOTS Act - H.R. 6489, AI and mental health",
+        "foreign_entity_issues": null,
+        "general_issue_code": "HCR",
+        "general_issue_code_display": "Health Issues",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "BRIAN",
+              "id": 152344,
+              "last_name": "ALTMAN",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      },
+      {
+        "description": "SAFE BOTS Act - H.R. 6489, AI and mental health",
+        "foreign_entity_issues": null,
+        "general_issue_code": "SCI",
+        "general_issue_code_display": "Science/Technology",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "BRIAN",
+              "id": 152344,
+              "last_name": "ALTMAN",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      }
+    ],
+    "posted_by_name": "Brian Altman",
+    "registrant": {
+      "address_1": "60 Madison Avenue",
+      "address_2": "2nd Floor",
+      "address_3": null,
+      "address_4": null,
+      "city": "New York City",
+      "contact_name": "BRIAN ALTMAN",
+      "contact_telephone": "+1 703-786-5098",
+      "country": "US",
+      "country_display": "United States of America",
+      "description": null,
+      "dt_updated": "2025-12-26T11:00:57.499598-05:00",
+      "house_registrant_id": 77361,
+      "id": 401110191,
+      "name": "SPRING CARE, INC.",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "state": "NY",
+      "state_display": "New York",
+      "url": "https://lda.senate.gov/api/v1/registrants/401110191/",
+      "zip": "10010"
+    },
+    "registrant_address_1": "60 Madison Ave.",
+    "registrant_address_2": "2nd Floor",
+    "registrant_city": "New York",
+    "registrant_country": "United States of America",
+    "registrant_different_address": null,
+    "registrant_ppb_country": null,
+    "registrant_state": "NY",
+    "registrant_zip": "10010",
+    "termination_date": null,
+    "url": "https://lda.senate.gov/api/v1/filings/f9377b93-4ba3-4710-a482-80ddf42307bc/"
+  },
+  {
+    "affiliated_organizations": [],
+    "client": {
+      "client_government_entity": null,
+      "client_id": 70533,
+      "client_self_select": false,
+      "country": "US",
+      "country_display": "United States of America",
+      "effective_date": "2026-01-01",
+      "general_description": "County government.",
+      "id": 70533,
+      "name": "COUNTY OF LOS ANGELES, CALIFORNIA",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "ppb_state": "CA",
+      "ppb_state_display": "California",
+      "state": "CA",
+      "state_display": "California",
+      "url": "https://lda.senate.gov/api/v1/clients/70533/"
+    },
+    "conviction_disclosures": [],
+    "dt_posted": "2026-01-13T13:18:18-05:00",
+    "expenses": null,
+    "expenses_method": null,
+    "expenses_method_display": null,
+    "filing_document_content_type": "text/html",
+    "filing_document_url": "https://lda.senate.gov/filings/public/filing/029ede2c-e3e0-450e-9b1c-4490ab0926e2/print/",
+    "filing_period": "first_quarter",
+    "filing_period_display": "1st Quarter (Jan 1 - Mar 31)",
+    "filing_type": "RR",
+    "filing_type_display": "Registration",
+    "filing_uuid": "029ede2c-e3e0-450e-9b1c-4490ab0926e2",
+    "filing_year": 2026,
+    "foreign_entities": [],
+    "income": null,
+    "lobbying_activities": [
+      {
+        "description": "Advance federal policies and funding to support the county departments which provide public health, mental health and health care services to its residents. Protect the Medicaid program and oppose cuts to Medicaid, including statutory Medicaid DSH cuts for FY2026-FY 2027. Support legislation and administrative action to ease the Medicaid IMD exclusion and Medicaid inmate exclusion. Budget reconciliation as it relates to health care policy.",
+        "foreign_entity_issues": null,
+        "general_issue_code": "HCR",
+        "general_issue_code_display": "Health Issues",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": "Chief of Staff, Sen. Dianne Feinstein; Chief of Staff, Sen. Martin Heinrich; Assistant Secretary of Commerce; Senior Adviser, Rep. Xavier Becerra; Director of Legislation & Communication, Rep. Xavier Becerra; Press Secretary, Rep. Xavier Becerra.",
+            "lobbyist": {
+              "first_name": "STEVE",
+              "id": 146513,
+              "last_name": "HARO",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Staff Director, Subcommittee on Children and Families, Senate HELP Committee; Professional Staff Member, Subcommittee on Children and Families, Senate HELP Committee; Legislative Assistant, Sen. Dianne Feinstein.",
+            "lobbyist": {
+              "first_name": "TAMAR",
+              "id": 149167,
+              "last_name": "MAGARIK HARO",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      },
+      {
+        "description": "Advance federal policies and funding to support the county departments which provide public health, mental health and health care services to its residents. Protect the Medicaid program and oppose cuts to Medicaid, including statutory Medicaid DSH cuts for FY2026-FY 2027. Support legislation and administrative action to ease the Medicaid IMD exclusion and Medicaid inmate exclusion. Budget reconciliation as it relates to health care policy.",
+        "foreign_entity_issues": null,
+        "general_issue_code": "MMM",
+        "general_issue_code_display": "Medicare/Medicaid",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": "Chief of Staff, Sen. Dianne Feinstein; Chief of Staff, Sen. Martin Heinrich; Assistant Secretary of Commerce; Senior Adviser, Rep. Xavier Becerra; Director of Legislation & Communication, Rep. Xavier Becerra; Press Secretary, Rep. Xavier Becerra.",
+            "lobbyist": {
+              "first_name": "STEVE",
+              "id": 146513,
+              "last_name": "HARO",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Staff Director, Subcommittee on Children and Families, Senate HELP Committee; Professional Staff Member, Subcommittee on Children and Families, Senate HELP Committee; Legislative Assistant, Sen. Dianne Feinstein.",
+            "lobbyist": {
+              "first_name": "TAMAR",
+              "id": 149167,
+              "last_name": "MAGARIK HARO",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      }
+    ],
+    "posted_by_name": "Steve Haro",
+    "registrant": {
+      "address_1": "2443 North Quantico Street",
+      "address_2": null,
+      "address_3": null,
+      "address_4": null,
+      "city": "Arlington",
+      "contact_name": "STEVE HARO",
+      "contact_telephone": "+1 202-510-2150",
+      "country": "US",
+      "country_display": "United States of America",
+      "description": null,
+      "dt_updated": "2026-01-12T10:02:06.646331-05:00",
+      "house_registrant_id": 56529,
+      "id": 401108563,
+      "name": "HARO SOLUTIONS LLC",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "state": "VA",
+      "state_display": "Virginia",
+      "url": "https://lda.senate.gov/api/v1/registrants/401108563/",
+      "zip": "22207"
+    },
+    "registrant_address_1": "2443 North Quantico Street",
+    "registrant_address_2": null,
+    "registrant_city": "Arlington",
+    "registrant_country": "United States of America",
+    "registrant_different_address": null,
+    "registrant_ppb_country": null,
+    "registrant_state": "VA",
+    "registrant_zip": "22207",
+    "termination_date": null,
+    "url": "https://lda.senate.gov/api/v1/filings/029ede2c-e3e0-450e-9b1c-4490ab0926e2/"
+  },
+  {
+    "affiliated_organizations": [],
+    "client": {
+      "client_government_entity": null,
+      "client_id": 70535,
+      "client_self_select": false,
+      "country": "NL",
+      "country_display": "Netherlands",
+      "effective_date": "2025-12-01",
+      "general_description": "biopharma",
+      "id": 70535,
+      "name": "UNIQURE BIOPHARMA B.V.",
+      "ppb_country": "NL",
+      "ppb_country_display": "Netherlands",
+      "ppb_state": null,
+      "ppb_state_display": null,
+      "state": null,
+      "state_display": null,
+      "url": "https://lda.senate.gov/api/v1/clients/70535/"
+    },
+    "conviction_disclosures": [],
+    "dt_posted": "2026-01-13T13:43:49-05:00",
+    "expenses": null,
+    "expenses_method": null,
+    "expenses_method_display": null,
+    "filing_document_content_type": "text/html",
+    "filing_document_url": "https://lda.senate.gov/filings/public/filing/083eb720-582d-4d87-842c-03677406cd59/print/",
+    "filing_period": "fourth_quarter",
+    "filing_period_display": "4th Quarter (Oct 1 - Dec 31)",
+    "filing_type": "RR",
+    "filing_type_display": "Registration",
+    "filing_uuid": "083eb720-582d-4d87-842c-03677406cd59",
+    "filing_year": 2025,
+    "foreign_entities": [],
+    "income": null,
+    "lobbying_activities": [
+      {
+        "description": "gene therapy",
+        "foreign_entity_issues": null,
+        "general_issue_code": "HCR",
+        "general_issue_code_display": "Health Issues",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": "Asst. Sec. for Leg.- HHS; Dep. Asst. Sec for Leg. - HHS; Cmte. Staff, House Cmte. on Ways and Means; Cmte. Staff. Sen. Cmte. on Finance",
+            "lobbyist": {
+              "first_name": "JENNIFER",
+              "id": 26124,
+              "last_name": "YOUNG",
+              "middle_name": "B",
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Prin. Dep. Asst. Sec for Leg.-HHS; Dep. Asst. Sec. for Leg.-HSS; Staff Dir., Sub Cmte. on Employment, Sen. HELP Cmte.",
+            "lobbyist": {
+              "first_name": "RAISSA",
+              "id": 7749,
+              "last_name": "DOWNS",
+              "middle_name": "H",
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Leg Asst. Rep. Ray LaHood, Leg Dir. Rep. Kevin Yoder, PSM Senate Appropriations Cmte.",
+            "lobbyist": {
+              "first_name": "PARICK",
+              "id": 147125,
+              "last_name": "CARROLL",
+              "middle_name": "BRAERTON",
+              "nickname": null,
+              "prefix": "mr",
+              "prefix_display": "MR.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      }
+    ],
+    "posted_by_name": "Jennifer B Young",
+    "registrant": {
+      "address_1": "1212 New York Avenue, NW",
+      "address_2": "Suite 750",
+      "address_3": null,
+      "address_4": null,
+      "city": "Washington",
+      "contact_name": "JENNIFER B. YOUNG",
+      "contact_telephone": "",
+      "country": "US",
+      "country_display": "United States of America",
+      "description": "Health care policy and regulatory and legislative consulting",
+      "dt_updated": "2026-01-29T13:56:13.803090-05:00",
+      "house_registrant_id": 38067,
+      "id": 304736,
+      "name": "TARPLIN, DOWNS & YOUNG, LLC",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "state": "DC",
+      "state_display": "District of Columbia",
+      "url": "https://lda.senate.gov/api/v1/registrants/304736/",
+      "zip": "20005"
+    },
+    "registrant_address_1": "1212 New York Avenue, NW",
+    "registrant_address_2": "Suite 750",
+    "registrant_city": "Washington",
+    "registrant_country": "United States of America",
+    "registrant_different_address": null,
+    "registrant_ppb_country": null,
+    "registrant_state": "DC",
+    "registrant_zip": "20005",
+    "termination_date": null,
+    "url": "https://lda.senate.gov/api/v1/filings/083eb720-582d-4d87-842c-03677406cd59/"
+  },
+  {
+    "affiliated_organizations": [],
+    "client": {
+      "client_government_entity": null,
+      "client_id": 70536,
+      "client_self_select": false,
+      "country": "US",
+      "country_display": "United States of America",
+      "effective_date": "2026-01-01",
+      "general_description": "pharmaceutical company",
+      "id": 70536,
+      "name": "BPI LABS, LLC",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "ppb_state": "FL",
+      "ppb_state_display": "Florida",
+      "state": "FL",
+      "state_display": "Florida",
+      "url": "https://lda.senate.gov/api/v1/clients/70536/"
+    },
+    "conviction_disclosures": [],
+    "dt_posted": "2026-01-13T13:54:10-05:00",
+    "expenses": null,
+    "expenses_method": null,
+    "expenses_method_display": null,
+    "filing_document_content_type": "text/html",
+    "filing_document_url": "https://lda.senate.gov/filings/public/filing/962e1a4c-e673-4da0-acbf-82ce2d0eb4c1/print/",
+    "filing_period": "first_quarter",
+    "filing_period_display": "1st Quarter (Jan 1 - Mar 31)",
+    "filing_type": "RR",
+    "filing_type_display": "Registration",
+    "filing_uuid": "962e1a4c-e673-4da0-acbf-82ce2d0eb4c1",
+    "filing_year": 2026,
+    "foreign_entities": [],
+    "income": null,
+    "lobbying_activities": [
+      {
+        "description": "Issues pertaining to FDA on compounded drugs",
+        "foreign_entity_issues": null,
+        "general_issue_code": "HCR",
+        "general_issue_code_display": "Health Issues",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "HARRY",
+              "id": 52221,
+              "last_name": "SPORIDIS",
+              "middle_name": "ANASTASIOS",
+              "nickname": null,
+              "prefix": "mr",
+              "prefix_display": "MR.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      }
+    ],
+    "posted_by_name": "Karen Blitz",
+    "registrant": {
+      "address_1": "1401 Eye Street, NW",
+      "address_2": "Suite 800",
+      "address_3": null,
+      "address_4": null,
+      "city": "Washington",
+      "contact_name": "KAREN BLITZ",
+      "contact_telephone": "+1 202-783-3300",
+      "country": "US",
+      "country_display": "United States of America",
+      "description": "Law Firm",
+      "dt_updated": "2026-01-21T11:12:57.976894-05:00",
+      "house_registrant_id": 39171,
+      "id": 314911,
+      "name": "POLSINELLI PC",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "state": "DC",
+      "state_display": "District of Columbia",
+      "url": "https://lda.senate.gov/api/v1/registrants/314911/",
+      "zip": "20005"
+    },
+    "registrant_address_1": "1401 Eye Street, NW",
+    "registrant_address_2": "Suite 800",
+    "registrant_city": "Washington",
+    "registrant_country": "United States of America",
+    "registrant_different_address": null,
+    "registrant_ppb_country": null,
+    "registrant_state": "DC",
+    "registrant_zip": "20005",
+    "termination_date": null,
+    "url": "https://lda.senate.gov/api/v1/filings/962e1a4c-e673-4da0-acbf-82ce2d0eb4c1/"
+  },
+  {
+    "affiliated_organizations": [],
+    "client": {
+      "client_government_entity": null,
+      "client_id": 70542,
+      "client_self_select": false,
+      "country": "US",
+      "country_display": "United States of America",
+      "effective_date": "2025-12-15",
+      "general_description": "Trade association",
+      "id": 70542,
+      "name": "ASSOCIATION FOR ACCESSIBLE MEDICINES",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "ppb_state": "DC",
+      "ppb_state_display": "District of Columbia",
+      "state": "DC",
+      "state_display": "District of Columbia",
+      "url": "https://lda.senate.gov/api/v1/clients/70542/"
+    },
+    "conviction_disclosures": [],
+    "dt_posted": "2026-01-13T17:32:43-05:00",
+    "expenses": null,
+    "expenses_method": null,
+    "expenses_method_display": null,
+    "filing_document_content_type": "text/html",
+    "filing_document_url": "https://lda.senate.gov/filings/public/filing/2c56721e-9dc5-443d-bc2b-ce77c5f63166/print/",
+    "filing_period": "fourth_quarter",
+    "filing_period_display": "4th Quarter (Oct 1 - Dec 31)",
+    "filing_type": "RR",
+    "filing_type_display": "Registration",
+    "filing_uuid": "2c56721e-9dc5-443d-bc2b-ce77c5f63166",
+    "filing_year": 2025,
+    "foreign_entities": [],
+    "income": null,
+    "lobbying_activities": [
+      {
+        "description": "Advocate on issues related to medication, pharmaceuticals, and healthcare.",
+        "foreign_entity_issues": null,
+        "general_issue_code": "PHA",
+        "general_issue_code_display": "Pharmacy",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "HEATHER",
+              "id": 148954,
+              "last_name": "TURNBULL",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "WILLIAM",
+              "id": 149155,
+              "last_name": "RUBIN",
+              "middle_name": "DAVID",
+              "nickname": null,
+              "prefix": "mr",
+              "prefix_display": "MR.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Regional Administrator, White House Liaison, Deputy White House Liaison at U.S. Dept. of Housing & Urban Development; Deputy Assistant to the President, Deputy Director of Presidential Personnel at White House EOP",
+            "lobbyist": {
+              "first_name": "MICHAEL",
+              "id": 151243,
+              "last_name": "BURLEY",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      },
+      {
+        "description": "Advocate on issues related to medication, pharmaceuticals, and healthcare.",
+        "foreign_entity_issues": null,
+        "general_issue_code": "HCR",
+        "general_issue_code_display": "Health Issues",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "HEATHER",
+              "id": 148954,
+              "last_name": "TURNBULL",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "WILLIAM",
+              "id": 149155,
+              "last_name": "RUBIN",
+              "middle_name": "DAVID",
+              "nickname": null,
+              "prefix": "mr",
+              "prefix_display": "MR.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Regional Administrator, White House Liaison, Deputy White House Liaison at U.S. Dept. of Housing & Urban Development; Deputy Assistant to the President, Deputy Director of Presidential Personnel at White House EOP",
+            "lobbyist": {
+              "first_name": "MICHAEL",
+              "id": 151243,
+              "last_name": "BURLEY",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      }
+    ],
+    "posted_by_name": "Jodi Bock Davidson",
+    "registrant": {
+      "address_1": "215 S. Monroe Street STE 410",
+      "address_2": null,
+      "address_3": null,
+      "address_4": null,
+      "city": "Tallahassee",
+      "contact_name": "JODI BOCK DAVIDSON",
+      "contact_telephone": "+1 954-260-0447",
+      "country": "US",
+      "country_display": "United States of America",
+      "description": "Public affairs consulting firm.",
+      "dt_updated": "2026-02-06T11:16:46.551991-05:00",
+      "house_registrant_id": 45243,
+      "id": 401106132,
+      "name": "RUBIN, TURNBULL & ASSOCIATES",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "state": "FL",
+      "state_display": "Florida",
+      "url": "https://lda.senate.gov/api/v1/registrants/401106132/",
+      "zip": "32301"
+    },
+    "registrant_address_1": "215 S. Monroe Street STE 410",
+    "registrant_address_2": null,
+    "registrant_city": "Tallahassee",
+    "registrant_country": "United States of America",
+    "registrant_different_address": null,
+    "registrant_ppb_country": null,
+    "registrant_state": "FL",
+    "registrant_zip": "32301",
+    "termination_date": null,
+    "url": "https://lda.senate.gov/api/v1/filings/2c56721e-9dc5-443d-bc2b-ce77c5f63166/"
+  },
+  {
+    "affiliated_organizations": [],
+    "client": {
+      "client_government_entity": null,
+      "client_id": 70548,
+      "client_self_select": false,
+      "country": "US",
+      "country_display": "United States of America",
+      "effective_date": "2025-12-15",
+      "general_description": "Hearing Aids Company",
+      "id": 70548,
+      "name": "STARKEY HEARING AIDS",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "ppb_state": "MN",
+      "ppb_state_display": "Minnesota",
+      "state": "MN",
+      "state_display": "Minnesota",
+      "url": "https://lda.senate.gov/api/v1/clients/70548/"
+    },
+    "conviction_disclosures": [],
+    "dt_posted": "2026-01-13T17:59:18-05:00",
+    "expenses": null,
+    "expenses_method": null,
+    "expenses_method_display": null,
+    "filing_document_content_type": "text/html",
+    "filing_document_url": "https://lda.senate.gov/filings/public/filing/b4cb9847-c5e8-49be-ba14-c521bcf42a43/print/",
+    "filing_period": "fourth_quarter",
+    "filing_period_display": "4th Quarter (Oct 1 - Dec 31)",
+    "filing_type": "RR",
+    "filing_type_display": "Registration",
+    "filing_uuid": "b4cb9847-c5e8-49be-ba14-c521bcf42a43",
+    "filing_year": 2025,
+    "foreign_entities": [],
+    "income": null,
+    "lobbying_activities": [
+      {
+        "description": "Issues related to medical devices, tariffs, and healthcare.",
+        "foreign_entity_issues": null,
+        "general_issue_code": "HCR",
+        "general_issue_code_display": "Health Issues",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "HEATHER",
+              "id": 148954,
+              "last_name": "TURNBULL",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "WILLIAM",
+              "id": 149155,
+              "last_name": "RUBIN",
+              "middle_name": "DAVID",
+              "nickname": null,
+              "prefix": "mr",
+              "prefix_display": "MR.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Regional Administrator, White House Liaison, Deputy White House Liaison at U.S. Dept. of Housing & Urban Development; Deputy Assistant to the President, Deputy Director of Presidential Personnel at White House EOP",
+            "lobbyist": {
+              "first_name": "MICHAEL",
+              "id": 151243,
+              "last_name": "BURLEY",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      },
+      {
+        "description": "Issues related to medical devices, tariffs, and healthcare.",
+        "foreign_entity_issues": null,
+        "general_issue_code": "MAN",
+        "general_issue_code_display": "Manufacturing",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "HEATHER",
+              "id": 148954,
+              "last_name": "TURNBULL",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "WILLIAM",
+              "id": 149155,
+              "last_name": "RUBIN",
+              "middle_name": "DAVID",
+              "nickname": null,
+              "prefix": "mr",
+              "prefix_display": "MR.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Regional Administrator, White House Liaison, Deputy White House Liaison at U.S. Dept. of Housing & Urban Development; Deputy Assistant to the President, Deputy Director of Presidential Personnel at White House EOP",
+            "lobbyist": {
+              "first_name": "MICHAEL",
+              "id": 151243,
+              "last_name": "BURLEY",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      },
+      {
+        "description": "Issues related to medical devices, tariffs, and healthcare.",
+        "foreign_entity_issues": null,
+        "general_issue_code": "TAR",
+        "general_issue_code_display": "Tariff (miscellaneous tariff bills)",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "HEATHER",
+              "id": 148954,
+              "last_name": "TURNBULL",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": null,
+            "lobbyist": {
+              "first_name": "WILLIAM",
+              "id": 149155,
+              "last_name": "RUBIN",
+              "middle_name": "DAVID",
+              "nickname": null,
+              "prefix": "mr",
+              "prefix_display": "MR.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Regional Administrator, White House Liaison, Deputy White House Liaison at U.S. Dept. of Housing & Urban Development; Deputy Assistant to the President, Deputy Director of Presidential Personnel at White House EOP",
+            "lobbyist": {
+              "first_name": "MICHAEL",
+              "id": 151243,
+              "last_name": "BURLEY",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      }
+    ],
+    "posted_by_name": "Jodi Bock Davidson",
+    "registrant": {
+      "address_1": "215 S. Monroe Street STE 410",
+      "address_2": null,
+      "address_3": null,
+      "address_4": null,
+      "city": "Tallahassee",
+      "contact_name": "JODI BOCK DAVIDSON",
+      "contact_telephone": "+1 954-260-0447",
+      "country": "US",
+      "country_display": "United States of America",
+      "description": "Public affairs consulting firm.",
+      "dt_updated": "2026-02-06T11:16:46.551991-05:00",
+      "house_registrant_id": 45243,
+      "id": 401106132,
+      "name": "RUBIN, TURNBULL & ASSOCIATES",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "state": "FL",
+      "state_display": "Florida",
+      "url": "https://lda.senate.gov/api/v1/registrants/401106132/",
+      "zip": "32301"
+    },
+    "registrant_address_1": "215 S. Monroe Street STE 410",
+    "registrant_address_2": null,
+    "registrant_city": "Tallahassee",
+    "registrant_country": "United States of America",
+    "registrant_different_address": null,
+    "registrant_ppb_country": null,
+    "registrant_state": "FL",
+    "registrant_zip": "32301",
+    "termination_date": null,
+    "url": "https://lda.senate.gov/api/v1/filings/b4cb9847-c5e8-49be-ba14-c521bcf42a43/"
+  },
+  {
+    "affiliated_organizations": [],
+    "client": {
+      "client_government_entity": null,
+      "client_id": 70549,
+      "client_self_select": false,
+      "country": "US",
+      "country_display": "United States of America",
+      "effective_date": "2025-12-11",
+      "general_description": "Healthcare Coalition",
+      "id": 70549,
+      "name": "THE CURE COALITION",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "ppb_state": "FL",
+      "ppb_state_display": "Florida",
+      "state": "FL",
+      "state_display": "Florida",
+      "url": "https://lda.senate.gov/api/v1/clients/70549/"
+    },
+    "conviction_disclosures": [],
+    "dt_posted": "2026-01-13T20:42:42-05:00",
+    "expenses": null,
+    "expenses_method": null,
+    "expenses_method_display": null,
+    "filing_document_content_type": "text/html",
+    "filing_document_url": "https://lda.senate.gov/filings/public/filing/245b9baa-df75-46a0-a3ad-89ed5e1f62b1/print/",
+    "filing_period": "fourth_quarter",
+    "filing_period_display": "4th Quarter (Oct 1 - Dec 31)",
+    "filing_type": "RR",
+    "filing_type_display": "Registration",
+    "filing_uuid": "245b9baa-df75-46a0-a3ad-89ed5e1f62b1",
+    "filing_year": 2025,
+    "foreign_entities": [],
+    "income": null,
+    "lobbying_activities": [
+      {
+        "description": "Issues related to medical innovation and drug development.",
+        "foreign_entity_issues": null,
+        "general_issue_code": "HCR",
+        "general_issue_code_display": "Health Issues",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": "Legislative Director, Rep. Susan Brooks (2018-2019); Legislative Director, Rep. David Valadao (2015-2018); Legislative Assistant, Rep. David Valadao (2014-2015)",
+            "lobbyist": {
+              "first_name": "KRISTINA",
+              "id": 70162,
+              "last_name": "DUNKLIN",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Legislative Director, Rep. Lucy McBath (2021-2022); Legislative Assistant, Rep. Lucy McBath (2019-2020); Legislative Aide, Sen. Doug Jones (2019); Legislative Correspondent, Sen. Doug Jones (2018-2019)",
+            "lobbyist": {
+              "first_name": "MICHAEL",
+              "id": 138827,
+              "last_name": "WILLIAMS",
+              "middle_name": "ALEXANDER",
+              "nickname": null,
+              "prefix": "mr",
+              "prefix_display": "MR.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Chief of Staff, Rep. Allen Boyd (2001-2009)",
+            "lobbyist": {
+              "first_name": "ELIZABETH",
+              "id": 57902,
+              "last_name": "GREER",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Legislative Assistant, Sen. Mike Crapo (2003-2006)",
+            "lobbyist": {
+              "first_name": "BARRETT",
+              "id": 72734,
+              "last_name": "THORNHILL",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      },
+      {
+        "description": "Issues related to medical innovation and drug development.",
+        "foreign_entity_issues": null,
+        "general_issue_code": "BUD",
+        "general_issue_code_display": "Budget/Appropriations",
+        "government_entities": [],
+        "lobbyists": [
+          {
+            "covered_position": "Legislative Director, Rep. Susan Brooks (2018-2019); Legislative Director, Rep. David Valadao (2015-2018); Legislative Assistant, Rep. David Valadao (2014-2015)",
+            "lobbyist": {
+              "first_name": "KRISTINA",
+              "id": 70162,
+              "last_name": "DUNKLIN",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Legislative Director, Rep. Lucy McBath (2021-2022); Legislative Assistant, Rep. Lucy McBath (2019-2020); Legislative Aide, Sen. Doug Jones (2019); Legislative Correspondent, Sen. Doug Jones (2018-2019)",
+            "lobbyist": {
+              "first_name": "MICHAEL",
+              "id": 138827,
+              "last_name": "WILLIAMS",
+              "middle_name": "ALEXANDER",
+              "nickname": null,
+              "prefix": "mr",
+              "prefix_display": "MR.",
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Chief of Staff, Rep. Allen Boyd (2001-2009)",
+            "lobbyist": {
+              "first_name": "ELIZABETH",
+              "id": 57902,
+              "last_name": "GREER",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          },
+          {
+            "covered_position": "Legislative Assistant, Sen. Mike Crapo (2003-2006)",
+            "lobbyist": {
+              "first_name": "BARRETT",
+              "id": 72734,
+              "last_name": "THORNHILL",
+              "middle_name": null,
+              "nickname": null,
+              "prefix": null,
+              "prefix_display": null,
+              "suffix": null,
+              "suffix_display": null
+            },
+            "new": true
+          }
+        ]
+      }
+    ],
+    "posted_by_name": "Zachary Williams",
+    "registrant": {
+      "address_1": "777 6th Street NW",
+      "address_2": "8th Floor",
+      "address_3": null,
+      "address_4": null,
+      "city": "Washington",
+      "contact_name": "ZACHARY WILLIAMS",
+      "contact_telephone": "+1 202-638-0125",
+      "country": "US",
+      "country_display": "United States of America",
+      "description": "Government Relations Firm.",
+      "dt_updated": "2026-01-28T13:28:39.346682-05:00",
+      "house_registrant_id": null,
+      "id": 400976792,
+      "name": "FORBES-TATE",
+      "ppb_country": "US",
+      "ppb_country_display": "United States of America",
+      "state": "DC",
+      "state_display": "District of Columbia",
+      "url": "https://lda.senate.gov/api/v1/registrants/400976792/",
+      "zip": "20001"
+    },
+    "registrant_address_1": "777 6th Street NW",
+    "registrant_address_2": "8th Floor",
+    "registrant_city": "Washington",
+    "registrant_country": "United States of America",
+    "registrant_different_address": null,
+    "registrant_ppb_country": null,
+    "registrant_state": "DC",
+    "registrant_zip": "20001",
+    "termination_date": null,
+    "url": "https://lda.senate.gov/api/v1/filings/245b9baa-df75-46a0-a3ad-89ed5e1f62b1/"
+  }
+]
