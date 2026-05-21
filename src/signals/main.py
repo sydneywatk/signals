@@ -18,7 +18,7 @@ from signals.distribute.slack import post_alert
 from signals.enrich import extraction, icp
 from signals.fixtures import FixtureMissing, load_fixture
 from signals.logging_config import setup_logging
-from signals.score.scoring import ScoreBreakdown, score_signal
+from signals.score.scoring import ScoreBreakdown, dedup_within_run, score_signal
 from signals.settings import DATA_DIR, USE_LIVE_APIS, load_pipeline_config
 from signals.sources import alec, edgar, lda as lda_src, openstates
 
@@ -162,10 +162,13 @@ def run_pipeline() -> dict[str, Any]:
     alert_threshold = scoring_cfg.get("alert_threshold", 70)
     watchlist_threshold = scoring_cfg.get("watchlist_threshold", 50)
 
+    scored = [(sig, score_signal(sig, cfg)) for sig in signals]
+    deduped = dedup_within_run(scored)
+    logger.info("Dedup: %d -> %d signals", len(scored), len(deduped))
+
     alerts: list[tuple[Signal, ScoreBreakdown]] = []
     watchlist: list[tuple[Signal, ScoreBreakdown]] = []
-    for sig in signals:
-        score = score_signal(sig, cfg)
+    for sig, score in deduped:
         if score.total >= alert_threshold:
             alerts.append((sig, score))
         elif score.total >= watchlist_threshold:

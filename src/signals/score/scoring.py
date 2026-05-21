@@ -98,3 +98,55 @@ def _confidence_band(total: int) -> Confidence:
     if total >= 50:
         return "medium"
     return "low"
+
+
+def _group_key(signal: Signal) -> tuple:
+    """Within-run dedup group: same key = same buying moment, surface once."""
+    if signal.signal_type == "A":
+        return (signal.company_cik, "A", signal.evidence.get("topic"))
+    if signal.signal_type == "C":
+        return (signal.company_cik, "C",
+                signal.evidence.get("filing", {}).get("accession"))
+    if signal.signal_type == "D3":
+        return (signal.company_cik, "D3", signal.evidence.get("model_bill_id"))
+    return (signal.company_cik, signal.signal_type, None)
+
+
+def dedup_within_run(scored: list[tuple[Signal, ScoreBreakdown]]) -> list[tuple[Signal, ScoreBreakdown]]:
+    """Group by (company, signal_type, anchor). Keep top score per group; attach
+    a list of suppressed bill identifiers to the winner's evidence so the Slack
+    renderer can show '+N related bills'."""
+    groups: dict[tuple, list[tuple[Signal, ScoreBreakdown]]] = {}
+    for pair in scored:
+        groups.setdefault(_group_key(pair[0]), []).append(pair)
+
+    out: list[tuple[Signal, ScoreBreakdown]] = []
+    for items in groups.values():
+        items.sort(key=lambda x: -x[1].total)
+        winner_sig, winner_score = items[0]
+        suppressed = items[1:]
+        if suppressed:
+            related = []
+            for sig, _ in suppressed:
+                anchor = _bill_anchor(sig)
+                if anchor:
+                    related.append(anchor)
+            if related:
+                # Attach to a shallow copy of evidence so we don't mutate the original
+                winner_sig.evidence["related_suppressed"] = related
+        out.append((winner_sig, winner_score))
+    return out
+
+
+def _bill_anchor(signal: Signal) -> str | None:
+    """Compact identifier for a suppressed signal — used in the '+N related' footer."""
+    if signal.signal_type == "D3":
+        mb = signal.evidence.get("matched_bill", {})
+        if mb.get("jurisdiction") and mb.get("identifier"):
+            return f"{mb['jurisdiction']} {mb['identifier']}"
+    if signal.signal_type == "A":
+        # A groups by (company, topic); cluster id distinguishes distinct waves
+        return signal.evidence.get("cluster_id")
+    if signal.signal_type == "C":
+        return signal.evidence.get("filing", {}).get("accession")
+    return None

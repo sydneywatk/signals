@@ -130,6 +130,13 @@ def _render_key_facts(signal: Signal) -> list[str]:
         rows.append(f"State bill      [{mb.get('jurisdiction')}] {mb.get('identifier')} {mb.get('title')}")
         rows.append(f"Similarity      {ev.get('similarity')}")
         rows.append(f"Prior states    {', '.join(ev.get('prior_states', []))}")
+    related = ev.get("related_suppressed")
+    if related:
+        if len(related) <= 4:
+            rows.append(f"+ Related       {', '.join(related)}")
+        else:
+            shown = ', '.join(related[:4])
+            rows.append(f"+ Related       {shown}, +{len(related) - 4} more")
     return rows
 
 
