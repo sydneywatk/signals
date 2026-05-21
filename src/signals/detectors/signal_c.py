@@ -121,7 +121,10 @@ def _bill_stage_signal(bills: list[dict]) -> int:
 def _match_specificity(extraction: dict) -> int:
     """1 if exactly one state is named (very specific), else fall off."""
     n = len(extraction.get("states", []))
-    if n == 0: return 0
-    if n == 1: return 3
-    if n <= 3: return 2
+    if n == 0:
+        return 0
+    if n == 1:
+        return 3
+    if n <= 3:
+        return 2
     return 1

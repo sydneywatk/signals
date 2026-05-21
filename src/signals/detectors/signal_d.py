@@ -13,7 +13,7 @@ import logging
 from typing import Any
 
 from signals.detectors import Signal
-from signals.detectors._common import bill_text_for_similarity, days_since
+from signals.detectors._common import bill_text_for_similarity
 from signals.enrich import icp
 from signals.enrich.embeddings import similarity_to_corpus
 

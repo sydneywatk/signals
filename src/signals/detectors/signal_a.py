@@ -106,7 +106,6 @@ def detect_signal_a(
 
 
 def _why_now(company, bills, states, lda, topics):
-    bill_ids = [f"{b['jurisdiction']['name'][:2].upper()} {b['identifier']}" for b in bills[:5]]
     return (
         f"{company['name']}'s 2026 10-K Item 1A flagged exposure to {topics[0]['label']}. "
         f"In the last 90 days, {len(bills)} substantively similar bills have been introduced "
