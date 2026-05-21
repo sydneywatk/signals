@@ -27,6 +27,16 @@ from signals.sources import alec, edgar, lda as lda_src, openstates
 
 logger = logging.getLogger(__name__)
 
+# Per-company 10-K topic confidence map: {cik: {topic_id: "high" | "medium" | "low"}}.
+# Populated by extract_company_topics. Detector narratives read it to soften
+# language on low-confidence topic matches (Fix 6).
+_COMPANY_TOPIC_CONFIDENCE: dict[str, dict[str, str]] = {}
+
+
+def topic_confidence(cik: str, topic_id: str) -> str:
+    """Return 'high' | 'medium' | 'low' | 'unknown' for a 10-K topic match."""
+    return _COMPANY_TOPIC_CONFIDENCE.get(cik, {}).get(topic_id, "unknown")
+
 
 def collect_bills(cfg: dict[str, Any]) -> list[dict[str, Any]]:
     if not USE_LIVE_APIS:
@@ -92,15 +102,23 @@ def extract_company_topics() -> dict[str, list[str]]:
             result[cik] = []
             continue
         topic_ids: list[str] = []
+        confidences: dict[str, str] = {}
         malformed = 0
         for t in topics_raw:
             if isinstance(t, dict) and isinstance(t.get("id"), str):
-                topic_ids.append(t["id"])
+                tid = t["id"]
+                topic_ids.append(tid)
+                conf = t.get("confidence")
+                if isinstance(conf, str):
+                    confidences[tid] = conf
             else:
                 malformed += 1
         if malformed:
             logger.warning("cik=%s skipped %d malformed topic entries", cik, malformed)
         result[cik] = topic_ids
+        # Stash confidence-by-topic so detector narratives can soften
+        # medium-confidence matches (Fix 6 from the 2026-05-21 audit).
+        _COMPANY_TOPIC_CONFIDENCE[cik] = confidences
     logger.info("Company topic extraction complete: %d of %d ICP companies",
                 len(result), len(icp.load_companies()))
     return result

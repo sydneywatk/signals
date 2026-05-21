@@ -24,6 +24,7 @@ from signals.detectors import Signal
 from signals.detectors._common import (
     classify_cluster_to_topics,
     days_since,
+    is_actionable_and_current,
     lda_filings_for_topics,
     bill_text_for_similarity,
 )
@@ -65,6 +66,8 @@ def detect_signal_a(
     cluster_min_states: int = 3,
     lda_lookback_days: int = 60,
 ) -> list[Signal]:
+    # Filter out enacted bills (>30d post-chaptering) and stale prior-session bills.
+    bills = [b for b in bills if is_actionable_and_current(b)]
     if len(bills) < cluster_min_size:
         return []
 
@@ -115,19 +118,26 @@ def detect_signal_a(
             company = icp.cik_to_company(cik)
             if not company:
                 continue
+            # Fix 6: surface the 10-K topic confidence on the alert so renderers
+            # can soften "flagged as material risk" language for medium matches.
+            from signals.main import topic_confidence
+            tc = topic_confidence(cik, cluster_topics[0]["id"])
             signals.append(Signal(
                 signal_type="A",
                 company_cik=cik,
                 company_name=company["name"],
                 title=f"Coordinated multistate bills in {len(states)} states on {cluster_topics[0]['label']}",
-                why_now=_why_now(company, cluster_bills, states, most_recent_lda, cluster_topics, attribution),
+                why_now=_why_now(company, cluster_bills, states, most_recent_lda, cluster_topics, attribution, tc),
                 evidence={
                     "cluster_id": f"A-cluster-{cluster_idx}",
                     "topic": cluster_topics[0]["id"],
                     "topic_label": cluster_topics[0]["label"],
+                    "topic_confidence": tc,
                     "states": states,
                     "bills": [_bill_summary(b) for b in cluster_bills],
-                    "lda_filing": _lda_summary(most_recent_lda),
+                    # Fix 5: only include LDA actor details when attribution is named.
+                    # For ambient, emit a generic message instead of the registrant/client pair.
+                    "lda_filing": _lda_summary(most_recent_lda) if attribution == "named" else _lda_ambient(),
                     "lda_attribution": attribution,
                     "lda_credible_count": len(credible),
                     "lda_total_in_window": len(recent_lda),
@@ -145,25 +155,46 @@ def detect_signal_a(
     return signals
 
 
-def _why_now(company, bills, states, lda, topics, attribution: str):
+def _why_now(company, bills, states, lda, topics, attribution: str, tc: str = "unknown"):
+    # Fix 6: vary 10-K phrasing by confidence. Strong language reserved for
+    # high-confidence verbatim risk-factor matches; medium becomes "noted in
+    # 10-K Item 1A (industry context)".
+    if tc == "high":
+        tenk_clause = f"{company['name']}'s 2026 10-K Item 1A flagged exposure to {topics[0]['label']} as a material risk"
+    elif tc == "medium":
+        tenk_clause = f"{company['name']}'s 2026 10-K Item 1A mentioned {topics[0]['label']} (industry context)"
+    else:
+        tenk_clause = f"{company['name']}'s 2026 10-K Item 1A references {topics[0]['label']}"
     base = (
-        f"{company['name']}'s 2026 10-K Item 1A flagged exposure to {topics[0]['label']}. "
-        f"In the last 90 days, {len(bills)} substantively similar bills have been introduced "
-        f"across {len(states)} states ({', '.join(states)})."
+        f"{tenk_clause}. In the last 90 days, {len(bills)} substantively similar bills "
+        f"have been introduced across {len(states)} states ({', '.join(states)})."
     )
     if attribution == "named":
-        # Credible pharma actor — name them
         return (
             f"{base} {lda['registrant']['name']} (client: {lda['client']['name']}) "
             f"registered new federal lobbying activity on this issue area "
             f"{days_since(lda['dt_posted'])} days ago."
         )
-    # Ambient — don't attribute mobilization to a non-pharma actor
+    # Ambient — don't attribute mobilization to a non-pharma actor.
+    # Fix 5: stop naming the specific registrant entirely in ambient mode.
     return (
-        f"{base} Federal lobbying activity on this issue area is also active "
-        f"in the same window (no pharma-specific actor identified in the v1 "
-        f"LDA filter)."
+        f"{base} Federal lobbying activity on this issue area is ambient in the "
+        f"same window; v1 LDA filter does not weight registrant industry "
+        f"alignment — v2 ranks by pharma credibility."
     )
+
+
+def _lda_ambient() -> dict[str, Any]:
+    """Placeholder used when attribution is ambient — avoids exposing a
+    non-pharma registrant/client pair an evaluator will Google."""
+    return {
+        "registrant": "(ambient — no pharma-credible actor in v1 LDA filter)",
+        "client": "",
+        "dt_posted": "",
+        "filing_uuid": "",
+        "url": "",
+        "issue_codes": [],
+    }
 
 
 def _bill_summary(b):

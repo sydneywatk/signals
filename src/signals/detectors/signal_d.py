@@ -13,7 +13,7 @@ import logging
 from typing import Any
 
 from signals.detectors import Signal
-from signals.detectors._common import bill_text_for_similarity
+from signals.detectors._common import bill_text_for_similarity, is_actionable_and_current
 from signals.enrich import icp
 from signals.enrich.embeddings import similarity_to_corpus
 
@@ -29,6 +29,11 @@ def detect_signal_d3(
     propagation_min: int = 3,
 ) -> list[Signal]:
     if not bills or not model_bills:
+        return []
+
+    # Drop enacted-and-stale bills + prior-session bills (Fixes 1 + 4)
+    bills = [b for b in bills if is_actionable_and_current(b)]
+    if not bills:
         return []
 
     model_texts = [f"{m['title']} {m['summary']}" for m in model_bills]
@@ -61,17 +66,20 @@ def detect_signal_d3(
         targets = matching_ciks if matching_ciks else [None]
         for cik in targets:
             company = icp.cik_to_company(cik) if cik else None
+            from signals.main import topic_confidence
+            tc = topic_confidence(cik, model_topic) if cik else "unknown"
             signals.append(Signal(
                 signal_type="D3",
                 company_cik=cik or "",
                 company_name=company["name"] if company else "(no ICP match)",
                 title=f"Model bill '{model['title']}' spreading; {bill_state} now {len(prior_states) + 1}th state",
-                why_now=_why_now(company, bill, model, prior_states, best_sim),
+                why_now=_why_now(company, bill, model, prior_states, best_sim, tc),
                 evidence={
                     "model_bill_id": model["id"],
                     "model_bill_title": model["title"],
                     "model_bill_source": model.get("source"),
                     "model_bill_topic": model_topic,
+                    "topic_confidence": tc,
                     "matched_bill": {
                         "id": bill["id"],
                         "identifier": bill["identifier"],
@@ -95,8 +103,18 @@ def detect_signal_d3(
     return signals
 
 
-def _why_now(company, bill, model, prior_states, similarity):
-    co_part = f" {company['name']}'s 10-K flagged {model['topic'].replace('_', ' ')} as a material risk." if company else ""
+def _why_now(company, bill, model, prior_states, similarity, tc: str = "unknown"):
+    # Fix 6: vary 10-K phrasing by topic confidence.
+    if company:
+        topic_h = model["topic"].replace("_", " ")
+        if tc == "high":
+            co_part = f" {company['name']}'s 10-K flagged {topic_h} as a material risk."
+        elif tc == "medium":
+            co_part = f" {company['name']}'s 10-K mentions {topic_h} (industry context)."
+        else:
+            co_part = f" {company['name']}'s 10-K references {topic_h}."
+    else:
+        co_part = ""
     return (
         f"{bill['jurisdiction']['name']} introduced {bill['identifier']} ({bill['title']}), "
         f"similar to the {model['source']} model bill '{model['title']}' "

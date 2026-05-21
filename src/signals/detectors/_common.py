@@ -41,6 +41,57 @@ def days_since(iso_str: str) -> int:
     return (date.today() - date.fromisoformat(s)).days
 
 
+# Lower-cased substrings in `latest_action_description` that indicate a bill
+# has been enacted (signed into law, chaptered, etc.). After enactment, a
+# bill is no longer an alert candidate beyond a short grace window.
+_ENACTED_MARKERS = (
+    "chaptered",
+    "became law",
+    "became a law",
+    "signed by governor",
+    "signed by the governor",
+    "approved by the governor",
+    "approved by governor",
+    "filed with secretary of state",
+    "act effective",
+    "effective date",  # e.g. "Chapter X, effective date Y"
+)
+
+
+def is_bill_actionable(bill: dict[str, Any], *, max_post_enactment_days: int = 30) -> bool:
+    """False iff the bill's latest action looks like enactment AND the enactment
+    is older than `max_post_enactment_days`. Defends against alerting on bills
+    that have already become law (Fix 1 from the 2026-05-21 audit)."""
+    desc = (bill.get("latest_action_description") or "").lower()
+    if not any(m in desc for m in _ENACTED_MARKERS):
+        return True
+    last = bill.get("latest_action_date") or bill.get("first_action_date")
+    if not last:
+        return True
+    try:
+        return days_since(last) <= max_post_enactment_days
+    except (ValueError, TypeError):
+        return True
+
+
+def is_current_session(bill: dict[str, Any], *, max_stale_days: int = 180) -> bool:
+    """False iff the bill's latest action is older than `max_stale_days` — proxy
+    for "bill is from a prior session that has gone quiet" (Fix 4 from the
+    2026-05-21 audit)."""
+    last = bill.get("latest_action_date") or bill.get("first_action_date")
+    if not last:
+        return True
+    try:
+        return days_since(last) <= max_stale_days
+    except (ValueError, TypeError):
+        return True
+
+
+def is_actionable_and_current(bill: dict[str, Any]) -> bool:
+    """Convenience: both filters at once. Use to prune candidate bill lists."""
+    return is_bill_actionable(bill) and is_current_session(bill)
+
+
 def classify_bill_to_topics(bill: dict[str, Any], topics: list[dict[str, Any]]) -> list[dict[str, Any]]:
     """Match a bill's title + abstracts against each topic's keywords and search terms."""
     haystack = bill_text_for_similarity(bill).lower()

@@ -29,7 +29,12 @@ from typing import Any
 import yaml
 
 from signals.detectors import Signal
-from signals.detectors._common import bill_text_for_similarity, classify_bill_to_topics, state_name_to_code
+from signals.detectors._common import (
+    bill_text_for_similarity,
+    classify_bill_to_topics,
+    is_actionable_and_current,
+    state_name_to_code,
+)
 from signals.enrich import icp
 from signals.enrich.embeddings import similarity_to_corpus
 from signals.fixtures import FixtureMissing, load_fixture
@@ -38,7 +43,12 @@ from signals.settings import CONFIG_DIR
 logger = logging.getLogger(__name__)
 
 MIN_SAMPLE = 3
-DEFAULT_SIMILARITY = 0.70
+# E4 raised from 0.70 -> 0.75 after the 2026-05-21 audit (Fix 3): false-positive
+# topic-classification matches (e.g. hospital-financial-aid bill mistaken for
+# Drug Affordability Board) were reaching threshold via shared health-care
+# vocabulary. Higher bar reduces noise on the signal that's most damaging when
+# wrong (governor-track-record claims are very specific).
+DEFAULT_SIMILARITY = 0.75
 DEFAULT_SIGN_RATE = 0.70
 
 
@@ -95,6 +105,10 @@ def detect_signal_e4(
     governors = load_governors()
     signals: list[Signal] = []
 
+    # Drop enacted-and-stale candidates (Fix 1 from audit — OR HB 4040 was
+    # already-chaptered hospital-financial-aid bill that fired E4).
+    bills = [b for b in bills if is_actionable_and_current(b)]
+
     for bill in bills:
         bill_state_name = bill["jurisdiction"]["name"]
         state_code = state_name_to_code(bill_state_name)
@@ -113,10 +127,16 @@ def detect_signal_e4(
         if not historical:
             continue
 
-        # Restrict historical bag to bills with a sign/veto outcome during this term
+        # Restrict historical bag to bills with a sign/veto outcome during this term.
+        # Fix 2: explicitly exclude the candidate bill itself — it was matching
+        # itself at cosine 1.0 when the candidate happened to live in both the
+        # current-bills fixture and the historical bag.
         term_start = gov["term_start"]
+        candidate_id = bill.get("id")
         in_term_outcomes: list[tuple[dict, str]] = []  # (historical_bill, outcome)
         for hb in historical:
+            if hb.get("id") == candidate_id:
+                continue  # self-exclusion
             outcome, action_date = _action_outcome(hb.get("actions") or [])
             if outcome and _in_current_term(action_date, term_start):
                 in_term_outcomes.append((hb, outcome))
@@ -124,13 +144,22 @@ def detect_signal_e4(
         if len(in_term_outcomes) < MIN_SAMPLE:
             continue
 
-        # Filter to topic-similar bills via Voyage cosine
+        # Filter to topic-similar bills via cosine AND topic-substance check.
+        # Fix 3: require keyword-based topic overlap between candidate and each
+        # historical bill, not just embedding similarity (which catches shared
+        # bureaucratic vocabulary like "Oregon Health Authority" across
+        # substantively unrelated bills).
         candidate_text = bill_text_for_similarity(bill)
         historical_texts = [bill_text_for_similarity(hb) for hb, _ in in_term_outcomes]
         sims = similarity_to_corpus(candidate_text, historical_texts)
-        similar = [(hb, outcome, sim)
-                    for (hb, outcome), sim in zip(in_term_outcomes, sims)
-                    if sim >= similarity_threshold]
+        similar: list[tuple[dict, str, float]] = []
+        for (hb, outcome), sim in zip(in_term_outcomes, sims):
+            if sim < similarity_threshold:
+                continue
+            hb_topic_ids = {t["id"] for t in classify_bill_to_topics(hb, topics)}
+            if not (hb_topic_ids & bill_topic_ids):
+                continue
+            similar.append((hb, outcome, sim))
 
         if len(similar) < MIN_SAMPLE:
             continue

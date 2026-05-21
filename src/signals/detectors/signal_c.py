@@ -16,6 +16,7 @@ from signals.detectors import Signal
 from signals.detectors._common import (
     classify_bill_to_topics,
     days_since,
+    is_actionable_and_current,
     state_name_to_code,
 )
 from signals.enrich import icp
@@ -48,6 +49,8 @@ def detect_signal_c(
 
             matching_bills = []
             for bill in active_bills:
+                if not is_actionable_and_current(bill):
+                    continue
                 bill_state_code = state_name_to_code(bill["jurisdiction"]["name"])
                 if bill_state_code not in states_in_8k:
                     continue
