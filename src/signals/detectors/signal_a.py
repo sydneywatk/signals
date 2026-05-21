@@ -4,14 +4,20 @@ Detection:
 1. Cluster recent bills by text similarity.
 2. Keep clusters with >= cluster_min_size bills across >= cluster_min_states states.
 3. Classify each cluster to taxonomy topics (keyword match).
-4. Require >= 1 LDA registration in the last `lda_lookback_days` matching the
-   cluster's lda_issue_codes (the actor signal).
+4. Require >= 1 LDA filing in the last `lda_lookback_days` matching the
+   cluster's lda_issue_codes. **Narrative attribution gating:** if no filing
+   in the matched bag passes `_is_pharma_credible_actor()`, the LDA evidence
+   is rendered as "ambient lobbying activity" rather than naming a specific
+   actor. This addresses v1's known issue where the HCR issue code matches
+   any health-sector lobbying (e.g., regional hospitals) and over-attributes
+   pharma-specific intent.
 5. For each ICP company whose 10-K Item 1A mentioned the cluster's topic, emit
    one Signal A per (cluster, company).
 """
 from __future__ import annotations
 
 import logging
+import re
 from typing import Any
 
 from signals.detectors import Signal
@@ -25,6 +31,27 @@ from signals.enrich import icp
 from signals.enrich.embeddings import Corpus
 
 logger = logging.getLogger(__name__)
+
+# Names + activity-text patterns we treat as credible pharma actors when
+# attributing legislative mobilization. Hits surface as named-actor narrative;
+# misses get the "ambient lobbying activity" framing.
+_PHARMA_ACTOR_RE = re.compile(
+    r"\b(phrma|pharmac|biopharm|biosim|biolog|drug manufactur|"
+    r"prescription drug|pharmacy benefit|pbm|insulin|biotech|"
+    r"pfizer|merck|abbvie|bristol|johnson|gilead|amgen|"
+    r"ahip|kaiser foundation|america's health insurance|"
+    r"medicaid|medicare part d)\b",
+    re.IGNORECASE,
+)
+
+
+def _is_pharma_credible_actor(filing: dict[str, Any]) -> bool:
+    """True iff the filing's registrant/client/activity-text names a pharma-credible actor."""
+    blob_parts = [filing.get("registrant", {}).get("name", ""),
+                   filing.get("client", {}).get("name", "")]
+    for a in filing.get("lobbying_activities", []) or []:
+        blob_parts.append(a.get("description") or "")
+    return bool(_PHARMA_ACTOR_RE.search(" ".join(blob_parts)))
 
 
 def detect_signal_a(
@@ -63,7 +90,17 @@ def detect_signal_a(
         if not recent_lda:
             continue
 
-        most_recent_lda = min(recent_lda, key=lambda f: days_since(f["dt_posted"]))
+        # Prefer a credible pharma actor for the narrative anchor. Fall back to
+        # the most-recent filing in the matched bag if none of the filings
+        # name a pharma actor — but the why-now narrative shifts to ambient.
+        credible = [f for f in recent_lda if _is_pharma_credible_actor(f)]
+        if credible:
+            anchor = min(credible, key=lambda f: days_since(f["dt_posted"]))
+            attribution = "named"
+        else:
+            anchor = min(recent_lda, key=lambda f: days_since(f["dt_posted"]))
+            attribution = "ambient"
+        most_recent_lda = anchor
         lda_age = days_since(most_recent_lda["dt_posted"])
 
         cluster_topic_ids = {t["id"] for t in cluster_topics}
@@ -83,7 +120,7 @@ def detect_signal_a(
                 company_cik=cik,
                 company_name=company["name"],
                 title=f"Coordinated multistate bills in {len(states)} states on {cluster_topics[0]['label']}",
-                why_now=_why_now(company, cluster_bills, states, most_recent_lda, cluster_topics),
+                why_now=_why_now(company, cluster_bills, states, most_recent_lda, cluster_topics, attribution),
                 evidence={
                     "cluster_id": f"A-cluster-{cluster_idx}",
                     "topic": cluster_topics[0]["id"],
@@ -91,6 +128,9 @@ def detect_signal_a(
                     "states": states,
                     "bills": [_bill_summary(b) for b in cluster_bills],
                     "lda_filing": _lda_summary(most_recent_lda),
+                    "lda_attribution": attribution,
+                    "lda_credible_count": len(credible),
+                    "lda_total_in_window": len(recent_lda),
                     "matching_companies_total": len(matching_ciks),
                 },
                 score_inputs={
@@ -105,13 +145,24 @@ def detect_signal_a(
     return signals
 
 
-def _why_now(company, bills, states, lda, topics):
-    return (
+def _why_now(company, bills, states, lda, topics, attribution: str):
+    base = (
         f"{company['name']}'s 2026 10-K Item 1A flagged exposure to {topics[0]['label']}. "
         f"In the last 90 days, {len(bills)} substantively similar bills have been introduced "
-        f"across {len(states)} states ({', '.join(states)}). "
-        f"{lda['registrant']['name']} (client: {lda['client']['name']}) registered new federal "
-        f"lobbying activity on the same issue area {days_since(lda['dt_posted'])} days ago."
+        f"across {len(states)} states ({', '.join(states)})."
+    )
+    if attribution == "named":
+        # Credible pharma actor — name them
+        return (
+            f"{base} {lda['registrant']['name']} (client: {lda['client']['name']}) "
+            f"registered new federal lobbying activity on this issue area "
+            f"{days_since(lda['dt_posted'])} days ago."
+        )
+    # Ambient — don't attribute mobilization to a non-pharma actor
+    return (
+        f"{base} Federal lobbying activity on this issue area is also active "
+        f"in the same window (no pharma-specific actor identified in the v1 "
+        f"LDA filter)."
     )
 
 

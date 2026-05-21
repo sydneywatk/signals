@@ -118,10 +118,18 @@ def test_account_block_kit_shows_n_signals_firing():
     json.dumps(payload)  # serializable
     text_blob = json.dumps(payload)
     assert "Pfizer Inc" in text_blob
-    assert "2 signals firing" in text_blob
+    # New structure: Signals Firing field with value "2"
+    assert "Signals Firing" in text_blob and '\\n2' in text_blob
     assert "Other firing signals" in text_blob
-    # Score breakdown footer present
     assert "Score breakdown" in text_blob
+    # Visual polish: divider blocks present
+    assert any(b.get("type") == "divider" for b in payload["blocks"])
+    # Fields block in second slot
+    assert payload["blocks"][1]["type"] == "section"
+    assert "fields" in payload["blocks"][1]
+    # Suggested opener prominently placed
+    opener_text = json.dumps(payload["blocks"][2])
+    assert "Suggested opener" in opener_text
 
 
 def test_separate_companies_separate_accounts():

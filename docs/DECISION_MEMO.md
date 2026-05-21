@@ -27,7 +27,23 @@ flagged with `is_synthetic_demo: true`. The Slack alert renders a warning row
 when this fixture is the source. In production Signal C would either (a) read
 8-K exhibits, or (b) be rescoped to 10-Q-driven detection.
 
-**3. Pfizer in companies.yml despite being out-of-ICP (large-cap, not mid-cap).**
+**3. Signal A's LDA filter is too broad — narrative softened, not blocked.**
+LDA's `/filings/` endpoint has no structured filter on the specific topic; only
+`filing_general_issue_area_code` (HCR = Health Care Reform, etc.) is queryable.
+This means our PDAB cluster matched any HCR filing in the window — including
+*Ephraim McDowell Health*, a small Kentucky community hospital lobbying on
+generic healthcare reform. They aren't credible PDAB actors. Fix in v1:
+narrative attribution gating. `_is_pharma_credible_actor()` regex-checks the
+filing's registrant/client/activity text against pharma actor patterns
+(PhRMA, AHIP, named manufacturers, "pharmacy benefit", "prescription drug",
+etc.). On hit, the narrative names the actor ("X registered new lobbying
+activity"); on miss, it shifts to ambient ("federal lobbying activity on this
+issue area is up — no pharma-specific actor identified in v1 LDA filter").
+Signal still fires (gate still requires LDA presence) but attribution is
+honest. v2 needs LD-2 quarterly text search (where activity descriptions
+are richer) and a curated registrant whitelist of credible pharma actors.
+
+**4. Pfizer in companies.yml despite being out-of-ICP (large-cap, not mid-cap).**
 The fixture demo depends on Pfizer's real 10-K + 8-K shape. Removing Pfizer
 would have left the fixture run with zero ICP topic enrichment (the other 12
 mid-caps don't have cached 10-K extractions in v1; each adds ~$0.02 in

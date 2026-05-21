@@ -343,6 +343,20 @@ def render_account_alert(account: AccountAlert) -> str:
 
 
 def build_account_block_kit(account: AccountAlert) -> dict[str, Any]:
+    """Block Kit alert tuned for 3-second AE comprehension.
+
+    Structure:
+      1. Header — big: emoji + composite score + company name
+      2. Fields block — at-a-glance: company / score / signals firing / top signal
+      3. Section — Suggested opener (the line they read on a call)
+      4. Divider — visual break between "what to say" and "why"
+      5. Section — Why now narrative
+      6. Section — Key facts table (monospaced)
+      7. Section — Other firing signals (if >1)
+      8. Divider
+      9. Context — small-font per-signal score breakdown
+     10. Actions — up to 5 buttons across signal types (bill / 10-K / LDA / etc.)
+    """
     top_sig, top_score = account.top
     emoji = _composite_emoji(account.composite_score)
 
@@ -350,27 +364,33 @@ def build_account_block_kit(account: AccountAlert) -> dict[str, Any]:
         {
             "type": "header",
             "text": {"type": "plain_text",
-                     "text": f"{emoji} Account Score {account.composite_score} — "
-                             f"{account.company_name}"[:150]},
+                     "text": f"{emoji} {account.company_name} — Score {account.composite_score}"[:150]},
         },
+        # Top-level fields for the 3-second scan
         {
-            "type": "context",
-            "elements": [{
-                "type": "mrkdwn",
-                "text": f"*{account.num_signals} signal"
-                         f"{'s' if account.num_signals != 1 else ''} firing* "
-                         f"· top: Signal *{top_sig.signal_type}* "
-                         f"({top_score.total}) · _{top_sig.title}_",
-            }],
+            "type": "section",
+            "fields": [
+                {"type": "mrkdwn",
+                 "text": f"*Company*\n{account.company_name}"},
+                {"type": "mrkdwn",
+                 "text": f"*Account Score*\n{emoji} {account.composite_score} / 100"},
+                {"type": "mrkdwn",
+                 "text": f"*Signals Firing*\n{account.num_signals}"},
+                {"type": "mrkdwn",
+                 "text": f"*Top Signal*\nSignal {top_sig.signal_type} ({top_score.total}) · _{top_score.confidence}_"},
+            ],
         },
+        # Promoted suggested opener — the line the AE actually reads
         {
             "type": "section",
             "text": {"type": "mrkdwn",
-                     "text": f"*Suggested opener:*\n> {_suggested_opener(account)}"},
+                     "text": f":speech_balloon: *Suggested opener*\n>{_suggested_opener(account)}"},
         },
+        {"type": "divider"},
+        # Why-now narrative
         {
             "type": "section",
-            "text": {"type": "mrkdwn", "text": f"*Why now:* {top_sig.why_now}"},
+            "text": {"type": "mrkdwn", "text": f"*Why now*\n{top_sig.why_now}"},
         },
     ]
 
@@ -378,11 +398,12 @@ def build_account_block_kit(account: AccountAlert) -> dict[str, Any]:
     if facts:
         blocks.append({
             "type": "section",
-            "text": {"type": "mrkdwn", "text": "```" + "\n".join(facts) + "```"},
+            "text": {"type": "mrkdwn",
+                     "text": f"*Key facts*\n```{chr(10).join(facts)}```"},
         })
 
     if account.num_signals > 1:
-        lines = ["*Other firing signals:*"]
+        lines = ["*Other firing signals*"]
         for sig, score in account.signals[1:]:
             lines.append(f"• *Signal {sig.signal_type}* ({score.total}): {sig.title}")
         blocks.append({
@@ -390,23 +411,73 @@ def build_account_block_kit(account: AccountAlert) -> dict[str, Any]:
             "text": {"type": "mrkdwn", "text": "\n".join(lines)},
         })
 
+    blocks.append({"type": "divider"})
+
+    # Per-signal score breakdown — de-emphasized in context block (Slack renders smaller)
     breakdown_segments = []
     for sig, score in account.signals:
-        comps = ", ".join(f"{k}={v:.1f}" for k, v in score.components.items())
-        breakdown_segments.append(f"_{sig.signal_type} ({score.total})_ {comps}")
+        comps = ", ".join(f"{k}={v:.0f}" for k, v in score.components.items())
+        breakdown_segments.append(f"*{sig.signal_type}* ({score.total}): {comps}")
     blocks.append({
         "type": "context",
         "elements": [{
             "type": "mrkdwn",
-            "text": ("*Score breakdown:* " + " · ".join(breakdown_segments))[:2900],
+            "text": ("Score breakdown — " + " · ".join(breakdown_segments))[:2900],
         }],
     })
 
-    buttons = _action_buttons(top_sig)
+    # Action buttons — mix bill / 10-K / LDA / 8-K depending on what's in the account
+    buttons = _gather_account_buttons(account)
     if buttons:
         blocks.append({"type": "actions", "elements": buttons[:5]})
 
     return {"text": render_account_alert(account)[:600], "blocks": blocks}
+
+
+def _gather_account_buttons(account: AccountAlert) -> list[dict[str, Any]]:
+    """Buttons across the account's signals: bill page, 10-K, LDA filing, 8-K
+    when available. Cap at 5 (Slack max per actions block)."""
+    seen_urls: set[str] = set()
+    buttons: list[dict[str, Any]] = []
+
+    def add(label: str, url: str | None) -> None:
+        if not url or url in seen_urls:
+            return
+        seen_urls.add(url)
+        buttons.append(_btn(label, url))
+
+    for sig, _ in account.signals:
+        ev = sig.evidence
+        if sig.signal_type == "A":
+            for b in ev.get("bills", [])[:2]:
+                add(f"📜 {b['jurisdiction'][:2]} {b['identifier']}",
+                    b.get("openstates_url"))
+            lda = ev.get("lda_filing", {})
+            add("🏛️ View LDA filing", lda.get("url"))
+        elif sig.signal_type == "C":
+            f = ev.get("filing", {})
+            add("📑 View 8-K", f.get("url"))
+            for b in ev.get("active_bills", [])[:1]:
+                add(f"📜 {b['jurisdiction'][:2]} {b['identifier']}",
+                    b.get("openstates_url"))
+        elif sig.signal_type == "D3":
+            mb = ev.get("matched_bill", {})
+            add(f"📜 {mb.get('jurisdiction', '')[:2]} {mb.get('identifier', '')}",
+                mb.get("openstates_url"))
+        elif sig.signal_type == "E4":
+            b = ev.get("bill", {})
+            add(f"📜 {b.get('jurisdiction', '')[:2]} {b.get('identifier', '')}",
+                b.get("openstates_url"))
+
+    # 10-K button — derived from CIK; works for any signal type with a company
+    cik = account.company_cik
+    if cik:
+        cik_padded = cik.zfill(10) if cik.isdigit() else cik
+        tenk_url = (f"https://www.sec.gov/cgi-bin/browse-edgar?"
+                     f"action=getcompany&CIK={cik_padded}&type=10-K&dateb=&owner=include&count=5")
+        add("📄 View 10-K", tenk_url)
+
+    return buttons
 
 
 def post_account_alert(account: AccountAlert) -> bool:
