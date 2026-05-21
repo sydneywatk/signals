@@ -82,12 +82,21 @@ def extract_company_topics() -> dict[str, list[str]]:
         except Exception as exc:
             logger.warning("10-K extraction failed for cik=%s: %s", cik, exc)
             continue
+        topics_raw = extracted.get("topics", [])
+        if not isinstance(topics_raw, list):
+            logger.warning("cik=%s extraction returned non-list topics field (type=%s); skipping",
+                           cik, type(topics_raw).__name__)
+            result[cik] = []
+            continue
         topic_ids: list[str] = []
-        for t in extracted.get("topics", []) or []:
+        malformed = 0
+        for t in topics_raw:
             if isinstance(t, dict) and isinstance(t.get("id"), str):
                 topic_ids.append(t["id"])
             else:
-                logger.warning("cik=%s malformed topic entry: %r", cik, t)
+                malformed += 1
+        if malformed:
+            logger.warning("cik=%s skipped %d malformed topic entries", cik, malformed)
         result[cik] = topic_ids
     logger.info("Company topic extraction complete: %d of %d ICP companies",
                 len(result), len(icp.load_companies()))
