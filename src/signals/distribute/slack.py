@@ -27,6 +27,20 @@ logger = logging.getLogger(__name__)
 
 _CONFIDENCE_EMOJI = {"high": "🔥", "medium": "🟡", "low": "⚪"}
 
+# User-facing names for signal types. Internal codes (A/C/D3/E4) stay unchanged
+# in code, tests, scoring config, fixtures, and engineer-facing docs. Slack
+# alerts and any other user-facing surface should use these labels.
+SIGNAL_LABEL = {
+    "A":  "Multistate Convergence",
+    "C":  "Public Risk Disclosure",
+    "D3": "Model Bill Spread",
+    "E4": "Governor Track Record",
+}
+
+
+def _label(signal_type: str) -> str:
+    return SIGNAL_LABEL.get(signal_type, signal_type)
+
 
 def render_alert_text(signal: Signal, score: ScoreBreakdown) -> str:
     """Plain-text fallback for stdout dry-run + Slack notification text."""
@@ -197,53 +211,17 @@ def _btn(label: str, url: str) -> dict[str, Any]:
 
 
 def _suggested_opener(account: "AccountAlert") -> str:
-    """One sentence the AE could read on a discovery call.
-
-    Templated per top signal so the language is concrete and fact-grounded —
-    every clause cites a specific bill, filing, or signing rate from the alert
-    evidence. No generic hand-waving.
+    """Primary opener used in the Slack alert body. Pulled from the cached
+    opener variants on the account (first variant = the AE's default line).
+    Falls back to the template if openers haven't been generated yet.
     """
+    if account.opener_variants:
+        return account.opener_variants[0]["text"]
+    # Last-resort fallback if generation was skipped entirely
     top_sig, _ = account.top
-    ev = top_sig.evidence
-    co = account.company_name
-
-    if top_sig.signal_type == "A":
-        topic_label = ev.get("topic_label", "the topic")
-        states = ev.get("states", [])
-        state_phrase = ", ".join(states[:3]) + (
-            f" and {len(states) - 3} other" if len(states) > 3 else "")
-        return (f"{co}'s 10-K just flagged {topic_label} as a material risk, and "
-                f"the same bill is now active in {state_phrase} — wanted to make "
-                f"sure your team had a heads-up before the next committee vote.")
-
-    if top_sig.signal_type == "C":
-        states = ev.get("states", [])
-        topics = ev.get("topics", [])
-        topic_phrase = topics[0].replace("_", " ") if topics else "state regulation"
-        state_phrase = "/".join(states[:3])
-        return (f"{co} just filed an 8-K naming {state_phrase} {topic_phrase} as a "
-                f"specific exposure — saw active matching bills and wanted to flag "
-                f"it before your team has to scramble.")
-
-    if top_sig.signal_type == "D3":
-        model_title = ev.get("model_bill_title", "a model bill")
-        prior_states = ev.get("prior_states", [])
-        bill_state = ev.get("matched_bill", {}).get("jurisdiction", "a target state")
-        return (f"The {model_title} just showed up in {bill_state} — that's "
-                f"{len(prior_states) + 1} states now. With {co}'s 10-K exposure "
-                f"on this topic, you're going to want this on the radar before "
-                f"two more states follow.")
-
-    if top_sig.signal_type == "E4":
-        gov = ev.get("governor", "the governor")
-        rate = int((ev.get("sign_rate") or 0) * 100)
-        bill_state = ev.get("bill", {}).get("jurisdiction", "")
-        bill_id = ev.get("bill", {}).get("identifier", "")
-        return (f"{bill_state} just introduced {bill_id} — {gov} has signed "
-                f"{rate}% of similar bills this term, so this one is on a fast "
-                f"path. {co}'s 10-K already flags this as material.")
-
-    return f"{co} has {account.num_signals} signals firing right now — worth a call this week."
+    return (f"{account.company_name} has {account.num_signals} signal"
+            f"{'s' if account.num_signals != 1 else ''} firing right now — "
+            f"worth a real call this week.")
 
 
 # ---------------------------------------------------------------------------
@@ -258,6 +236,10 @@ class AccountAlert:
     # Ordered by score desc — signals[0] is the top-scoring signal for this account.
     signals: list[tuple[Signal, ScoreBreakdown]] = field(default_factory=list)
     composite_score: int = 0
+    # Filled in by main.py before posting: 3 opener variants from Claude (or fallback).
+    opener_variants: list[dict[str, str]] = field(default_factory=list)
+    # Filled in by main.py: GitHub blob URL for the brief markdown file.
+    brief_url: str = ""
 
     @property
     def num_signals(self) -> int:
@@ -327,7 +309,7 @@ def render_account_alert(account: AccountAlert) -> str:
         parts.append("")
         parts.append("Other firing signals:")
         for sig, score in account.signals[1:]:
-            parts.append(f"  • Signal {sig.signal_type} ({score.total}): {sig.title}")
+            parts.append(f"  • {_label(sig.signal_type)} ({score.total}): {sig.title}")
             short = sig.why_now[:160] + ("…" if len(sig.why_now) > 160 else "")
             parts.append(f"    {short}")
 
@@ -335,7 +317,7 @@ def render_account_alert(account: AccountAlert) -> str:
     parts.append("Per-signal score breakdown:")
     for sig, score in account.signals:
         comps = ", ".join(f"{k}={v:.1f}" for k, v in score.components.items())
-        parts.append(f"  Signal {sig.signal_type} total {score.total} — {comps}")
+        parts.append(f"  {_label(sig.signal_type)} total {score.total} — {comps}")
 
     parts.append("")
     parts.extend(_render_action_links(top_sig))
@@ -377,7 +359,7 @@ def build_account_block_kit(account: AccountAlert) -> dict[str, Any]:
                 {"type": "mrkdwn",
                  "text": f"*Signals Firing*\n{account.num_signals}"},
                 {"type": "mrkdwn",
-                 "text": f"*Top Signal*\nSignal {top_sig.signal_type} ({top_score.total}) · _{top_score.confidence}_"},
+                 "text": f"*Top Signal*\n{_label(top_sig.signal_type)} ({top_score.total}) · _{top_score.confidence}_"},
             ],
         },
         # Promoted suggested opener — the line the AE actually reads
@@ -405,7 +387,7 @@ def build_account_block_kit(account: AccountAlert) -> dict[str, Any]:
     if account.num_signals > 1:
         lines = ["*Other firing signals*"]
         for sig, score in account.signals[1:]:
-            lines.append(f"• *Signal {sig.signal_type}* ({score.total}): {sig.title}")
+            lines.append(f"• *{_label(sig.signal_type)}* ({score.total}): {sig.title}")
         blocks.append({
             "type": "section",
             "text": {"type": "mrkdwn", "text": "\n".join(lines)},
@@ -413,25 +395,35 @@ def build_account_block_kit(account: AccountAlert) -> dict[str, Any]:
 
     blocks.append({"type": "divider"})
 
-    # Per-signal score breakdown — de-emphasized in context block (Slack renders smaller)
-    breakdown_segments = []
-    for sig, score in account.signals:
-        comps = ", ".join(f"{k}={v:.0f}" for k, v in score.components.items())
-        breakdown_segments.append(f"*{sig.signal_type}* ({score.total}): {comps}")
-    blocks.append({
-        "type": "context",
-        "elements": [{
-            "type": "mrkdwn",
-            "text": ("Score breakdown — " + " · ".join(breakdown_segments))[:2900],
-        }],
-    })
-
-    # Action buttons — mix bill / 10-K / LDA / 8-K depending on what's in the account
+    # Action buttons — mix bill / 10-K / LDA / 8-K depending on what's in the account.
+    # First button is "View full brief →" if a brief URL has been wired up.
     buttons = _gather_account_buttons(account)
+    if account.brief_url:
+        buttons.insert(0, _btn("📄 View full brief →", account.brief_url))
     if buttons:
         blocks.append({"type": "actions", "elements": buttons[:5]})
 
     return {"text": render_account_alert(account)[:600], "blocks": blocks}
+
+
+def build_score_breakdown_followup(account: AccountAlert) -> dict[str, Any]:
+    """Companion Slack message: per-signal score breakdown. Posted immediately
+    after the main alert so the main alert stays clean. v1 limitation: webhooks
+    don't support true threading without a bot token, so this is a follow-up
+    message in the same channel — not a thread reply.
+    """
+    lines = [f"_Score breakdown for {account.company_name} (Account Score {account.composite_score})_"]
+    for sig, score in account.signals:
+        label = _label(sig.signal_type)
+        comps = " · ".join(f"`{k}` {v:.1f}" for k, v in score.components.items())
+        lines.append(f"• *{label}* — total *{score.total}* ({score.confidence}): {comps}")
+    return {
+        "text": f"Score breakdown for {account.company_name}",
+        "blocks": [{
+            "type": "context",
+            "elements": [{"type": "mrkdwn", "text": "\n".join(lines)[:2900]}],
+        }],
+    }
 
 
 def _gather_account_buttons(account: AccountAlert) -> list[dict[str, Any]]:
@@ -500,4 +492,13 @@ def post_account_alert(account: AccountAlert) -> bool:
     logger.info("Account alert posted: %s (%d signals, composite %d) -> %s",
                 account.company_name, account.num_signals, account.composite_score,
                 resp.status_code)
+
+    # Follow-up message: score breakdown (de-emphasized from main alert)
+    try:
+        followup = build_score_breakdown_followup(account)
+        resp2 = httpx.post(SLACK_WEBHOOK_URL, json=followup, timeout=15.0)
+        resp2.raise_for_status()
+        logger.info("Score breakdown follow-up posted -> %s", resp2.status_code)
+    except httpx.HTTPError as exc:
+        logger.warning("Score breakdown follow-up post failed (non-fatal): %s", exc)
     return True

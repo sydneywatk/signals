@@ -69,7 +69,7 @@ def test_action_buttons_have_urls():
 # ---------- Account-level alerts ----------
 
 from signals.distribute.slack import (  # noqa: E402
-    aggregate_by_company, build_account_block_kit,
+    aggregate_by_company, build_account_block_kit, build_score_breakdown_followup,
 )
 
 
@@ -113,7 +113,8 @@ def test_account_block_kit_shows_n_signals_firing():
         _d3_signal("78003", "alec_pbm", 84),
         _d3_signal("78003", "nashp_pdab", 80),
     ]
-    payload = build_account_block_kit(aggregate_by_company(scored)[0])
+    account = aggregate_by_company(scored)[0]
+    payload = build_account_block_kit(account)
     import json
     json.dumps(payload)  # serializable
     text_blob = json.dumps(payload)
@@ -121,7 +122,6 @@ def test_account_block_kit_shows_n_signals_firing():
     # New structure: Signals Firing field with value "2"
     assert "Signals Firing" in text_blob and '\\n2' in text_blob
     assert "Other firing signals" in text_blob
-    assert "Score breakdown" in text_blob
     # Visual polish: divider blocks present
     assert any(b.get("type") == "divider" for b in payload["blocks"])
     # Fields block in second slot
@@ -130,6 +130,27 @@ def test_account_block_kit_shows_n_signals_firing():
     # Suggested opener prominently placed
     opener_text = json.dumps(payload["blocks"][2])
     assert "Suggested opener" in opener_text
+    # Human-readable labels used (not raw "D3")
+    assert "Model Bill Spread" in text_blob
+    # Score breakdown is NOT in the main alert anymore — it goes to a follow-up
+    assert "Score breakdown" not in text_blob
+
+
+def test_score_breakdown_followup_separate_payload():
+    """Score breakdown is a separate Slack post, not in the main alert."""
+    scored = [
+        _d3_signal("78003", "alec_pbm", 84),
+        _d3_signal("78003", "nashp_pdab", 80),
+    ]
+    account = aggregate_by_company(scored)[0]
+    payload = build_score_breakdown_followup(account)
+    import json
+    text = json.dumps(payload)
+    assert "Score breakdown" in text
+    assert "Model Bill Spread" in text  # human-readable labels here too
+    # Compact: one context block
+    assert len(payload["blocks"]) == 1
+    assert payload["blocks"][0]["type"] == "context"
 
 
 def test_separate_companies_separate_accounts():

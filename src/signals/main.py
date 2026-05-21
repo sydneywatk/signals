@@ -14,7 +14,10 @@ from datetime import date, datetime, timedelta
 from typing import Any
 
 from signals.detectors import Signal, detect_signal_a, detect_signal_c, detect_signal_d3, detect_signal_e4
-from signals.distribute.slack import aggregate_by_company, post_account_alert
+from signals.distribute.brief import brief_url, write_brief
+from signals.distribute.slack import (
+    SIGNAL_LABEL, aggregate_by_company, post_account_alert,
+)
 from signals.enrich import extraction, icp
 from signals.fixtures import FixtureMissing, load_fixture
 from signals.logging_config import setup_logging
@@ -186,6 +189,34 @@ def run_pipeline() -> dict[str, Any]:
     logger.info("Aggregated %d firing signals into %d account alert(s)",
                 len(alerts), len(accounts))
     for account in accounts:
+        # Generate 3 opener variants for this account (Claude or fallback)
+        top_sig, _ = account.top
+        try:
+            openers = extraction.generate_opener_variants(
+                company_name=account.company_name,
+                signal_type=top_sig.signal_type,
+                signal_label=SIGNAL_LABEL.get(top_sig.signal_type, top_sig.signal_type),
+                top_signal_title=top_sig.title,
+                why_now=top_sig.why_now,
+                evidence=top_sig.evidence,
+                num_signals=account.num_signals,
+            )
+            account.opener_variants = openers
+        except Exception as exc:
+            logger.warning("Opener generation failed for %s: %s", account.company_name, exc)
+        # Write the long-form brief to disk; URL will work after the briefs/ file
+        # is committed (v1 limitation — see DECISION_MEMO).
+        try:
+            write_brief(
+                company_cik=account.company_cik,
+                company_name=account.company_name,
+                composite_score=account.composite_score,
+                signals=account.signals,
+                suggested_openers=[v["text"] for v in account.opener_variants],
+            )
+            account.brief_url = brief_url(account.company_cik)
+        except Exception as exc:
+            logger.warning("Brief write failed for %s: %s", account.company_name, exc)
         post_account_alert(account)
 
     if watchlist:
