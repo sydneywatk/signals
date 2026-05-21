@@ -492,13 +492,7 @@ def post_account_alert(account: AccountAlert) -> bool:
     logger.info("Account alert posted: %s (%d signals, composite %d) -> %s",
                 account.company_name, account.num_signals, account.composite_score,
                 resp.status_code)
-
-    # Follow-up message: score breakdown (de-emphasized from main alert)
-    try:
-        followup = build_score_breakdown_followup(account)
-        resp2 = httpx.post(SLACK_WEBHOOK_URL, json=followup, timeout=15.0)
-        resp2.raise_for_status()
-        logger.info("Score breakdown follow-up posted -> %s", resp2.status_code)
-    except httpx.HTTPError as exc:
-        logger.warning("Score breakdown follow-up post failed (non-fatal): %s", exc)
+    # Score breakdown stays in the brief (one-pager) only — keeps the Slack
+    # channel clean. `build_score_breakdown_followup` is retained for tests +
+    # potential future re-enablement, but isn't posted.
     return True
