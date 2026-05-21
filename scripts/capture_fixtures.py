@@ -36,25 +36,43 @@ logger = logging.getLogger(__name__)
 # Populated lazily inside _build_registry() so source modules aren't imported
 # until needed (lets `--help` work without all deps installed).
 def _build_registry() -> dict[str, dict[str, Callable[[], Any]]]:
-    from signals.sources import edgar, lda, openstates  # noqa: F401  # filled in later steps
+    from signals.sources import openstates
 
     return {
         "openstates": {
-            # TODO: enable once openstates.get_recent_bills is implemented (build task 5)
-            # "recent_bills_pharma_ca_2026-05": lambda: openstates.get_recent_bills(
-            #     states=["CA"], topics=["drug_price_transparency"], days=14
-            # ),
+            # Bag of recent bills matching the pharma-pricing query across all states.
+            # Used by Signal A clustering and by smoke tests.
+            "recent_bills_drug_pricing": lambda: openstates.search_bills(
+                query='"drug pricing" OR "prescription drug" OR "pharmacy benefit manager"',
+                updated_since="2026-03-01",
+                max_pages=3,
+            ),
+            # One detailed bill for the get_bill_detail fixture path.
+            # Bill ID resolved on first capture and pinned manually if it churns.
+            "bill_detail_sample": lambda: _capture_sample_bill_detail(),
         },
         "lda": {
-            # TODO: enable once lda.get_recent_registrations is implemented (build task 7)
+            # populated in build task 7
         },
         "edgar": {
-            # TODO: enable once edgar.get_10k_risk_factors is implemented (build task 6)
+            # populated in build task 6
         },
         "anthropic": {
-            # TODO: enable once enrich/extraction + embeddings are implemented (build task 10)
+            # populated in build task 10
         },
     }
+
+
+def _capture_sample_bill_detail() -> Any:
+    """Pick the first bill from the recent_bills query and fetch its detail."""
+    from signals.sources import openstates
+
+    bills = openstates.search_bills(
+        query='"drug pricing"', updated_since="2026-03-01", max_pages=1
+    )
+    if not bills:
+        raise RuntimeError("No bills returned; can't seed bill_detail_sample fixture")
+    return openstates.get_bill_detail(bills[0]["id"])
 
 
 def parse_targets(args: list[str], registry: dict[str, dict[str, Callable]]) -> list[tuple[str, str]]:

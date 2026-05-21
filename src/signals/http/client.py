@@ -65,8 +65,9 @@ class HttpClient:
         merged_headers = dict(config.extra_headers or {})
         if config.user_agent:
             merged_headers["User-Agent"] = config.user_agent
-        if kwargs.get("headers"):
-            merged_headers.update(kwargs.pop("headers"))
+        caller_headers = kwargs.pop("headers", None)
+        if caller_headers:
+            merged_headers.update(caller_headers)
 
         last_exc: Exception | None = None
         for attempt in range(_MAX_RETRIES):
