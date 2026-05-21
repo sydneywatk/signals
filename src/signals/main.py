@@ -14,7 +14,7 @@ from datetime import date, datetime, timedelta
 from typing import Any
 
 from signals.detectors import Signal, detect_signal_a, detect_signal_c, detect_signal_d3
-from signals.distribute.slack import post_alert
+from signals.distribute.slack import aggregate_by_company, post_account_alert
 from signals.enrich import extraction, icp
 from signals.fixtures import FixtureMissing, load_fixture
 from signals.logging_config import setup_logging
@@ -177,9 +177,12 @@ def run_pipeline() -> dict[str, Any]:
     alerts.sort(key=lambda x: -x[1].total)
     watchlist.sort(key=lambda x: -x[1].total)
 
-    # ---- Distribute ----
-    for sig, score in alerts:
-        post_alert(sig, score)
+    # ---- Distribute (company-grouped: one Slack alert per company per run) ----
+    accounts = aggregate_by_company(alerts)
+    logger.info("Aggregated %d firing signals into %d account alert(s)",
+                len(alerts), len(accounts))
+    for account in accounts:
+        post_account_alert(account)
 
     if watchlist:
         DATA_DIR.mkdir(parents=True, exist_ok=True)

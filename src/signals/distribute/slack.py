@@ -1,14 +1,20 @@
 """Slack distribution — Block Kit alerts or stdout dry-run.
 
-If `SLACK_WEBHOOK_URL` is set, POST the alert payload to the webhook. Otherwise
-format the same content and print to stdout. Same code path either way; the
-fixture-first contract means a reviewer with no Slack credentials still sees
-the alerts.
+Two alert shapes:
+- Per-signal alert (`post_alert`) — one Slack message per individual signal.
+  Used for tests and one-off posts.
+- Per-account alert (`post_account_alert`) — one Slack message per company
+  per run, consolidating all that company's firing signals into a single
+  message. This is what `main.py` uses in production.
+
+If `SLACK_WEBHOOK_URL` is set, POST the payload to the webhook. Otherwise
+format the same content and print to stdout.
 """
 from __future__ import annotations
 
 import logging
 import sys
+from dataclasses import dataclass, field
 from typing import Any
 
 import httpx
@@ -188,3 +194,182 @@ def _btn(label: str, url: str) -> dict[str, Any]:
         "text": {"type": "plain_text", "text": label[:75]},
         "url": url,
     }
+
+
+# ---------------------------------------------------------------------------
+# Account-level alerts: one Slack message per company per run.
+# ---------------------------------------------------------------------------
+
+
+@dataclass
+class AccountAlert:
+    company_cik: str
+    company_name: str
+    # Ordered by score desc — signals[0] is the top-scoring signal for this account.
+    signals: list[tuple[Signal, ScoreBreakdown]] = field(default_factory=list)
+    composite_score: int = 0
+
+    @property
+    def num_signals(self) -> int:
+        return len(self.signals)
+
+    @property
+    def top(self) -> tuple[Signal, ScoreBreakdown]:
+        return self.signals[0]
+
+
+def aggregate_by_company(
+    scored: list[tuple[Signal, ScoreBreakdown]],
+) -> list[AccountAlert]:
+    """Group scored signals by company; compute composite score.
+
+    Composite formula: max(signal_scores) + 5 * (num_signals - 1), capped at 100.
+    Rationale: a single strong signal floors the score; each additional firing
+    signal adds 5 points (so 2 signals at 80 ranks above 1 signal at 84). Cap
+    prevents runaway from a noisy day.
+    """
+    by_cik: dict[str, list[tuple[Signal, ScoreBreakdown]]] = {}
+    for pair in scored:
+        by_cik.setdefault(pair[0].company_cik, []).append(pair)
+
+    accounts: list[AccountAlert] = []
+    for cik, sigs in by_cik.items():
+        if not sigs:
+            continue
+        sigs.sort(key=lambda x: -x[1].total)
+        top_score = sigs[0][1].total
+        composite = min(100, top_score + 5 * (len(sigs) - 1))
+        accounts.append(AccountAlert(
+            company_cik=cik,
+            company_name=sigs[0][0].company_name,
+            signals=sigs,
+            composite_score=composite,
+        ))
+    accounts.sort(key=lambda a: -a.composite_score)
+    return accounts
+
+
+def _composite_emoji(composite: int) -> str:
+    if composite >= 80:
+        return "🔥"
+    if composite >= 50:
+        return "🟡"
+    return "⚪"
+
+
+def render_account_alert(account: AccountAlert) -> str:
+    top_sig, top_score = account.top
+    emoji = _composite_emoji(account.composite_score)
+    parts = [
+        f"{emoji} Account Score {account.composite_score} — {account.company_name}",
+        f"  {account.num_signals} signal{'s' if account.num_signals != 1 else ''} firing"
+        f" · top: Signal {top_sig.signal_type} ({top_score.total})",
+        "",
+        f"Top signal: {top_sig.title}",
+        f"Why now: {top_sig.why_now}",
+        "",
+    ]
+    parts.extend(_render_key_facts(top_sig))
+
+    if account.num_signals > 1:
+        parts.append("")
+        parts.append("Other firing signals:")
+        for sig, score in account.signals[1:]:
+            parts.append(f"  • Signal {sig.signal_type} ({score.total}): {sig.title}")
+            short = sig.why_now[:160] + ("…" if len(sig.why_now) > 160 else "")
+            parts.append(f"    {short}")
+
+    parts.append("")
+    parts.append("Per-signal score breakdown:")
+    for sig, score in account.signals:
+        comps = ", ".join(f"{k}={v:.1f}" for k, v in score.components.items())
+        parts.append(f"  Signal {sig.signal_type} total {score.total} — {comps}")
+
+    parts.append("")
+    parts.extend(_render_action_links(top_sig))
+    return "\n".join(parts)
+
+
+def build_account_block_kit(account: AccountAlert) -> dict[str, Any]:
+    top_sig, top_score = account.top
+    emoji = _composite_emoji(account.composite_score)
+
+    blocks: list[dict[str, Any]] = [
+        {
+            "type": "header",
+            "text": {"type": "plain_text",
+                     "text": f"{emoji} Account Score {account.composite_score} — "
+                             f"{account.company_name}"[:150]},
+        },
+        {
+            "type": "context",
+            "elements": [{
+                "type": "mrkdwn",
+                "text": f"*{account.num_signals} signal"
+                         f"{'s' if account.num_signals != 1 else ''} firing* "
+                         f"· top: Signal *{top_sig.signal_type}* "
+                         f"({top_score.total}) · _{top_sig.title}_",
+            }],
+        },
+        {
+            "type": "section",
+            "text": {"type": "mrkdwn", "text": f"*Why now:* {top_sig.why_now}"},
+        },
+    ]
+
+    facts = _render_key_facts(top_sig)
+    if facts:
+        blocks.append({
+            "type": "section",
+            "text": {"type": "mrkdwn", "text": "```" + "\n".join(facts) + "```"},
+        })
+
+    if account.num_signals > 1:
+        lines = ["*Other firing signals:*"]
+        for sig, score in account.signals[1:]:
+            lines.append(f"• *Signal {sig.signal_type}* ({score.total}): {sig.title}")
+        blocks.append({
+            "type": "section",
+            "text": {"type": "mrkdwn", "text": "\n".join(lines)},
+        })
+
+    breakdown_segments = []
+    for sig, score in account.signals:
+        comps = ", ".join(f"{k}={v:.1f}" for k, v in score.components.items())
+        breakdown_segments.append(f"_{sig.signal_type} ({score.total})_ {comps}")
+    blocks.append({
+        "type": "context",
+        "elements": [{
+            "type": "mrkdwn",
+            "text": ("*Score breakdown:* " + " · ".join(breakdown_segments))[:2900],
+        }],
+    })
+
+    buttons = _action_buttons(top_sig)
+    if buttons:
+        blocks.append({"type": "actions", "elements": buttons[:5]})
+
+    return {"text": render_account_alert(account)[:600], "blocks": blocks}
+
+
+def post_account_alert(account: AccountAlert) -> bool:
+    if not SLACK_WEBHOOK_URL:
+        text = render_account_alert(account)
+        print("=" * 78, file=sys.stdout)
+        print(text, file=sys.stdout)
+        print("=" * 78, file=sys.stdout, flush=True)
+        logger.info("Slack dry-run: account alert %s printed to stdout", account.company_cik)
+        return True
+
+    payload = build_account_block_kit(account)
+    try:
+        resp = httpx.post(SLACK_WEBHOOK_URL, json=payload, timeout=15.0)
+        resp.raise_for_status()
+    except httpx.HTTPError as exc:
+        logger.error("Slack webhook POST failed for account %s: %s",
+                     account.company_cik, exc)
+        return False
+    logger.info("Account alert posted: %s (%d signals, composite %d) -> %s",
+                account.company_name, account.num_signals, account.composite_score,
+                resp.status_code)
+    return True
