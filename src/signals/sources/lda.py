@@ -67,7 +67,7 @@ def get_recent_registrations(
 
     params: dict[str, Any] = {
         "filing_type": "RR",
-        "ordering": "dt_posted",
+        "ordering": "-dt_posted",  # descending so freshest filings page first
         "page_size": _PAGE_SIZE,
     }
     if filing_year:

@@ -51,8 +51,8 @@ def _build_registry() -> dict[str, dict[str, Callable[[], Any]]]:
             # Recent LD-1 registrations on pharma-relevant issue codes
             "recent_registrations_pharma": lambda: _import_lda().get_recent_registrations(
                 issue_codes=["HCR", "PHA", "MMM"],  # Health Care Reform, Pharmacy, Medicare/Medicaid
-                since="2026-01-01",
-                max_pages=8,  # large window since issue filter runs client-side
+                since="2026-03-01",  # within 60d of today (2026-05-21) so Signal A LDA gate fires
+                max_pages=10,
             ),
         },
         "edgar": {
