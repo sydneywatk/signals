@@ -57,6 +57,25 @@ _ENACTED_MARKERS = (
     "effective date",  # e.g. "Chapter X, effective date Y"
 )
 
+# Substrings indicating the bill has died — either explicitly killed by a
+# chamber, withdrawn by sponsor, or vetoed without override. Unlike enacted
+# bills (which stay alert-eligible for 30 days post-enactment), dead bills
+# are always non-actionable: a corpse doesn't drive a buying moment.
+_DEAD_MARKERS = (
+    "postpone indefinitely",
+    "postponed indefinitely",
+    "withdrawn",
+    "vetoed",
+    "died in committee",
+    "failed",
+)
+# Subphrases that look like dead-markers but actually mean the bill survived.
+_DEAD_MARKER_OVERRIDES = (
+    "veto override",   # legislature overrode the veto -> bill became law
+    "override veto",
+    "override of veto",
+)
+
 
 def is_bill_actionable(bill: dict[str, Any], *, max_post_enactment_days: int = 30) -> bool:
     """False iff the bill's latest action looks like enactment AND the enactment
@@ -74,6 +93,24 @@ def is_bill_actionable(bill: dict[str, Any], *, max_post_enactment_days: int = 3
         return True
 
 
+def is_bill_alive(bill: dict[str, Any]) -> bool:
+    """False iff the bill's latest action looks like a definitive death:
+    postpone indefinitely, withdrawn, vetoed (without override), died in
+    committee, or failed.
+
+    Unlike enacted-bill detection, dead bills get no grace window — a killed
+    bill is killed regardless of when the action happened. Pharma GA teams
+    don't mobilize against dead legislation.
+    """
+    desc = (bill.get("latest_action_description") or "").lower()
+    if not desc:
+        return True
+    # Veto override means the bill survived — short-circuit before the dead check
+    if any(o in desc for o in _DEAD_MARKER_OVERRIDES):
+        return True
+    return not any(m in desc for m in _DEAD_MARKERS)
+
+
 def is_current_session(bill: dict[str, Any], *, max_stale_days: int = 180) -> bool:
     """False iff the bill's latest action is older than `max_stale_days` — proxy
     for "bill is from a prior session that has gone quiet" (Fix 4 from the
@@ -88,8 +125,11 @@ def is_current_session(bill: dict[str, Any], *, max_stale_days: int = 180) -> bo
 
 
 def is_actionable_and_current(bill: dict[str, Any]) -> bool:
-    """Convenience: both filters at once. Use to prune candidate bill lists."""
-    return is_bill_actionable(bill) and is_current_session(bill)
+    """Convenience: applies all three filters at once. Use to prune candidate
+    bill lists. A bill must be (a) not stale-enacted, (b) within the active
+    session window, AND (c) not killed (postponed indefinitely / vetoed /
+    withdrawn / failed / died in committee)."""
+    return is_bill_actionable(bill) and is_current_session(bill) and is_bill_alive(bill)
 
 
 def classify_bill_to_topics(bill: dict[str, Any], topics: list[dict[str, Any]]) -> list[dict[str, Any]]:
